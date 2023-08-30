@@ -16,6 +16,7 @@ public class Loot : MonoBehaviour
     [SerializeField] private float _moveSpeed = 18f;
     [SerializeField] private float _rotationSpeed = 360f;
     [SerializeField] private Collider _collider;
+    private CoinCounter coinCounter;
 
     private void LateUpdate()
     {
@@ -58,7 +59,9 @@ public class Loot : MonoBehaviour
     }
 
     protected virtual void Take(Collector coinCollector) {
+        
         Die();
+
     }
 
     protected void Die()

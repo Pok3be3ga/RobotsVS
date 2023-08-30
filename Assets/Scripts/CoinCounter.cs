@@ -10,6 +10,7 @@ public class CoinCounter : MonoBehaviour
     [SerializeField] private AnimationCurve _scaleCurve;
 
     private Progress _progress;
+    
     private PermanentProgress _permanentProgress;
 
     // Ёто число должно быть float. ѕотому что из стартового меню можно увеличить процент прибыли
@@ -28,6 +29,7 @@ public class CoinCounter : MonoBehaviour
         NumberInLevel += number * (1 + _permanentProgress.GetLoot());
         Display();
         StartCoroutine(CounterAnimation());
+
     }
 
 

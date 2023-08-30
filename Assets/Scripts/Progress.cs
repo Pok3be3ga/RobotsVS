@@ -13,6 +13,7 @@ public class ProgressData
     [SerializeField] private int _chapter;
     [SerializeField] private int _coins;
 
+    
     public int HealthLevel
     {
         get => _healthLevel; set
