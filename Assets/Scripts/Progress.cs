@@ -10,8 +10,8 @@ public class ProgressData
     [SerializeField] private int _damageLevel;
     [SerializeField] private int _lootLevel;
 
-    [SerializeField] private int _chapter;
-    [SerializeField] private int _coins;
+    [SerializeField] public int _chapter;
+    [SerializeField] public int _coins;
 
     
     public int HealthLevel
@@ -59,8 +59,7 @@ public class ProgressData
 
 public class Progress : MonoBehaviour
 {
-    public ProgressData ProgressData;
-
+    public ProgressData ProgressData; 
     public void Init()
     {
         ProgressData = SaveSystem.Load();

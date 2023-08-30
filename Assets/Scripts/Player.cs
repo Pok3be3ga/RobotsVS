@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     private Progress _progress;
     private PermanentProgress _permanentProgress;
 
+
     public void Init(PermanentProgress permanentProgress)
     {
         _permanentProgress = permanentProgress;

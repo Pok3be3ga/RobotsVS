@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class FinishWindow : MonoBehaviour
@@ -44,6 +45,7 @@ public class FinishWindow : MonoBehaviour
 
     private void Continue()
     {
-        _gameManager.Restart();
+        SceneManager.LoadScene("Menu");
+        _coinCounter.SaveToProgress();
     }
 }

@@ -13,7 +13,8 @@ public class PauseState : GameState
     [SerializeField] private Button _continueButton;
     [SerializeField] private Button _restartButton;
     [SerializeField] private GameManager _gameManager;
-    
+    [SerializeField] CoinCounter _coinCounter;
+
     protected override void EnterFirstTime()
     {
         //base.EnterFirstTime();
@@ -44,6 +45,7 @@ public class PauseState : GameState
     {
         // Перезагрузка уровня. В игре всего один уровень
         _gameManager.Restart();
+        _coinCounter.SaveToProgress();
     }
 
 }

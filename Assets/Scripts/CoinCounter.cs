@@ -8,27 +8,34 @@ public class CoinCounter : MonoBehaviour
     [SerializeField] private Transform _counterTransform;
     [SerializeField] private TextMeshProUGUI _coinsText;
     [SerializeField] private AnimationCurve _scaleCurve;
-
     private Progress _progress;
     
     private PermanentProgress _permanentProgress;
 
+    public float CoinsInGame;
+
     // Ёто число должно быть float. ѕотому что из стартового меню можно увеличить процент прибыли
     // ≈сли он будет int то например 4 + 4% будет равно 4 и ничего не помен€етс€
     public float NumberInLevel { get; private set; }
-
+    private void Start()
+    {
+        CoinsInGame = ProgressGame.Instance.Coins;
+        Display();
+    }
     public void Init(Progress progress, PermanentProgress permanentProgress)
     {
         _progress = progress;
         _permanentProgress = permanentProgress;
         Display();
     }
-
     public void AddCoins(int number)
     {
         NumberInLevel += number * (1 + _permanentProgress.GetLoot());
+        CoinsInGame += number;
+
         Display();
         StartCoroutine(CounterAnimation());
+        
 
     }
 
@@ -53,8 +60,13 @@ public class CoinCounter : MonoBehaviour
 
     void Display()
     {
-        int totalNumber = _progress.ProgressData.Coins + Mathf.RoundToInt(NumberInLevel);
-        _coinsText.text = totalNumber.ToString();
+        //int totalNumber = _progress.ProgressData.Coins + Mathf.RoundToInt(NumberInLevel);
+        _coinsText.text = CoinsInGame.ToString(); //totalNumber.ToString();
+
+    }
+    public void SaveToProgress()
+    {
+        ProgressGame.Instance.Coins = CoinsInGame;
     }
 
 }
