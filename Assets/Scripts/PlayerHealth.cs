@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private float _startMaxHealth = 100f;
+    public float StartMaxHealth = 100f;
     private float _maxHealth;
     private float _currentHealth;
     [SerializeField] private Player _player;
     public Action<float, float, bool> OnChangeHealth;
     public Action OnDie;
     private float _timer;
-    [SerializeField] private float _regenerationPeriod;
+    public float RegenerationPeriod;
 
     private List<IPlayerHealthEffect> _playerHealthEffects = new List<IPlayerHealthEffect>();
 
@@ -31,7 +31,7 @@ public class PlayerHealth : MonoBehaviour
 
     // возвращает максимально здоровье с учетом постоянной прокачки
     private float GetMaxHealth() {
-        float result = _startMaxHealth * (1 + _player.MaxHpBoost);
+        float result = StartMaxHealth * (1 + _player.MaxHpBoost);
         Debug.Log(result);
         return result;
     }
@@ -39,7 +39,7 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         _timer += Time.deltaTime;
-        if (_timer > _regenerationPeriod) {
+        if (_timer > RegenerationPeriod) {
             _timer = 0f;
             Regenerate();
         }
@@ -88,7 +88,7 @@ public class PlayerHealth : MonoBehaviour
     public void Die() {
         //Time.timeScale = 0f;
         _gameStateManager.SetLose();
-        OnDie.Invoke();
+       // OnDie.Invoke();
     }
 
     

@@ -4,7 +4,7 @@ public class RigidbodyMove : MonoBehaviour
 {
 
     [SerializeField] private Rigidbody _rigidbody;
-    [SerializeField] private float _speed = 5f;
+    public float Speed = 5f;
     [SerializeField] private Joystick _joystick;
     private Vector2 _moveInput;
     [SerializeField] private Animator _animator;
@@ -26,7 +26,7 @@ public class RigidbodyMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float speed = _speed * (1 + _player.MovementSpeed);
+        float speed = Speed * (1 + _player.MovementSpeed);
         _rigidbody.velocity = new Vector3(_moveInput.x, 0, _moveInput.y) * speed;
 
         if (_rigidbody.velocity != Vector3.zero)

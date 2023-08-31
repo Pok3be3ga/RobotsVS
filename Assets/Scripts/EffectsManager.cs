@@ -11,6 +11,8 @@ public class EffectsManager : MonoBehaviour
     [SerializeField] private List<ContinuousEffect> _continuousEffectsApplied = new List<ContinuousEffect>();
     [SerializeField] private List<OneTimeEffect> _oneTimeEffectsApplied = new List<OneTimeEffect>();
 
+    [SerializeField] private List<ContinuousEffect> _robotsEffect = new List<ContinuousEffect>();
+
     [SerializeField] private List<ContinuousEffect> _continuousEffects = new List<ContinuousEffect>();
     [SerializeField] private List<OneTimeEffect> _oneTimeEffects = new List<OneTimeEffect>();
 
@@ -19,6 +21,8 @@ public class EffectsManager : MonoBehaviour
 
     [SerializeField] private TopIconManager _topIconManager;
     public Action OnHideCards;
+
+
 
     private void Awake()
     {
@@ -33,6 +37,8 @@ public class EffectsManager : MonoBehaviour
             _oneTimeEffects[i] = Instantiate(_oneTimeEffects[i]);
             _oneTimeEffects[i].Initialize(this, _enemyManager, _player);
         }
+        
+        
     }
 
     [ContextMenu(nameof(ShowCards))]
@@ -169,4 +175,6 @@ public class EffectsManager : MonoBehaviour
             ShowCards(2);
         }
     }
+
+
 }

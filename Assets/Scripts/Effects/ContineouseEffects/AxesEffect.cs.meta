@@ -4,8 +4,9 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - Sprite: {fileID: 21300000, guid: 95155d9989fb244f88f9656cbd4eecbc, type: 3}
-  - _axesPrefab: {instanceID: 0}
+  - Sprite: {instanceID: 0}
+  - _axesPrefab: {fileID: 3692635458392790744, guid: e576d6243895a404b90526dbc9018b18,
+      type: 3}
   executionOrder: 0
   icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   userData: 

@@ -13,7 +13,7 @@ public class AxesEffect : ContinuousEffect
         base.Activate();
         if (Level == 1) {
             Axes axes = Instantiate(_axesPrefab);
-            axes.Setup(_effectsManager.transform);
+            axes.Setup(_player.transform);
         }
     }
 
