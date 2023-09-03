@@ -1393,7 +1393,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1117454040}
   - component: {fileID: 1117454039}
-  - component: {fileID: 1117454041}
   m_Layer: 0
   m_Name: Progress
   m_TagString: Untagged
@@ -1430,24 +1429,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1117454041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1117454038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5012fe4a00e8cc49b63a7e406d3f971, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ProgressData:
-    _healthLevel: 0
-    _damageLevel: 0
-    _lootLevel: 0
-    _chapter: 0
-    _coins: 0
 --- !u!1001 &1147919292
 PrefabInstance:
   m_ObjectHideFlags: 0

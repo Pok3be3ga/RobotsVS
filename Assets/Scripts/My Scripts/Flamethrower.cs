@@ -5,14 +5,26 @@ using UnityEngine;
 public class Flamethrower : MonoBehaviour
 {
 
-    public float _damage = 5;
+    public float Damage;
+    public float Cooldown = 0.3f;
+    private float _timer;
 
-    private void OnTriggerEnter(Collider other)
+
+    private void Update()
     {
-        if (other.GetComponent<Enemy>() is Enemy enemy)
+        _timer += Time.deltaTime;
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if(_timer > Cooldown)
         {
-            enemy.SetDamage(_damage, true);
+            if (other.GetComponent<Enemy>() is Enemy enemy)
+            {
+                enemy.SetDamage(Damage, true);
+                _timer = 0;
 
+            }
         }
-    }      
+        
+    }  
 }

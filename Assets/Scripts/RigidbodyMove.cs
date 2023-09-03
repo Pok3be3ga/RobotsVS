@@ -10,7 +10,12 @@ public class RigidbodyMove : MonoBehaviour
     [SerializeField] private Animator _animator;
 
     [SerializeField] private Player _player;
+    [SerializeField] ChoseRobot _choseRobot;
 
+    private void Start()
+    {
+        _animator = _choseRobot.Robots[ProgressGame.Instance.index].GetComponentInChildren<Animator>();
+    }
     private void Update()
     {
         _moveInput = _joystick.Value.normalized;

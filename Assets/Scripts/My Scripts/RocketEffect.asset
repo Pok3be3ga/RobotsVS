@@ -179,3 +179,5 @@ MonoBehaviour:
   _RocketPrefab: {fileID: 9126213732097959305, guid: ec27e15e4c92bfb47b79d716329ac275,
     type: 3}
   _bulletSpeed: 10
+  _timer: 0
+  Period: 0

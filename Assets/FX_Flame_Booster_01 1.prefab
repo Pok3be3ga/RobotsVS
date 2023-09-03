@@ -4649,7 +4649,7 @@ GameObject:
   - component: {fileID: 198740915752801168}
   - component: {fileID: 199876713702356702}
   m_Layer: 0
-  m_Name: FX_Flame_Booster_01
+  m_Name: FX_Flame_Booster_01 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

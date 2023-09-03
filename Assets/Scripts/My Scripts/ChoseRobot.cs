@@ -9,6 +9,7 @@ public class ChoseRobot : MonoBehaviour
     public GameObject[] Robots;
     [SerializeField] RigidbodyMove _rigidbodyMove;
     [SerializeField] PlayerHealth _playerHealth;
+    
 
     private void Start()
     {

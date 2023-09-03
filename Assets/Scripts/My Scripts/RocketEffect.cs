@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
+//using static UnityEditor.Experimental.GraphView.GraphView;
 
 
 [CreateAssetMenu(fileName = nameof(RocketEffect), menuName = "Effects/" + nameof(RocketEffect))]
@@ -10,7 +10,11 @@ public class RocketEffect : ContinuousEffect
 
     [SerializeField] private Rocket _RocketPrefab;
     [SerializeField] private float _bulletSpeed;
+    [SerializeField] float _timer;
 
+    public float Period;
+
+   
     protected override void Produce()
     {
         base.Produce();
