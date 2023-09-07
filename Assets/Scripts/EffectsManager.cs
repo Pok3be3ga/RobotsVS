@@ -37,10 +37,19 @@ public class EffectsManager : MonoBehaviour
             _oneTimeEffects[i] = Instantiate(_oneTimeEffects[i]);
             _oneTimeEffects[i].Initialize(this, _enemyManager, _player);
         }
-        
-        
+        for (int i = 0; i < _robotsEffect.Count; i++)
+        {
+            _robotsEffect[i] = Instantiate(_robotsEffect[i]);
+            _robotsEffect[i].Initialize(this, _enemyManager, _player);
+
+        }
+
     }
 
+    //private void Start()
+    //{
+    //    AddRobotCard();
+    //}
     [ContextMenu(nameof(ShowCards))]
     public void ShowCards(int level)
     {
@@ -130,6 +139,17 @@ public class EffectsManager : MonoBehaviour
         return result;
     }
 
+
+    //public void AddRobotCard()
+    //{
+    //      ContinuousEffect c_effect = _robotsEffect[ProgressGame.Instance.index];
+    //        if (!_continuousEffectsApplied.Contains(c_effect))
+    //        {
+    //            _continuousEffectsApplied.Add(c_effect);
+    //            _robotsEffect.Remove(c_effect);
+    //            _topIconManager.AddIcon(c_effect);
+    //        }
+    //}
     // Вызывается при клике по карте
     public void ClickCard(Effect effect)
     {
