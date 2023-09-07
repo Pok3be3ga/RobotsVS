@@ -28,9 +28,9 @@ public class Rocket : MonoBehaviour
         {
             if (_targetEnemy)
             {
-                Vector3 toEnemy = transform.position - _targetEnemy.transform.position;
+                Vector3 toEnemy =   _targetEnemy.transform.position - transform.position;
                 transform.position = Vector3.MoveTowards(transform.position, _targetEnemy.transform.position, _speed * Time.deltaTime);
-                transform.rotation = Quaternion.LookRotation(Vector3.forward);
+                transform.Rotate(toEnemy);
                 if (transform.position == _targetEnemy.transform.position)
                 {
                     AffectEnemy();

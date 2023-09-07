@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class DamageOnTrigger : MonoBehaviour
 {
+    public float Damage = 5;
     private void OnTriggerEnter(Collider other)
     {
-            other.GetComponent<Enemy>().SetDamage(10);
+            other.GetComponent<Enemy>().SetDamage(Damage);
     }
 }
