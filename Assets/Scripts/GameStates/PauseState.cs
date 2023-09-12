@@ -45,7 +45,7 @@ public class PauseState : GameState
     {
         // Перезагрузка уровня. В игре всего один уровень
         _gameManager.Restart();
-        _coinCounter.SaveToProgress();
+        //_coinCounter.SaveToProgress();
     }
 
 }

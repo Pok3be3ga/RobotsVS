@@ -19,16 +19,16 @@ MonoBehaviour:
   ActiveSkills: 01010100000000
   SkillLevels:
   - Values:
-    - 6
-    - 6
-    - 5
-    - 5
-    - 5
-    - 5
-    - 4
-    - 4
-    - 4
     - 2
+    - 2
+    - 1.5
+    - 1.5
+    - 1.5
+    - 1.5
+    - 1
+    - 1
+    - 1
+    - 0.5
   - Values:
     - 30
     - 60
@@ -97,16 +97,16 @@ MonoBehaviour:
     - 0
   SkillLevelsAdditions:
   - Values:
-    - 6
+    - 2
     - 0
-    - -1
-    - 0
-    - 0
-    - 0
-    - -1
+    - -0.5
     - 0
     - 0
-    - -2
+    - 0
+    - -0.5
+    - 0
+    - 0
+    - -0.5
   - Values:
     - 30
     - 30

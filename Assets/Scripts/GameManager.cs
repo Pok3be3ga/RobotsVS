@@ -39,7 +39,8 @@ public class GameManager : MonoBehaviour
     public void SetFirstLevel()
     {
         UpLevel();
-        ShowCards();
+        AddRobotCard();
+        //ShowCards();
     }
 
     public void UpLevelDelayed() {
@@ -78,6 +79,10 @@ public class GameManager : MonoBehaviour
 
     public void Restart() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    public void AddRobotCard()
+    {
+        _effectsManager.AddRobotCard();
     }
 
 }

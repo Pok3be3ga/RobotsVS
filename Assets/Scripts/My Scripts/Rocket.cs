@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static UnityEngine.GraphicsBuffer;
 
 public class Rocket : MonoBehaviour
 {
@@ -28,9 +29,9 @@ public class Rocket : MonoBehaviour
         {
             if (_targetEnemy)
             {
-                Vector3 toEnemy =   _targetEnemy.transform.position - transform.position;
                 transform.position = Vector3.MoveTowards(transform.position, _targetEnemy.transform.position, _speed * Time.deltaTime);
-                transform.Rotate(toEnemy);
+                Vector3 newDir = Vector3.RotateTowards(transform.forward, (_targetEnemy.transform.position - transform.position), 360f, 0.0F);
+                transform.rotation = Quaternion.LookRotation(newDir);
                 if (transform.position == _targetEnemy.transform.position)
                 {
                     AffectEnemy();

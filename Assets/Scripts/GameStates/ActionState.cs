@@ -21,6 +21,7 @@ public class ActionState : GameState
         base.Enter();
         _joystick.Activate();
         _rigidbodyMove.enabled = true;
+        Time.timeScale = 1f;
     }
 
     public override void Exit()

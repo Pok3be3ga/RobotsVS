@@ -79,7 +79,7 @@ public class EffectsManager : MonoBehaviour
         }
 
         // не примененные Continuous эффекты
-        if (_continuousEffectsApplied.Count < 4)
+        if (_continuousEffectsApplied.Count < 5)
         {
             effectsToShow.AddRange(_continuousEffects);
         }
@@ -140,16 +140,22 @@ public class EffectsManager : MonoBehaviour
     }
 
 
-    //public void AddRobotCard()
-    //{
-    //      ContinuousEffect c_effect = _robotsEffect[ProgressGame.Instance.index];
-    //        if (!_continuousEffectsApplied.Contains(c_effect))
-    //        {
-    //            _continuousEffectsApplied.Add(c_effect);
-    //            _robotsEffect.Remove(c_effect);
-    //            _topIconManager.AddIcon(c_effect);
-    //        }
-    //}
+    public void AddRobotCard()
+    {
+        Effect effect = _robotsEffect[ProgressGame.Instance.index];
+        
+        if (effect is ContinuousEffect c_effect)
+        {
+            if (!_continuousEffectsApplied.Contains(c_effect))
+            {
+                _continuousEffectsApplied.Add(c_effect);
+                _robotsEffect.Remove(c_effect);
+                _topIconManager.AddIcon(c_effect);
+            }
+
+        }
+        effect.Activate();
+    }
     // Вызывается при клике по карте
     public void ClickCard(Effect effect)
     {
@@ -175,7 +181,6 @@ public class EffectsManager : MonoBehaviour
         }
         // активируем эффект
         effect.Activate();
-
         HideCards();
     }
 
