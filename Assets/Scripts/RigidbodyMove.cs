@@ -14,7 +14,7 @@ public class RigidbodyMove : MonoBehaviour
 
     private void Start()
     {
-        _animator = _choseRobot.Robots[ProgressGame.Instance.index].GetComponentInChildren<Animator>();
+        _animator = _choseRobot.Robots[ProgressGame.Instance.IndexRobot].GetComponentInChildren<Animator>();
     }
     private void Update()
     {

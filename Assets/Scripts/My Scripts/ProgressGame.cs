@@ -7,7 +7,9 @@ public class ProgressGame : MonoBehaviour
 {
     public float Coins;
     public static ProgressGame Instance;
-    public int index = 0;
+    public int IndexRobot = 0;
+    public int IndexChapter = 0;
+    public int NumberOfWaves = 4;
 
     private void Awake()
     { 

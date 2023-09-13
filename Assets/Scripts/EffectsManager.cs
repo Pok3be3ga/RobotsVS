@@ -142,7 +142,7 @@ public class EffectsManager : MonoBehaviour
 
     public void AddRobotCard()
     {
-        Effect effect = _robotsEffect[ProgressGame.Instance.index];
+        Effect effect = _robotsEffect[ProgressGame.Instance.IndexRobot];
         
         if (effect is ContinuousEffect c_effect)
         {

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Chapter 0
   m_EditorClassIdentifier: 
   EnemyWavesArray:
-  - Enemy: {fileID: 6177058380949903985, guid: 283382827953cf04a8b107229f61beed, type: 3}
+  - Enemy: {fileID: 418030179873237852, guid: 478ac5358d445ac43ac9a80637a7f025, type: 3}
     NumberPerSecond:
     - 1
     - 1
@@ -65,21 +65,21 @@ MonoBehaviour:
     - 11.457438
     - 11.685455
     - 11.913378
-  - Enemy: {fileID: 6177058380949903985, guid: 1e6348616a3f27f499aa0500b9ee32d8, type: 3}
+  - Enemy: {fileID: 418030179873237852, guid: deb945e06607e7c4992641936cbd75c5, type: 3}
     NumberPerSecond:
     - 0
     - 0
-    - 3
     - 0
     - 0
     - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 3.1599998
+    - 0.5
+    - 0.5
+    - 0.5
+    - 0.5
+    - 0.5
+    - 0.5
+    - 0.5
+    - 0.6
     - 2.05
     - 2.05
     - 2.05
@@ -115,23 +115,23 @@ MonoBehaviour:
     - 8.537247
     - 5.800638
     - 5.9195004
-    - 6.0383625
-    - 6.1572247
-  - Enemy: {fileID: 220491103788886143, guid: 1bbb962c5b200d340b48936926f53a7b, type: 3}
+    - 0
+    - 0
+  - Enemy: {fileID: 6177058380949903985, guid: 84466f82818fdce46ba19797de6852d3, type: 3}
     NumberPerSecond:
     - 0
     - 0
-    - 2
+    - 0
+    - 0
+    - 1
     - 0
     - 0
     - 0
+    - 1
     - 0
     - 0
     - 0
-    - 0
-    - 0
-    - 0
-    - 3.1599998
+    - 1
     - 0
     - 0
     - 0

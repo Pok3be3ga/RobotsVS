@@ -13,6 +13,9 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private float _minRadius;
     [SerializeField] private float _maxRadius;
     [SerializeField] private List<Enemy> _enemyiesList = new List<Enemy>();
+
+    public ChapterSettings[] ChapterSettings;
+
     [SerializeField] private ChapterSettings _chapterSettings;
 
     [Tooltip("List of enemies for this chapter")]
@@ -27,12 +30,19 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private Loot _expPrefab;
     [SerializeField] private Loot _coinPrefab;
 
-    [SerializeField] private int _numberOfWaves;
+    [SerializeField] public int _numberOfWaves;
 
     private bool _isWaveLast = false;
 
     private GameStateManager _gameStateManager;
 
+
+    private void Start()
+    {
+        _chapterSettings = ChapterSettings[ProgressGame.Instance.IndexChapter];
+        ProgressGame.Instance.NumberOfWaves++;
+        _numberOfWaves = ProgressGame.Instance.NumberOfWaves;
+    }
     public void Init(GameManager gameManager, GameStateManager gameStateManager)
     {
         _gameManager = gameManager;
@@ -151,6 +161,7 @@ public class EnemyManager : MonoBehaviour
     private void OnLastKilled()
     {
         Debug.Log("OnLastKilled");
+        ProgressGame.Instance.IndexChapter++;
         _gameStateManager.SetWin();
     }
 
