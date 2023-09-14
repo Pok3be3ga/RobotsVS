@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6431f2465bb87d445b48b264db1b849c, type: 3}
   m_Name: RocketEffect
   m_EditorClassIdentifier: 
-  Name: "\u0420\u0430\u043A\u0435\u0442\u0430"
+  Name: "\u041F\u0443\u0441\u043A \u0440\u0430\u043A\u0435\u0442"
   Description: 
-  Sprite: {fileID: 0}
+  Sprite: {fileID: 21300000, guid: d0c6ebed0fcb9934aa7c6ffdca3bb576, type: 3}
   Level: 0
   ActiveSkills: 01010001000000
   SkillLevels:

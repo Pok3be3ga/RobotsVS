@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c6218df26aa8954a9ae04cef9afe175, type: 3}
   m_Name: MineEffect
   m_EditorClassIdentifier: 
-  Name: Mine
-  Description: Set Mine
+  Name: "\u041C\u0438\u043D\u044B"
+  Description: "\u0421\u0442\u0430\u0432\u0438\u0442 \u043C\u0438\u043D\u044B"
   Sprite: {fileID: 21300000, guid: 63aabd00c6d82a043a3bbb80ba3dcad7, type: 3}
   Level: 0
   ActiveSkills: 01010100000000

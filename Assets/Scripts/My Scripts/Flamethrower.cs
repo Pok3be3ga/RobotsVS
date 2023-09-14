@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Flamethrower : MonoBehaviour
@@ -25,9 +26,10 @@ public class Flamethrower : MonoBehaviour
         transform.position = _target.position;
         transform.rotation = _target.rotation;
     }
+    
     private void OnTriggerStay(Collider other)
     {
-        if(_timer > _piriod)
+        if (_timer > _piriod)
         {
             if (other.GetComponent<Enemy>() is Enemy enemy)
             {
@@ -35,10 +37,14 @@ public class Flamethrower : MonoBehaviour
             }
             _timer = 0;
         }
-        
+
     }
     public void SetRadius(float radius)
     {
     }
 
+    private void OnCollisionStay(Collision collision)
+    {
+        
+    }
 }

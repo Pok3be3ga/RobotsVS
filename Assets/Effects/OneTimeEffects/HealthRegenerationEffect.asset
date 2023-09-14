@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1361020cd2113e4eb65585a4b5cd3c3, type: 3}
   m_Name: HealthRegenerationEffect
   m_EditorClassIdentifier: 
-  Level: 0
-  Sprite: {fileID: 21300000, guid: 0bf5ecdb514bc0248b9eaaf494623af2, type: 3}
-  Name: Health Regeneration
+  Name: "\u0420\u0435\u0433\u0435\u043D\u0435\u0440\u0430\u0446\u0438\u044F"
   Description: +1% Regeneration
+  Sprite: {fileID: 21300000, guid: 0bf5ecdb514bc0248b9eaaf494623af2, type: 3}
+  Level: 0
   _percent: 0.01

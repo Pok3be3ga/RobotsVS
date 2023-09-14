@@ -8,6 +8,7 @@ public class LevelUpEffect : MonoBehaviour
     [SerializeField] private float _lifeTime;
     [SerializeField] protected ParticleSystem _particleSystem;
     private Coroutine _coroutine;
+    public AudioSource Audio;
 
     public void StartEffect(Transform target) {
         if (_coroutine != null) {
@@ -18,6 +19,7 @@ public class LevelUpEffect : MonoBehaviour
 
     private IEnumerator LifeCycle(Transform target) {
         _particleSystem.Play();
+        Audio.Play();
         float birthTime = Time.time;
         while (Time.time - birthTime < _lifeTime)
         {

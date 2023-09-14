@@ -18,6 +18,8 @@ public class PlayerHealth : MonoBehaviour
 
     private GameStateManager _gameStateManager;
 
+    public AudioSource DamageAudio;
+
     public void AddHealthEffect(IPlayerHealthEffect effect) {
         _playerHealthEffects.Add(effect);
     }
@@ -54,6 +56,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void SetDamage(float value) {
 
+        DamageAudio.Play();
         foreach (var item in _playerHealthEffects)
         {
             item.OnSetDamage(ref value);
@@ -75,6 +78,7 @@ public class PlayerHealth : MonoBehaviour
         _currentHealth = value;
         Debug.Log("SetHealth " + _currentHealth + "  " + _maxHealth);
         OnChangeHealth?.Invoke(_currentHealth, _maxHealth, isDamage);
+        
     }
 
     public void BoostMaxHp(float percent) {

@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf69140d08215c7489b33295cf16c9d9, type: 3}
   m_Name: DamageReductionEffect
   m_EditorClassIdentifier: 
-  Level: 0
+  Name: "\u0417\u0430\u0449\u0438\u0442\u0430"
+  Description: "\u0423\u043C\u0435\u043D\u044C\u0448\u0435\u043D\u0438\u0435 \u043F\u043E\u043B\u0443\u0447\u0430\u0435\u043C\u043E\u0433\u043E
+    \u0443\u0440\u043E\u043D\u0430"
   Sprite: {fileID: 21300000, guid: 70789037d1637854e9ffbd1f569525d5, type: 3}
-  Name: Damage Reduction
-  Description: Damage Reduction Effect
+  Level: 0
   _percent: 0.05

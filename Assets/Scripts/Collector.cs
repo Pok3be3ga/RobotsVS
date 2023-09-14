@@ -14,7 +14,7 @@ public class Collector : MonoBehaviour
     private GameManager _gameManager;
 
     private float _experience = 0;
-    private float _nextLevelExperience = 5;
+    [SerializeField] private float _nextLevelExperience = 5;
     private Collider[] _colliders = new Collider[10];
 
     // кривая показывает сколько надо набрать опыта для повышения уровня в каждом уровне

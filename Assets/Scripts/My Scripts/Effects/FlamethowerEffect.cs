@@ -11,7 +11,7 @@ public class FlamethowerEffect : ContinuousEffect
     [SerializeField] private Flamethrower _flamethrowerPrefab;
     [SerializeField] private Flamethrower _flamethrower;
 
-    private Collider[] _colliders = new Collider[20];
+    
     [SerializeField] private LayerMask _layerMask;
     protected override void FirstTimeCreated()
     {

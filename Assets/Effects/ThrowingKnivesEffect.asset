@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: ThrowingKnivesEffect
   m_EditorClassIdentifier: 
   Name: Throwing Knives
-  Description: Throwing Knives Effect
+  Description: "\u0421\u043D\u0430\u0440\u044F\u0434\u044B \u043B\u0435\u0442\u044F\u0442
+    \u0432\u043F\u0435\u0440\u0435\u0434"
   Sprite: {fileID: 21300000, guid: 3aab110b14a6aea4d988627ca70b188a, type: 3}
   Level: 0
   ActiveSkills: 01010001000100

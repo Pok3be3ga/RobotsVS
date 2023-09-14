@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a6b071f35f5a414988d776992d49b37, type: 3}
   m_Name: FrostAuraEffect
   m_EditorClassIdentifier: 
-  Name: Frost Aura
-  Description: Frost Aura Effect
+  Name: "\u0410\u0443\u0440\u0430 \u0437\u0430\u043C\u0435\u0434\u043B\u0435\u043D\u0438\u044F"
+  Description: "\u0417\u0430\u043C\u0435\u0434\u043B\u044F\u0435\u0442 \u0438 \u043D\u0430\u043D\u043E\u0441\u0438\u0442
+    \u0443\u0440\u043E\u043D \u0432\u043E\u043A\u0440\u0443\u0433 \u0438\u0433\u0440\u043E\u043A\u0430"
   Sprite: {fileID: 21300000, guid: f107a077b9587a0459c557d50519ba47, type: 3}
   Level: 0
   ActiveSkills: 00000100010000
