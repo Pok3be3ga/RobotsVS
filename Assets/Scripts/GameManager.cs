@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     private int _level = -1;
     [SerializeField] private LevelUpEffect _levelUpEffect;
     [SerializeField] private PauseButton _pauseButton;
-    
+    [SerializeField] private EnvironmentManager _environmentManager;
 
     public void Init(GameStateManager gameStateManager)
     {
@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour
         _enemyManager.Init(this, gameStateManager);
         _effectsManager.OnHideCards += WhenHideCards;
         _pauseButton.Init(gameStateManager);
+
+        _environmentManager.Init(this, gameStateManager);
     }
 
     public void SetFirstLevel()
