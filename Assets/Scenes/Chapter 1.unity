@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.09181083, g: 0.09337396, b: 0.1518588, a: 1}
+  m_IndirectSpecularColor: {r: 0.09181083, g: 0.093374155, b: 0.1518588, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8775,9 +8775,9 @@ MonoBehaviour:
   _environment: {fileID: 0}
   _spawnArea: {fileID: 1123449433}
   _ground: {fileID: 1771399229}
-  LvlNumber: 2
+  LvlNumber: 3
   _loadedObjects: []
-  density: 0.504
+  density: 0.771
   spawnMore: 0
 --- !u!1001 &1664634343
 PrefabInstance:
