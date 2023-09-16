@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: FireBall
   Description: "\u041D\u0430\u043D\u043E\u0441\u0438\u0442 \u0443\u0440\u043E\u043D
     \u043F\u043E \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u0438\u043C \u0446\u0435\u043B\u044F\u043C"
-  Sprite: {fileID: 21300000, guid: c996f015b7b9de2418e480c7adc709fc, type: 3}
+  Sprite: {fileID: 21300000, guid: 48728ac0edb9a5e489076d7d8a0f97f5, type: 3}
   Level: 0
   ActiveSkills: 01010101000000
   SkillLevels:

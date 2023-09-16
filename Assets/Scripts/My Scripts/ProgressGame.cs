@@ -24,6 +24,9 @@ public class ProgressGame : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    public void Sell(float coin)
+    {
+        Coins -= coin;
+    }
 
 }
