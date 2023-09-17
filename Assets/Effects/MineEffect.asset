@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: "\u041C\u0438\u043D\u044B"
   Description: "\u0421\u0442\u0430\u0432\u0438\u0442 \u043C\u0438\u043D\u044B"
-  Sprite: {fileID: 21300000, guid: 63aabd00c6d82a043a3bbb80ba3dcad7, type: 3}
+  Sprite: {fileID: 21300000, guid: ff4d93e70adf6334ab807fc17b3255f7, type: 3}
   Level: 0
   ActiveSkills: 01010100000000
   SkillLevels:
