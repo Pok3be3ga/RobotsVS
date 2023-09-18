@@ -2271,54 +2271,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d470bd30d5ceec4383744406c8b6440, type: 3}
---- !u!1 &1117454038
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1117454040}
-  - component: {fileID: 1117454039}
-  m_Layer: 0
-  m_Name: Progress
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1117454039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1117454038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa6a6afa46aa34a429e7273885d90edf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Coins: 0
-  IndexRobot: 0
-  IndexChapter: 0
-  NumberOfWaves: 4
---- !u!4 &1117454040
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1117454038}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1147919292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3478,6 +3430,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1837292232}
   m_CullTransparentMesh: 1
+--- !u!1 &1844736846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1844736848}
+  - component: {fileID: 1844736847}
+  m_Layer: 0
+  m_Name: Progress (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1844736847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844736846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5012fe4a00e8cc49b63a7e406d3f971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProgressData:
+    _healthLevel: 0
+    _damageLevel: 0
+    _lootLevel: 0
+    _chapter: 0
+    _coins: 0
+  IndexRobot: 0
+  IndexChapter: 0
+  NumberOfWaves: 4
+--- !u!4 &1844736848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844736846}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1955803530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3691,7 +3696,12 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  CoinsInGame: 0
+  ProgressData:
+    _healthLevel: 0
+    _damageLevel: 0
+    _lootLevel: 0
+    _chapter: 0
+    _coins: 0
 --- !u!4 &1979217958
 Transform:
   m_ObjectHideFlags: 0
@@ -3824,7 +3834,7 @@ SceneRoots:
   - {fileID: 1439914423}
   - {fileID: 285711286}
   - {fileID: 1772149592}
-  - {fileID: 1117454040}
+  - {fileID: 1844736848}
   - {fileID: 1979217958}
   - {fileID: 1147919292}
   - {fileID: 1963733498}

@@ -11,7 +11,7 @@ public class ChoseRobots : MonoBehaviour
 
     private void Start()
     {
-        index = ProgressGame.Instance.IndexRobot;
+        index = Progress.InstanceProgress.IndexRobot;
         Robots[index].SetActive(true);
     }
     public void ChoseRobotsDawn()
@@ -47,7 +47,7 @@ public class ChoseRobots : MonoBehaviour
 
     public void SaveRobotIndex()
     {
-        ProgressGame.Instance.IndexRobot = index;
+        Progress.InstanceProgress.IndexRobot = index;
     }
 
 

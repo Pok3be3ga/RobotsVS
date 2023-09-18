@@ -39,9 +39,9 @@ public class EnemyManager : MonoBehaviour
 
     private void Start()
     {
-        _chapterSettings = ChapterSettings[ProgressGame.Instance.IndexChapter];
-        ProgressGame.Instance.NumberOfWaves++;
-        _numberOfWaves = ProgressGame.Instance.NumberOfWaves;
+        _chapterSettings = ChapterSettings[Progress.InstanceProgress.IndexChapter];
+        Progress.InstanceProgress.NumberOfWaves++;
+        _numberOfWaves = Progress.InstanceProgress.NumberOfWaves;
     }
     public void Init(GameManager gameManager, GameStateManager gameStateManager)
     {
@@ -161,7 +161,7 @@ public class EnemyManager : MonoBehaviour
     private void OnLastKilled()
     {
         Debug.Log("OnLastKilled");
-        ProgressGame.Instance.IndexChapter++;
+        Progress.InstanceProgress.IndexChapter++;
         _gameStateManager.SetWin();
     }
 

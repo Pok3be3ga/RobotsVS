@@ -18,29 +18,29 @@ public class ChoseRobot : MonoBehaviour
         {
             Robots[i].SetActive(false);
         }
-        Robots[ProgressGame.Instance.IndexRobot].SetActive(true);
+        Robots[Progress.InstanceProgress.IndexRobot].SetActive(true);
 
-        if (ProgressGame.Instance.IndexRobot == 0)
+        if (Progress.InstanceProgress.IndexRobot == 0)
         {
             _rigidbodyMove.Speed = 4;
             _playerHealth.StartMaxHealth = 150;
         }
-        if (ProgressGame.Instance.IndexRobot == 1)
+        if (Progress.InstanceProgress.IndexRobot == 1)
         {
             _rigidbodyMove.Speed = 5;
             _playerHealth.StartMaxHealth = 120;
         }
-        if (ProgressGame.Instance.IndexRobot == 2)
+        if (Progress.InstanceProgress.IndexRobot == 2)
         {
             _rigidbodyMove.Speed = 8;
             _playerHealth.StartMaxHealth = 80;
         }
-        if (ProgressGame.Instance.IndexRobot == 3)
+        if (Progress.InstanceProgress.IndexRobot == 3)
         {
             _rigidbodyMove.Speed = 6;
             _playerHealth.StartMaxHealth = 100;
         }
-        if (ProgressGame.Instance.IndexRobot == 4)
+        if (Progress.InstanceProgress.IndexRobot == 4)
         {
             _rigidbodyMove.Speed = 5;
             _playerHealth.StartMaxHealth = 150;

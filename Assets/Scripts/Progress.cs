@@ -11,7 +11,7 @@ public class ProgressData
     [SerializeField] private int _lootLevel;
 
     [SerializeField] public int _chapter;
-    [SerializeField] public int _coins;
+    [SerializeField] public float _coins;
 
     
     public int HealthLevel
@@ -46,7 +46,7 @@ public class ProgressData
             SaveSystem.Save(this);
         }
     }
-    public int Coins
+    public float Coins
     {
         get => _coins; set
         {
@@ -59,10 +59,31 @@ public class ProgressData
 
 public class Progress : MonoBehaviour
 {
-    public ProgressData ProgressData; 
+    public ProgressData ProgressData;
+    public static Progress InstanceProgress;
+
+    public int IndexRobot = 0;
+    public int IndexChapter = 0;
+    public int NumberOfWaves = 4;
+
+
     public void Init()
     {
         ProgressData = SaveSystem.Load();
+    }
+
+    private void Awake()
+    {
+        if (InstanceProgress == null)
+        {
+            transform.parent = null;
+            DontDestroyOnLoad(gameObject);
+            InstanceProgress = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
 }
