@@ -99,7 +99,7 @@ MonoBehaviour:
   ColumnColor: {r: 0.9960785, g: 0.627451, b: 0.38823533, a: 1}
   _health: 25
   _rigidbody: {fileID: 2949437815831505586}
-  _speed: 1
+  _speed: 1.5
   _attackPeriod: 0.2
   _dps: 50
   _enemyHitPrefab: {fileID: 7642662276420158857, guid: 073e385a22bacac4ebd0e5609dc286cf,
@@ -153,8 +153,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.42
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.9
+  m_Center: {x: 0, y: 0, z: 0.2}
 --- !u!1 &3828470067755571897
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,8 +206,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.8327569
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.9
+  m_Center: {x: 0, y: 0, z: 0.1}
 --- !u!1 &7429468279925358289
 GameObject:
   m_ObjectHideFlags: 0
@@ -2216,4 +2216,4 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0.1}

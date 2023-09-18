@@ -97,9 +97,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ColumnColor: {r: 0.9960785, g: 0.627451, b: 0.38823533, a: 1}
-  _health: 25
+  _health: 20
   _rigidbody: {fileID: 2949437815831505586}
-  _speed: 1
+  _speed: 1.5
   _attackPeriod: 0.2
   _dps: 50
   _enemyHitPrefab: {fileID: 7642662276420158857, guid: 073e385a22bacac4ebd0e5609dc286cf,
@@ -153,7 +153,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.42
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3828470067755571897
 GameObject:
@@ -206,7 +206,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.8327569
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8258897730717544192
 GameObject:
