@@ -15,9 +15,9 @@ public class Player : MonoBehaviour
         _permanentProgress = permanentProgress;
     }
 
-    private float _damageBoost; // +10% ок
+    [SerializeField] private float _damageBoost; // +10% ок
     public float HealthRegeneration; // +1% ок
-    private float _maxHpBoost; //+10% ок
+    [SerializeField] private float _maxHpBoost; //+10% ок
     public float DamageReduction; // +5% ок
     public float MovementSpeed; // +10%   ок
     public float CollectionDistanceBoost; // +50% ок

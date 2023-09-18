@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class PermanentProgress : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class PermanentProgress : MonoBehaviour
     [SerializeField] private PermanentProgressCard _healthCard;
     [SerializeField] private PermanentProgressCard _damageCard;
     [SerializeField] private PermanentProgressCard _lootCard;
+
+    [SerializeField] private Player _player;
 
     private CoinCounter _coinCounter;
 

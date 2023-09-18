@@ -30,7 +30,7 @@ public class CoinCounter : MonoBehaviour
     public void AddCoins(int number)
     {
         NumberInLevel += number * (1 + _permanentProgress.GetLoot());
-        ProgressData.Coins += number;
+        _progress.ProgressData.Coins += number;
         //CoinsInGame += number;
 
         Display();
@@ -54,18 +54,18 @@ public class CoinCounter : MonoBehaviour
 
     public void SpendCoins(int value)
     {
-        ProgressData.Coins -= value;
+        _progress.ProgressData.Coins -= value;
         Display();
     }
 
     void Display()
     {
         //int totalNumber = _progress.ProgressData.Coins + Mathf.RoundToInt(NumberInLevel);
-        _coinsText.text = ProgressData.Coins.ToString(); //totalNumber.ToString();
+        _coinsText.text = _progress.ProgressData.Coins.ToString(); //totalNumber.ToString();
 
     }
     public void SaveToProgress()
     {
-        ProgressData.Coins = ProgressData.Coins;
+        //SaveSystem.Save(_progress.ProgressData);
     }
 }

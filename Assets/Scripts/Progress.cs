@@ -70,6 +70,7 @@ public class Progress : MonoBehaviour
     public void Init()
     {
         ProgressData = SaveSystem.Load();
+
     }
 
     private void Awake()

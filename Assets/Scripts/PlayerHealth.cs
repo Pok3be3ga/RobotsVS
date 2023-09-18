@@ -32,7 +32,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
     // возвращает максимально здоровье с учетом постоянной прокачки
-    private float GetMaxHealth() {
+    public float GetMaxHealth() {
         float result = StartMaxHealth * (1 + _player.MaxHpBoost);
         Debug.Log(result);
         return result;

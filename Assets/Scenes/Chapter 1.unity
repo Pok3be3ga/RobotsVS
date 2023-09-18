@@ -2351,7 +2351,6 @@ MonoBehaviour:
     _lootLevel: 0
     _chapter: 0
     _coins: 0
-  CoinsInGame: 0
 --- !u!4 &439927506
 Transform:
   m_ObjectHideFlags: 0
@@ -3598,6 +3597,7 @@ MonoBehaviour:
   _healthCard: {fileID: 1941580716}
   _damageCard: {fileID: 615720448}
   _lootCard: {fileID: 1890428520}
+  _player: {fileID: 8873387193165512676}
 --- !u!4 &720596258 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7273708822720978755, guid: c54ae8c68c5cdd54585f7b7e66899ce0,
@@ -6142,7 +6142,10 @@ MonoBehaviour:
     _damageLevel: 0
     _lootLevel: 0
     _chapter: 0
-    _coins: 50
+    _coins: 0
+  IndexRobot: 0
+  IndexChapter: 0
+  NumberOfWaves: 4
 --- !u!4 &1176852731
 Transform:
   m_ObjectHideFlags: 0
@@ -7882,6 +7885,9 @@ MonoBehaviour:
     _lootLevel: 0
     _chapter: 0
     _coins: 0
+  IndexRobot: 0
+  IndexChapter: 0
+  NumberOfWaves: 4
 --- !u!4 &1484735717 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7895182287314768312, guid: f886824f56deb914197400c459000e03,
@@ -33159,7 +33165,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerHealth: {fileID: 1713029519600081093}
+  _damageBoost: 0
   HealthRegeneration: 0
+  _maxHpBoost: 0
   DamageReduction: 0
   MovementSpeed: 0
   CollectionDistanceBoost: 0
