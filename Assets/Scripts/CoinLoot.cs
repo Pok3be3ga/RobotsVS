@@ -10,6 +10,7 @@ public class CoinLoot : Loot
     private void Awake()
     {
         LootType = LootType.Coin;
+        _value += Progress.InstanceProgress.ProgressData.LootLevel;
     }
 
     protected override void Take(Collector coinCollector)

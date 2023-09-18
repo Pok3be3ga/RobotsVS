@@ -13,6 +13,8 @@ public class Bootstrapper : MonoBehaviour
 
     private void Awake()
     {
+
+        _progress = FindAnyObjectByType<Progress>();
         _progress.Init();
         _permanentProgress.Init(_progress, _coinCounter);
         _gameStateManager.Init();

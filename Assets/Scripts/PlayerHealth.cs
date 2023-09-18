@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public float StartMaxHealth = 100f;
-    private float _maxHealth;
+    [SerializeField] private float _maxHealth;
     private float _currentHealth;
     [SerializeField] private Player _player;
     public Action<float, float, bool> OnChangeHealth;
@@ -27,7 +27,7 @@ public class PlayerHealth : MonoBehaviour
     public void Init(GameStateManager gameStateManager)
     {
         _gameStateManager = gameStateManager;
-        _maxHealth = GetMaxHealth();
+        _maxHealth = GetMaxHealth() + Progress.InstanceProgress.ProgressData.HealthLevel * 10;
         SetHealth(_maxHealth, false);
     }
 

@@ -11,6 +11,8 @@ public class Flamethrower : MonoBehaviour
     private float _piriod;
     private float _timer;
 
+    Enemy[] _enemy;
+
     public void Init(Transform target, float damage, float period)
     {
         _target = target;
@@ -26,9 +28,9 @@ public class Flamethrower : MonoBehaviour
         transform.position = _target.position;
         transform.rotation = _target.rotation;
     }
-    
     private void OnTriggerStay(Collider other)
     {
+
         if (_timer > _piriod)
         {
             if (other.GetComponent<Enemy>() is Enemy enemy)

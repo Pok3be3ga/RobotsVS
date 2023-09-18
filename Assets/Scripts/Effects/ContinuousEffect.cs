@@ -47,7 +47,7 @@ public class ContinuousEffect : Effect
         if (skill == Skill.Colldown) {
             value *= (1 - _player.ColldownReduction);
         } else if (skill == Skill.Damage) {
-            value *= (1 + _player.DamageBoost);
+            value *= (1 + _player.DamageBoost + (Progress.InstanceProgress.ProgressData.DamageLevel) * 0.5f);
         }
         else if (skill == Skill.Radius)
         {

@@ -2912,6 +2912,7 @@ MonoBehaviour:
   _healthCard: {fileID: 0}
   _damageCard: {fileID: 0}
   _lootCard: {fileID: 0}
+  _player: {fileID: 0}
 --- !u!1 &1605203072
 GameObject:
   m_ObjectHideFlags: 0
@@ -3554,7 +3555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ProgressData:
-    _healthLevel: 5
+    _healthLevel: 100
     _damageLevel: 0
     _lootLevel: 0
     _chapter: 0
