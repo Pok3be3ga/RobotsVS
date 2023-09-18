@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float _health = 50;
     private Transform _playerTransform;
     [SerializeField] Rigidbody _rigidbody;
-    [SerializeField] float _speed = 3f;
+    public float speed = 3f;
     private PlayerHealth _playerHealth;
     private float _attackTimer;
     [SerializeField] private float _attackPeriod = 1f;
@@ -60,7 +60,7 @@ public class Enemy : MonoBehaviour
         }
         Quaternion targetRotation = Quaternion.LookRotation(toPlayer);
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * _rotationLerp);
-        _rigidbody.velocity = transform.forward * _speed;
+        _rigidbody.velocity = transform.forward * speed;
     }
 
     private void OnTriggerEnter(Collider other)
