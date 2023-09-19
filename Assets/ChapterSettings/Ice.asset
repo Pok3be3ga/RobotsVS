@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 669e8109c1ddac3439204c8ea2b6bea0, type: 3}
-  m_Name: Chapter 0
+  m_Name: Ice
   m_EditorClassIdentifier: 
   EnemyWavesArray:
-  - Enemy: {fileID: 418030179873237852, guid: 0411d3094b26a9045ac704b8bede6aeb, type: 3}
+  - Enemy: {fileID: 418030179873237852, guid: 478ac5358d445ac43ac9a80637a7f025, type: 3}
     NumberPerSecond:
-    - 0.4
+    - 1
     - 1
     - 2.0828013
     - 2.3856022
@@ -65,7 +65,7 @@ MonoBehaviour:
     - 11.457438
     - 11.685455
     - 11.913378
-  - Enemy: {fileID: 418030179873237852, guid: f3ac82ab432bd6946a5ef464ec7ddf12, type: 3}
+  - Enemy: {fileID: 418030179873237852, guid: deb945e06607e7c4992641936cbd75c5, type: 3}
     NumberPerSecond:
     - 0
     - 0
@@ -117,16 +117,16 @@ MonoBehaviour:
     - 5.9195004
     - 0
     - 0
-  - Enemy: {fileID: 418030179873237852, guid: 89be3627d3ed3c44d865a7b926bb338e, type: 3}
+  - Enemy: {fileID: 6177058380949903985, guid: 84466f82818fdce46ba19797de6852d3, type: 3}
     NumberPerSecond:
     - 0
     - 0
-    - 1
-    - 0
-    - 1
     - 0
     - 0
     - 1
+    - 0
+    - 0
+    - 0
     - 1
     - 0
     - 0
