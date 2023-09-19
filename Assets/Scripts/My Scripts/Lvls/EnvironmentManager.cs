@@ -7,8 +7,6 @@ using UnityEngine;
 public class EnvironmentManager : MonoBehaviour
 {
     [SerializeField] private Environment _environment;
-    private GameManager _gameManager;
-    private GameStateManager _gameStateManager;
     [SerializeField] private Renderer _spawnArea;
 
     private string _resourcePath;
@@ -35,11 +33,8 @@ public class EnvironmentManager : MonoBehaviour
         }
     }
 
-    public void Init(GameManager gameManager, GameStateManager gameStateManager)
+    public void Init()
     {
-        _gameManager = gameManager;
-        _gameStateManager = gameStateManager;
-
         _spawnAreaSizeZ = _spawnArea.bounds.size.z;
         _spawnAreaSizeX = _spawnArea.bounds.size.x;
         LoadNewGround();

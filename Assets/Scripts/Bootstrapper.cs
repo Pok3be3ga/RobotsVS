@@ -10,15 +10,16 @@ public class Bootstrapper : MonoBehaviour
     [SerializeField] private GameStateManager _gameStateManager;
     [SerializeField] private CoinCounter _coinCounter;
     [SerializeField] private ChapterDisplay _chapterDisplay;
+    [SerializeField] private EnvironmentManager _environmentManager;
 
     private void Awake()
     {
-
         _progress = FindAnyObjectByType<Progress>();
         _progress.Init();
         _permanentProgress.Init(_progress, _coinCounter);
         _gameStateManager.Init();
         _coinCounter.Init(_progress, _permanentProgress);
+        _environmentManager.Init();
     }
 
 }

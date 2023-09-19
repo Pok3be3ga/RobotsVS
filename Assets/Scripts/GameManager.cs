@@ -34,8 +34,6 @@ public class GameManager : MonoBehaviour
         _enemyManager.Init(this, gameStateManager);
         _effectsManager.OnHideCards += WhenHideCards;
         _pauseButton.Init(gameStateManager);
-
-        _environmentManager.Init(this, gameStateManager);
     }
 
     public void SetFirstLevel()

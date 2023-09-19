@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.09181083, g: 0.09337396, b: 0.1518588, a: 1}
+  m_IndirectSpecularColor: {r: 0.09181083, g: 0.093374155, b: 0.1518588, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5488,6 +5488,7 @@ MonoBehaviour:
   _gameStateManager: {fileID: 33470073}
   _coinCounter: {fileID: 439927505}
   _chapterDisplay: {fileID: 1328201843}
+  _environmentManager: {fileID: 1662317524}
 --- !u!1 &1061911993
 GameObject:
   m_ObjectHideFlags: 0
@@ -8698,7 +8699,7 @@ MonoBehaviour:
   _environment: {fileID: 0}
   _spawnArea: {fileID: 1123449433}
   _ground: {fileID: 1771399229}
-  LvlNumber: 4
+  LvlNumber: 1
   _loadedObjects: []
   density: 0.771
   spawnMore: 0
@@ -10745,7 +10746,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2002672898
 Transform:
   m_ObjectHideFlags: 0

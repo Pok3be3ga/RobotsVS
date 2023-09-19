@@ -5624,6 +5624,7 @@ MonoBehaviour:
   _gameStateManager: {fileID: 33470073}
   _coinCounter: {fileID: 439927505}
   _chapterDisplay: {fileID: 1328201843}
+  _environmentManager: {fileID: 1662317524}
 --- !u!1 &1061911993
 GameObject:
   m_ObjectHideFlags: 0
@@ -9076,7 +9077,7 @@ MonoBehaviour:
   _environment: {fileID: 0}
   _spawnArea: {fileID: 1123449433}
   _ground: {fileID: 1771399229}
-  LvlNumber: 1
+  LvlNumber: 2
   _loadedObjects: []
   density: 0.771
   spawnMore: 0
@@ -31975,6 +31976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartMaxHealth: 100
+  _maxHealth: 0
   _player: {fileID: 8873387193165512676}
   RegenerationPeriod: 1
   DamageAudio: {fileID: 320564615}
