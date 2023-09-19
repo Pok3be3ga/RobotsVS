@@ -190,15 +190,6 @@ public class EffectsManager : MonoBehaviour
         {
             effect.ProcessFrame(Time.deltaTime * (1 + _player.ColldownReduction) );
         }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ShowCards(1);
-        }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            ShowCards(2);
-        }
     }
 
 

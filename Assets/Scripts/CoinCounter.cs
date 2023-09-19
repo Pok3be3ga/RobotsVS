@@ -9,6 +9,8 @@ public class CoinCounter : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _coinsText;
     [SerializeField] private AnimationCurve _scaleCurve;
 
+    [SerializeField] AudioSource _dontAudio;
+
     public ProgressData ProgressData;
     private Progress _progress;
     private PermanentProgress _permanentProgress;
@@ -58,7 +60,7 @@ public class CoinCounter : MonoBehaviour
         Display();
     }
 
-    void Display()
+    public void Display()
     {
         //int totalNumber = _progress.ProgressData.Coins + Mathf.RoundToInt(NumberInLevel);
         _coinsText.text = _progress.ProgressData.Coins.ToString(); //totalNumber.ToString();
@@ -68,4 +70,6 @@ public class CoinCounter : MonoBehaviour
     {
         //SaveSystem.Save(_progress.ProgressData);
     }
+
+
 }

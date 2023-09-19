@@ -39,15 +39,15 @@ public class EnemyManager : MonoBehaviour
 
     private void Start()
     {
-        _chapterSettings = ChapterSettings[Progress.InstanceProgress.IndexChapter];
-        Progress.InstanceProgress.NumberOfWaves++;
-        _numberOfWaves = Progress.InstanceProgress.NumberOfWaves;
+
     }
     public void Init(GameManager gameManager, GameStateManager gameStateManager)
     {
         _gameManager = gameManager;
         _gameStateManager = gameStateManager;
         _gameManager.OnUpLevel += UpLevel;
+        _chapterSettings = ChapterSettings[Progress.InstanceProgress.IndexChapter];
+        _numberOfWaves = Progress.InstanceProgress.ProgressData.NumberOfWaves;
         SetupEnemies();
     }
 
@@ -111,6 +111,8 @@ public class EnemyManager : MonoBehaviour
 
     void Update()
     {
+        
+
         // если волна последняя, то больше никого не создавать
         if (_isWaveLast) return;
 
@@ -158,10 +160,14 @@ public class EnemyManager : MonoBehaviour
     }
 
     // Когда последний враг убит
-    private void OnLastKilled()
+    public void OnLastKilled()
     {
-        Debug.Log("OnLastKilled");
         Progress.InstanceProgress.IndexChapter++;
+        if (Progress.InstanceProgress.IndexChapter == 3)
+        {
+            Progress.InstanceProgress.IndexChapter = 0;
+        }
+        Progress.InstanceProgress.ProgressData.NumberOfWaves++;
         _gameStateManager.SetWin();
     }
 

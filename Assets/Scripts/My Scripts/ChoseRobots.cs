@@ -8,11 +8,13 @@ public class ChoseRobots : MonoBehaviour
 {
     [SerializeField] int index;
     public GameObject[] Robots;
+    public GameObject[] Button;
 
     private void Start()
     {
         index = Progress.InstanceProgress.IndexRobot;
         Robots[index].SetActive(true);
+        Button[index].SetActive(true);
     }
     public void ChoseRobotsDawn()
     {
@@ -22,6 +24,14 @@ public class ChoseRobots : MonoBehaviour
         {
             index = 0;
         }
+
+        for (int i = 0; i < Button.Length; i++)
+        {
+            Button[i].SetActive(false);
+        }
+        Button[index].SetActive(true);
+
+
         for (int i = 0; i < Robots.Length; i++)
         {
             Robots[i].SetActive(false);
@@ -37,6 +47,14 @@ public class ChoseRobots : MonoBehaviour
         {
             index = Robots.Length - 1;
         }
+
+        for (int i = 0; i < Button.Length; i++)
+        {
+            Button[i].SetActive(false);
+        }
+        Button[index].SetActive(true);
+
+
         for (int i = 0; i < Robots.Length; i++)
         {
             Robots[i].SetActive(false);
