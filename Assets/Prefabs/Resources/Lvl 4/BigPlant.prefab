@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6653058975759251312}
   - component: {fileID: 7998081391963419774}
   - component: {fileID: -4984890119355459622}
+  - component: {fileID: 1915705480045708132}
   m_Layer: 3
   m_Name: BigPlant
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6613867234113981436}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.68686, y: 7.547211, z: -16.99184}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -99,3 +100,24 @@ MonoBehaviour:
   spawnArea: {fileID: 0}
   spawnAreaSizeZ: 0
   spawnAreaSizeX: 0
+--- !u!135 &1915705480045708132
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6613867234113981436}
+  m_Material: {fileID: 13400000, guid: 357d02571d2c0eb4f8c0f9e679bf0b7b, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: -0.12, y: 0, z: -0.1}

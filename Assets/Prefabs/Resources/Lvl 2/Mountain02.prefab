@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 5257232359891525075}
   - component: {fileID: 8003327219358574873}
   - component: {fileID: 4593431258572562717}
-  m_Layer: 0
+  - component: {fileID: 1788365420716767939}
+  m_Layer: 3
   m_Name: Mountain02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -99,3 +100,24 @@ MonoBehaviour:
   spawnArea: {fileID: 0}
   spawnAreaSizeZ: 0
   spawnAreaSizeX: 0
+--- !u!135 &1788365420716767939
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8363602064440985804}
+  m_Material: {fileID: 13400000, guid: 357d02571d2c0eb4f8c0f9e679bf0b7b, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 2.06
+  m_Center: {x: 0, y: 0, z: -0.07}

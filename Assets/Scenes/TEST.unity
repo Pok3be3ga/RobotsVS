@@ -2345,12 +2345,14 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _dontAudio: {fileID: 0}
   ProgressData:
     _healthLevel: 0
     _damageLevel: 0
     _lootLevel: 0
     _chapter: 0
     _coins: 0
+    _numberOfWaves: 5
 --- !u!4 &439927506
 Transform:
   m_ObjectHideFlags: 0
@@ -6144,9 +6146,9 @@ MonoBehaviour:
     _lootLevel: 0
     _chapter: 0
     _coins: 0
+    _numberOfWaves: 5
   IndexRobot: 0
   IndexChapter: 0
-  NumberOfWaves: 4
 --- !u!4 &1176852731
 Transform:
   m_ObjectHideFlags: 0
@@ -7886,9 +7888,9 @@ MonoBehaviour:
     _lootLevel: 0
     _chapter: 0
     _coins: 0
+    _numberOfWaves: 5
   IndexRobot: 0
   IndexChapter: 0
-  NumberOfWaves: 4
 --- !u!4 &1484735717 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7895182287314768312, guid: f886824f56deb914197400c459000e03,
@@ -9077,7 +9079,7 @@ MonoBehaviour:
   _environment: {fileID: 0}
   _spawnArea: {fileID: 1123449433}
   _ground: {fileID: 1771399229}
-  LvlNumber: 2
+  LvlNumber: 4
   _loadedObjects: []
   density: 0.771
   spawnMore: 0

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8562219722762056497}
   - component: {fileID: -1726760729612170923}
   - component: {fileID: 3244556335193566934}
+  - component: {fileID: 6994668152516731830}
   m_Layer: 3
   m_Name: Ribs
   m_TagString: Untagged
@@ -107,7 +108,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7913916399506739940}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 357d02571d2c0eb4f8c0f9e679bf0b7b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -119,5 +120,26 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 2.6
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 1.35
+  m_Center: {x: 1.23, y: 0, z: -1.19}
+--- !u!135 &6994668152516731830
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7913916399506739940}
+  m_Material: {fileID: 13400000, guid: 357d02571d2c0eb4f8c0f9e679bf0b7b, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 2.06
+  m_Center: {x: -0.73, y: 0, z: 0.7}

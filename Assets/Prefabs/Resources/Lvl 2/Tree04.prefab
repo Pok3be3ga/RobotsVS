@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 3223144810614715108}
   - component: {fileID: 819125619391825454}
   - component: {fileID: -2800663696275403848}
-  m_Layer: 0
+  - component: {fileID: 3478206118595128028}
+  m_Layer: 3
   m_Name: Tree04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,3 +100,24 @@ MonoBehaviour:
   spawnArea: {fileID: 0}
   spawnAreaSizeZ: 0
   spawnAreaSizeX: 0
+--- !u!135 &3478206118595128028
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179628749502162939}
+  m_Material: {fileID: 13400000, guid: 357d02571d2c0eb4f8c0f9e679bf0b7b, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.25
+  m_Center: {x: 0, y: 0, z: 0}
