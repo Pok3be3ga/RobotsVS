@@ -12,21 +12,37 @@ public class Environment : MonoBehaviour
     private Vector3 _newPosition;
     private float _randomValue;
 
+    private float _objectRadius;
+
+    private void Start()
+    {
+        _objectRadius = GetComponent<SphereCollider>().radius;
+    }
+
     private void FixedUpdate()
     {
         if (!spawnArea.bounds.Contains(transform.position))
         {
             _newPosition = transform.position;
-            _randomValue = Random.Range(-180,180);
+            _randomValue = Random.Range(-180, 180);
 
             if (transform.position.x < spawnArea.bounds.min.x || transform.position.x > spawnArea.bounds.max.x)
             {
-                _newPosition.x = transform.position.x < spawnArea.bounds.min.x ? spawnArea.bounds.max.x : spawnArea.bounds.min.x;
+
+                do
+                {
+                    _newPosition.x = transform.position.x < spawnArea.bounds.min.x ? spawnArea.bounds.max.x : spawnArea.bounds.min.x;
+                } while (Physics.CheckSphere(_newPosition, _objectRadius, LayerMask.GetMask("Ground")));
+
                 _newPosition.z += _randomValue / 20;
             }
             else
             {
-                _newPosition.x += _randomValue / 20;
+                do
+                {
+                    _newPosition.x += _randomValue / 20;
+                } while (Physics.CheckSphere(_newPosition, _objectRadius, LayerMask.GetMask("Ground")));
+
                 _newPosition.z = transform.position.z < spawnArea.bounds.min.z ? spawnArea.bounds.max.z : spawnArea.bounds.min.z;
             }
 
