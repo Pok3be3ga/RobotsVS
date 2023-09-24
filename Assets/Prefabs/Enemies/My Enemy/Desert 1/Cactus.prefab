@@ -58,7 +58,6 @@ GameObject:
   - component: {fileID: 4742341989202962196}
   - component: {fileID: 2674009030413930258}
   - component: {fileID: 1015121240791116726}
-  - component: {fileID: 3124322665886589663}
   m_Layer: 3
   m_Name: Cactus
   m_TagString: Untagged
@@ -131,21 +130,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3124322665886589663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 189350217710051306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5864ed6c2ca42a5448feb0e06b6162df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnArea: {fileID: 0}
-  spawnAreaSizeZ: 0
-  spawnAreaSizeX: 0
 --- !u!1 &715163565419134395
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,8 +184,8 @@ MonoBehaviour:
   _health: 30
   _rigidbody: {fileID: 2949437815831505586}
   speed: 0.4
-  _attackPeriod: 0.2
-  _dps: 50
+  _attackPeriod: 1
+  _dps: 25
   _enemyHitPrefab: {fileID: 7642662276420158857, guid: 073e385a22bacac4ebd0e5609dc286cf,
     type: 3}
   _deathEffect: {fileID: 8891085540853434729, guid: a76161fe5e4d2c447965f3a0c359e851,

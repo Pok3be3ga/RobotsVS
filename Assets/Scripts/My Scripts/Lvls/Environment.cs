@@ -16,7 +16,15 @@ public class Environment : MonoBehaviour
 
     private void Start()
     {
-        _objectRadius = GetComponent<SphereCollider>().radius;
+        if(GetComponent<SphereCollider>())
+        {
+            _objectRadius = GetComponent<SphereCollider>().radius;
+        }
+        else
+        {
+            _objectRadius = 0;
+        }
+        
     }
 
     private void FixedUpdate()

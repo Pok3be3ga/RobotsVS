@@ -163,7 +163,7 @@ public class EnemyManager : MonoBehaviour
     public void OnLastKilled()
     {
         Progress.InstanceProgress.IndexChapter++;
-        if (Progress.InstanceProgress.IndexChapter == 3)
+        if (Progress.InstanceProgress.IndexChapter == 4)
         {
             Progress.InstanceProgress.IndexChapter = 0;
         }

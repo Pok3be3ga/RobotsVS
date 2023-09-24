@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5108751998528209876}
@@ -161,11 +161,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ColumnColor: {r: 0.9960785, g: 0.627451, b: 0.38823533, a: 1}
-  _health: 8
+  _health: 16
   _rigidbody: {fileID: 2949437815831505586}
-  _speed: 2.5
-  _attackPeriod: 0.2
-  _dps: 8
+  speed: 3
+  _attackPeriod: 1
+  _dps: 20
   _enemyHitPrefab: {fileID: 7642662276420158857, guid: 073e385a22bacac4ebd0e5609dc286cf,
     type: 3}
   _deathEffect: {fileID: 8891085540853434729, guid: a76161fe5e4d2c447965f3a0c359e851,
