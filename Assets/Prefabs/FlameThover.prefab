@@ -54,9 +54,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1
-  m_Height: 2.66
+  m_Height: 3
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 1.96}
+  m_Center: {x: 0, y: 0, z: 2}
 --- !u!114 &6582071131593300935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,10 +69,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56428f096f98b384aa6a6771d1a9361c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _radius: 5
   _layerMask:
     serializedVersion: 2
     m_Bits: 64
+  _enemyList: []
 --- !u!1001 &5280113314672828302
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -107,15 +107,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4740318220287132, guid: 8034c324275e80840a3765424d2dd97a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0000004891818
+      value: -0.018
       objectReference: {fileID: 0}
     - target: {fileID: 4740318220287132, guid: 8034c324275e80840a3765424d2dd97a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.50000024
+      value: 0.529
       objectReference: {fileID: 0}
     - target: {fileID: 4740318220287132, guid: 8034c324275e80840a3765424d2dd97a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.4999998
+      value: 0.4675
       objectReference: {fileID: 0}
     - target: {fileID: 4740318220287132, guid: 8034c324275e80840a3765424d2dd97a, type: 3}
       propertyPath: m_LocalRotation.w

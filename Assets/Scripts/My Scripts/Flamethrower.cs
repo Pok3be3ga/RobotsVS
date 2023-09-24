@@ -11,17 +11,8 @@ public class Flamethrower : MonoBehaviour
     private float _piriod;
     private float _timer;
 
-    [SerializeField] private float _radius = 5f;
     [SerializeField] private LayerMask _layerMask;
-    private const int _arraySize = 50;
-
-    private Collider[] _colliders = new Collider[_arraySize];
-    private Enemy[] _enemiesToDrag = new Enemy[_arraySize];
-    Enemy[] _enemy;
-    private void Start()
-    {
-        StartCoroutine(GetEnemiesToDrag());
-    }
+    public List<Enemy> _enemyList;
     public void Init(Transform target, float damage, float period)
     {
         _target = target;
@@ -31,6 +22,14 @@ public class Flamethrower : MonoBehaviour
     private void Update()
     {
         _timer += Time.deltaTime;
+        for (int i = 0; i < _enemyList.Count; i++)
+        {
+            if (_enemyList[i] == null)
+            {
+                _enemyList.RemoveAt(i);
+            }
+        }
+        
     }
     private void LateUpdate()
     {
@@ -39,46 +38,26 @@ public class Flamethrower : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-
-        //int numberOfColliders = Physics.OverlapSphereNonAlloc(transform.position, _radius, _colliders, _layerMask, QueryTriggerInteraction.Ignore);
-        //for (int i = 0; i < numberOfColliders; i++)
-        //{
-        //    _enemiesToDrag[i] = _colliders[i].GetComponent<Enemy>();
-        //    //_enemiesToDrag[i].SetDamage(_damage);
-        //}
-        //for (int i = numberOfColliders; i < _arraySize; i++)
-        //{
-        //    _enemiesToDrag[i] = null;
-        //    //_enemiesToDrag[i].SetDamage(_damage);
-        //}
-
-
         if (_timer > _piriod)
         {
-            if (other.GetComponent<Enemy>() is Enemy enemy)
+            for (int i = 0; i < _enemyList.Count; i++)
             {
-                enemy.SetDamage(_damage);
+                _enemyList[i].SetDamage(_damage);
             }
             _timer = 0;
         }
     }
-
-    private IEnumerator GetEnemiesToDrag()
+    private void OnTriggerEnter(Collider other)
     {
-        while (true)
+        if (other.gameObject.GetComponent<Enemy>())
         {
-            int numberOfColliders = Physics.OverlapSphereNonAlloc(transform.position, _radius, _colliders, _layerMask, QueryTriggerInteraction.Ignore);
+            _enemyList.Add(other.GetComponent<Enemy>());
 
-            for (int i = 0; i < numberOfColliders; i++)
-            {
-                _enemiesToDrag[i] = _colliders[i].GetComponent<Enemy>();
-            }
-            for (int i = numberOfColliders; i < _arraySize; i++)
-            {
-                _enemiesToDrag[i] = null;
-            }
-
-            yield return new WaitForSeconds(0.16f);
         }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        _enemyList.Remove(other.GetComponent<Enemy>());
+    }
+    
 }

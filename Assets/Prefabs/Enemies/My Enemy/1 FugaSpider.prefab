@@ -1271,9 +1271,9 @@ MonoBehaviour:
   ColumnColor: {r: 0.9960785, g: 0.627451, b: 0.38823533, a: 1}
   _health: 4
   _rigidbody: {fileID: 2949437815831505586}
-  speed: 5
-  _attackPeriod: 0.2
-  _dps: 5
+  speed: 4.5
+  _attackPeriod: 1
+  _dps: 8
   _enemyHitPrefab: {fileID: 7642662276420158857, guid: 073e385a22bacac4ebd0e5609dc286cf,
     type: 3}
   _deathEffect: {fileID: 8891085540853434729, guid: a76161fe5e4d2c447965f3a0c359e851,

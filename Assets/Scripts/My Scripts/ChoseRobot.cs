@@ -14,6 +14,12 @@ public class ChoseRobot : MonoBehaviour
     public float SpeedRobot3;
     public float SpeedRobot4;
     public float SpeedRobot5;
+
+    public float HealthCefficent1;
+    public float HealthCefficent2;
+    public float HealthCefficent3;
+    public float HealthCefficent4;
+    public float HealthCefficent5;
     
 
     private void Start()
@@ -28,23 +34,29 @@ public class ChoseRobot : MonoBehaviour
         if (Progress.InstanceProgress.IndexRobot == 0)
         {
             _rigidbodyMove.Speed = SpeedRobot1;
+            _playerHealth.StartMaxHealth *= HealthCefficent1;
+
         }
         if (Progress.InstanceProgress.IndexRobot == 1)
         {
             _rigidbodyMove.Speed = SpeedRobot2;
+            _playerHealth.StartMaxHealth *= HealthCefficent2;
         }
         if (Progress.InstanceProgress.IndexRobot == 2)
         {
             _rigidbodyMove.Speed = SpeedRobot3;
+            _playerHealth.StartMaxHealth *= HealthCefficent3;
         }
         if (Progress.InstanceProgress.IndexRobot == 3)
         {
             _rigidbodyMove.Speed = SpeedRobot4;
+            _playerHealth.StartMaxHealth *= HealthCefficent4;
 
         }
         if (Progress.InstanceProgress.IndexRobot == 4)
         {
-            _rigidbodyMove.Speed = SpeedRobot5; ;
+            _rigidbodyMove.Speed = SpeedRobot5;
+            _playerHealth.StartMaxHealth *= HealthCefficent5;
         }
     }
 }
