@@ -255,10 +255,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ColumnColor: {r: 1, g: 0.70535606, b: 0.514151, a: 1}
-  _health: 4
+  _health: 12
   _rigidbody: {fileID: 6177058380949903998}
   speed: 4
-  _attackPeriod: 1
+  _attackPeriod: 0.5
   _dps: 10
   _enemyHitPrefab: {fileID: 7642662276420158857, guid: 073e385a22bacac4ebd0e5609dc286cf,
     type: 3}

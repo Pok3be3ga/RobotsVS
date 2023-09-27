@@ -97,10 +97,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ColumnColor: {r: 0.9960785, g: 0.627451, b: 0.38823533, a: 1}
-  _health: 4
+  _health: 18
   _rigidbody: {fileID: 2949437815831505586}
   speed: 5
-  _attackPeriod: 1
+  _attackPeriod: 0.5
   _dps: 5
   _enemyHitPrefab: {fileID: 7642662276420158857, guid: 073e385a22bacac4ebd0e5609dc286cf,
     type: 3}

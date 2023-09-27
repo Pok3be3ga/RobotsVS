@@ -15,7 +15,7 @@ public class MenuState : GameState
         //base.EnterFirstTime();
         Debug.Log(_gameStateManager);
         _startMenu.Init(_gameStateManager);
-        _chapterDisplay.Set(Progress.InstanceProgress.ProgressData.Chapter);
+        _chapterDisplay.Set(Progress.InstanceProgress.IndexChapter);
     }
 
 

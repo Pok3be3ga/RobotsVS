@@ -100,7 +100,7 @@ MonoBehaviour:
   _health: 50
   _rigidbody: {fileID: 2949437815831505586}
   speed: 4
-  _attackPeriod: 1
+  _attackPeriod: 0.5
   _dps: 30
   _enemyHitPrefab: {fileID: 7642662276420158857, guid: 073e385a22bacac4ebd0e5609dc286cf,
     type: 3}
