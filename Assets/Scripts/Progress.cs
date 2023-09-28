@@ -1,4 +1,5 @@
 #if UNITY_EDITOR
+using System.Runtime.InteropServices;
 using UnityEditor;
 #endif
 using UnityEngine;
@@ -68,12 +69,18 @@ public class ProgressData
 
 public class Progress : MonoBehaviour
 {
+    //[DllImport("__Internal")]
+    //private static extern void SaveExtern(string date);
+    //[DllImport("__Internal")]
+    //private static extern void LoadExtern();
+
+
+
     public ProgressData ProgressData;
     public static Progress InstanceProgress;
 
     public int IndexRobot = 0;
     public int IndexChapter = 0;
-    //public int NumberOfWaves = 4;
 
 
     public void Init()

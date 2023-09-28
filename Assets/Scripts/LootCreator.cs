@@ -10,10 +10,11 @@ public class LootCreator : MonoBehaviour
     [SerializeField] private Loot _loot;
     [SerializeField] private Transform _playerTransform;
     [SerializeField] float _creationDistance;
-    private float _timer;
+    [SerializeField] private float _timer;
 
     private void Update()
     {
+        if (Time.timeScale < 1f) _timer = _timer;
         _timer += Time.deltaTime;
         if (_timer > _period) {
             Vector2 randomPoint = Random.insideUnitCircle;
