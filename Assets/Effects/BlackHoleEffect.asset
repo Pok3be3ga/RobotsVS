@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: "\u0427\u0435\u0440\u043D\u0430\u044F \u0434\u044B\u0440\u0430"
   Description: "\u041D\u0430\u043D\u043E\u0441\u0438\u0442 \u0443\u0440\u043E\u043D
     \u0438 \u0437\u0430\u0441\u0430\u0441\u044B\u0432\u0430\u0435\u0442"
-  Sprite: {fileID: 21300000, guid: 80258d376fa9e3a4bb7dc8bc1483dec4, type: 3}
+  Sprite: {fileID: 21300000, guid: 0d08c1e2935e43f4a958e51facd127ae, type: 3}
   Level: 0
   ActiveSkills: 01000100010001
   SkillLevels:
