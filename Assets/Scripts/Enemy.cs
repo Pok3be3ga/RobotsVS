@@ -26,18 +26,20 @@ public class Enemy : MonoBehaviour
     private bool _isFrozen;
     [SerializeField] private float _rotationLerp = 3f;
 
-    public void Init(Transform playerTransform, EnemyManager enemyManager)
+    public void Init(Transform playerTransform, EnemyManager enemyManager, int level)
     {
         _playerTransform = playerTransform;
         _attackTimer = 0f;
         _enemyManager = enemyManager;
+        _health += level * 2;
         _enemyHit = Instantiate(_enemyHitPrefab, transform.position, Quaternion.identity);
         _enemyHit.Init();
     }
 
     private void Update()
     {
-        if (_playerHealth) {
+        if (_playerHealth)
+        {
             _attackTimer += Time.deltaTime;
             if (_attackTimer > _attackPeriod)
             {
@@ -45,7 +47,7 @@ public class Enemy : MonoBehaviour
                 _playerHealth.SetDamage(_dps * _attackPeriod);
             }
         }
-        
+
     }
 
     void FixedUpdate()
@@ -55,7 +57,8 @@ public class Enemy : MonoBehaviour
         if (_isFrozen) return;
         Vector3 toPlayer = _playerTransform.position - transform.position;
         // TODO: Убрать магическое число
-        if (toPlayer.magnitude > 32f) {
+        if (toPlayer.magnitude > 32f)
+        {
             transform.position += toPlayer * 1.95f;
         }
         Quaternion targetRotation = Quaternion.LookRotation(toPlayer);
@@ -73,7 +76,8 @@ public class Enemy : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (other.attachedRigidbody)
-            if (other.attachedRigidbody.GetComponent<PlayerHealth>()) {
+            if (other.attachedRigidbody.GetComponent<PlayerHealth>())
+            {
                 _attackTimer = 0f;
                 _playerHealth = null;
             }

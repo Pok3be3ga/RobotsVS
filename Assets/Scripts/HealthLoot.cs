@@ -14,7 +14,7 @@ public class HealthLoot : Loot
     {
         base.Take(coinCollector);
         // TODO: убрать FindObjectOfType
-        FindObjectOfType<PlayerHealth>().SetMaxHealth();
+        FindObjectOfType<PlayerHealth>().GetHealed();
     }
 
 }

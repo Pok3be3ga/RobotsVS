@@ -203,7 +203,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.4
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6177058380949903999
 GameObject:
@@ -257,7 +257,7 @@ MonoBehaviour:
   ColumnColor: {r: 1, g: 0.70535606, b: 0.514151, a: 1}
   _health: 12
   _rigidbody: {fileID: 6177058380949903998}
-  speed: 4
+  speed: 3.5
   _attackPeriod: 0.5
   _dps: 10
   _enemyHitPrefab: {fileID: 7642662276420158857, guid: 073e385a22bacac4ebd0e5609dc286cf,

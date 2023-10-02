@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.ProBuilder.MeshOperations;
 
 public class EnemyManager : MonoBehaviour
 {
@@ -34,9 +35,9 @@ public class EnemyManager : MonoBehaviour
 
     private bool _isWaveLast = false;
 
+    private int _level = 0;
+
     private GameStateManager _gameStateManager;
-
-
     private void Start()
     {
 
@@ -61,7 +62,7 @@ public class EnemyManager : MonoBehaviour
             {
                 Enemy enemy = enemyGameObject.GetComponent<Enemy>();
                 _enemyiesList.Add(enemy);
-                enemy.Init(_playerTransform, this);
+                enemy.Init(_playerTransform, this, _level);
             }
         }
 
@@ -99,6 +100,7 @@ public class EnemyManager : MonoBehaviour
                 _nextTimeToCreateList.Add(_timer + 1f / _periodList[i]);
             }
         }
+        _level++;
     }
 
     //private IEnumerator ProcessLastWave() {
@@ -111,7 +113,7 @@ public class EnemyManager : MonoBehaviour
 
     void Update()
     {
-        
+
 
         // если волна последняя, то больше никого не создавать
         if (_isWaveLast) return;
@@ -135,7 +137,7 @@ public class EnemyManager : MonoBehaviour
         Vector3 randomPointXZ = new Vector3(randomPoint.x, 0, randomPoint.y);
         Enemy newEnemy = Instantiate(enemy, randomPointXZ + _playerTransform.position, Quaternion.identity, transform);
         _enemyiesList.Add(newEnemy);
-        newEnemy.Init(_playerTransform, this);
+        newEnemy.Init(_playerTransform, this, _level);
         return newEnemy;
     }
 

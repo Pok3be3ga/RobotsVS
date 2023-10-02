@@ -47,7 +47,7 @@ public class EnemyDash : MonoBehaviour
         }
         _enemy.speed = targetSpeed;
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.8f);
 
         _decelerationElapsedTime = 0f;
         while (_decelerationElapsedTime < decelerationDuration)
