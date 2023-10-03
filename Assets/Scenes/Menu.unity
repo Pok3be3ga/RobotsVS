@@ -2863,6 +2863,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SP_Planet
       objectReference: {fileID: 0}
+    - target: {fileID: 7280704041433903217, guid: 7d470bd30d5ceec4383744406c8b6440,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7944791113433049803, guid: 7d470bd30d5ceec4383744406c8b6440,
         type: 3}
       propertyPath: m_LocalScale.x

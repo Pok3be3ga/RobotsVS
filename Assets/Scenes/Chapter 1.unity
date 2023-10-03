@@ -5981,7 +5981,6 @@ MonoBehaviour:
   ChapterSettings:
   - {fileID: 11400000, guid: 7159e29206dfbfc4b9a90b4881ae157d, type: 2}
   - {fileID: 11400000, guid: 13fd323639551c540b6c5b4bf983340f, type: 2}
-  - {fileID: 11400000, guid: 3cc00d84a8f1a0544b693cfa64864528, type: 2}
   - {fileID: 11400000, guid: b940f6584a1ec1043879394ea3617c9c, type: 2}
   _chapterSettings: {fileID: 11400000, guid: 3cc00d84a8f1a0544b693cfa64864528, type: 2}
   _expPrefab: {fileID: 4005732087564659323, guid: 7cb85909b3e2fb142a772f292ffa5bbf,
@@ -8107,7 +8106,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1687894706
 MonoBehaviour:
   m_ObjectHideFlags: 0
