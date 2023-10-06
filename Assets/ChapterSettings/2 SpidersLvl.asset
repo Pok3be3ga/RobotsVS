@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 669e8109c1ddac3439204c8ea2b6bea0, type: 3}
-  m_Name: 3 SpidersLvl
+  m_Name: 2 SpidersLvl
   m_EditorClassIdentifier: 
   EnemyWavesArray:
   - Enemy: {fileID: 418030179873237852, guid: 32c52e69227228a4fb62fe56f4a39970, type: 3}

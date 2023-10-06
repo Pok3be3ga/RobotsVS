@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -24,7 +25,9 @@ public class Enemy : MonoBehaviour
 
     public Action OnTakeDamdage;
     private bool _isFrozen;
-    [SerializeField] private float _rotationLerp = 3f;
+    public float _rotationLerp = 3f;
+
+    private bool isActive;
 
     public void Init(Transform playerTransform, EnemyManager enemyManager, int level)
     {
@@ -32,6 +35,14 @@ public class Enemy : MonoBehaviour
         _attackTimer = 0f;
         _enemyManager = enemyManager;
         _health += level * 2;
+        _enemyHit = Instantiate(_enemyHitPrefab, transform.position, Quaternion.identity);
+        _enemyHit.Init();
+    }
+    
+    public void Init(Transform playerTransform)
+    {
+        _playerTransform = playerTransform;
+        _attackTimer = 0f;
         _enemyHit = Instantiate(_enemyHitPrefab, transform.position, Quaternion.identity);
         _enemyHit.Init();
     }
@@ -138,5 +149,13 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(period);
         _isFrozen = false;
     }
-
+    public void SetActive(bool active)
+    {
+        gameObject.SetActive(active);
+        foreach (Transform child in gameObject.transform)
+        {
+            child.gameObject.SetActive(active);
+            child.gameObject.SetActive(active);
+        }
+    }
 }

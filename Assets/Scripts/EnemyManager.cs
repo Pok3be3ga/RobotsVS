@@ -1,16 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.ProBuilder.MeshOperations;
+using static UnityEngine.GraphicsBuffer;
+using Random = UnityEngine.Random;
 
 public class EnemyManager : MonoBehaviour
 {
 
     [SerializeField] private Transform _playerTransform;
     private float _timer;
-
     [SerializeField] private float _minRadius;
     [SerializeField] private float _maxRadius;
     [SerializeField] private List<Enemy> _enemyiesList = new List<Enemy>();
@@ -34,10 +37,12 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] public int _numberOfWaves;
 
     private bool _isWaveLast = false;
-
     private int _level = 0;
 
     private GameStateManager _gameStateManager;
+
+    [SerializeField] private HordeManager _hordeManager;
+
     private void Start()
     {
 
@@ -50,21 +55,22 @@ public class EnemyManager : MonoBehaviour
         _chapterSettings = ChapterSettings[Progress.InstanceProgress.IndexChapter];
         _numberOfWaves = Progress.InstanceProgress.ProgressData.NumberOfWaves;
         SetupEnemies();
+        _hordeManager.Init(_playerTransform, this, ref _level);
     }
 
     private void SetupEnemies()
     {
         // Инициализация тестовых врагов, которые присутствуют в сцене изначально
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            GameObject enemyGameObject = transform.GetChild(i).gameObject;
-            if (enemyGameObject.activeSelf)
-            {
-                Enemy enemy = enemyGameObject.GetComponent<Enemy>();
-                _enemyiesList.Add(enemy);
-                enemy.Init(_playerTransform, this, _level);
-            }
-        }
+        //for (int i = 0; i < transform.childCount; i++)
+        //{
+        //    GameObject enemyGameObject = transform.GetChild(i).gameObject;
+        //    if (enemyGameObject.activeSelf)
+        //    {
+        //        Enemy enemy = enemyGameObject.GetComponent<Enemy>();
+        //        _enemyiesList.Add(enemy);
+        //        //enemy.Init(_playerTransform, this, _level);
+        //    }
+        //}
 
         _enemyList.Clear();
         for (int i = 0; i < _chapterSettings.EnemyWavesArray.Length; i++)
@@ -132,13 +138,21 @@ public class EnemyManager : MonoBehaviour
     // Создать врага в случайной точке кольца вокруг плеера
     public Enemy CreteEnemy(Enemy enemy)
     {
-        Vector2 randomVector = Random.insideUnitCircle;
-        Vector2 randomPoint = randomVector.normalized * Random.Range(_minRadius, _maxRadius);
-        Vector3 randomPointXZ = new Vector3(randomPoint.x, 0, randomPoint.y);
-        Enemy newEnemy = Instantiate(enemy, randomPointXZ + _playerTransform.position, Quaternion.identity, transform);
+        Enemy newEnemy = Instantiate(enemy, RandomSpawnPosition() + _playerTransform.position, Quaternion.identity, transform);
         _enemyiesList.Add(newEnemy);
         newEnemy.Init(_playerTransform, this, _level);
         return newEnemy;
+    }
+
+    public Vector3 RandomSpawnPosition()
+    {
+        // ФУНКЦИЯ ДЛЯ ПОЛУЧЕНИЯ СЛУЧАЙНОЙ ПОЗИЦИИ В КРУГЕ ВОКРУГ ИГРОКА ДЛЯ СПАВНА ВРАГОВ 
+
+        Vector2 randomVector = Random.insideUnitCircle;
+        Vector2 randomPoint = randomVector.normalized * Random.Range(_minRadius, _maxRadius);
+        Vector3 randomPointXZ = new Vector3(randomPoint.x, 0, randomPoint.y);
+
+        return randomPointXZ;
     }
 
     public void ExcludeDead(Enemy enemy)
