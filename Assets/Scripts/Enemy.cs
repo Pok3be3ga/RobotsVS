@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] private float _health = 50;
     private Transform _playerTransform;
-    [SerializeField] Rigidbody _rigidbody;
+    [SerializeField] private Rigidbody _rigidbody;
     public float speed = 3f;
     private PlayerHealth _playerHealth;
     private float _attackTimer;
@@ -26,8 +26,6 @@ public class Enemy : MonoBehaviour
     public Action OnTakeDamdage;
     private bool _isFrozen;
     public float _rotationLerp = 3f;
-
-    private bool isActive;
 
     public void Init(Transform playerTransform, EnemyManager enemyManager, int level)
     {
@@ -58,7 +56,6 @@ public class Enemy : MonoBehaviour
                 _playerHealth.SetDamage(_dps * _attackPeriod);
             }
         }
-
     }
 
     void FixedUpdate()
@@ -149,12 +146,12 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(period);
         _isFrozen = false;
     }
+
     public void SetActive(bool active)
     {
         gameObject.SetActive(active);
         foreach (Transform child in gameObject.transform)
         {
-            child.gameObject.SetActive(active);
             child.gameObject.SetActive(active);
         }
     }

@@ -1,73 +1,91 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.ProBuilder.MeshOperations;
+using static UnityEngine.EventSystems.EventTrigger;
+using Random = UnityEngine.Random;
 
 public class HordeManager : MonoBehaviour
 {
-    [SerializeField] private int _hordeMembers;
     [SerializeField] private Transform _playerTransform;
 
     [SerializeField] private float _maxDelay;
     [SerializeField] private float _minDelay;
-    private float _delay;
-    private int _numberOfAttacks;
+
+    [SerializeField] private int _hordeMembers;
+    [SerializeField] private HordeEnemy _hordeEnemyPrefab;
+    [SerializeField] private HordeEnemy[] _hordeArray;
+    [SerializeField] private float _delayBeforeAttack = 10;
+
+    private float _spawnRange = 1.7f;
     private int _playerLevel;
     private EnemyManager _enemyManager;
+    private Vector3 _positionInFormation;
+    private Vector3 _defaultPositionForHorde;
+    private Quaternion _defaultRotationForHorde;
 
-    private List<Enemy> _hordeList = new List<Enemy>();
-
-    [SerializeField] private Enemy _hordeEnemyPrefab;
 
     public void Init(Transform playerTransform, EnemyManager enemyManager, ref int level)
     {
         _playerTransform = playerTransform;
         _playerLevel = level;
         _enemyManager = enemyManager;
-        _delay = Random.Range(_minDelay, _maxDelay);
+        _hordeArray = new HordeEnemy[_hordeMembers];
+        _defaultPositionForHorde = transform.position;
+        _defaultRotationForHorde = transform.rotation;
+
         CreateHorde(_hordeEnemyPrefab);
+        SetActiveForHorde(false);
     }
 
     public void FixedUpdate()
     {
-        _delay -= Time.deltaTime;
-        if (_delay <= 0)
+        _delayBeforeAttack -= Time.deltaTime;
+        if (_delayBeforeAttack <= 0)
         {
-            _numberOfAttacks = _playerLevel + 1;
-            ActivateHordeAttack(_numberOfAttacks);
-            _delay = Random.Range(_minDelay, _maxDelay);
+            _delayBeforeAttack = Random.Range(_minDelay, _maxDelay) - (_playerLevel * 2);
+
+            StartCoroutine(HordeAttack(_hordeEnemyPrefab));
         }
     }
 
-    public void CreateHorde(Enemy enemy)
+    public void CreateHorde(HordeEnemy _hordeEnemy)
     {
-        Vector3 startPosition = new Vector3(-_hordeMembers / 2, -1f, 0f);
-        Enemy newHordeEnemy;
+        _positionInFormation = new Vector3(-_hordeMembers / 2, -1f, 0f);
+
         for (int i = 0; i < _hordeMembers; i++)
         {
-            newHordeEnemy = Instantiate(enemy, startPosition, Quaternion.identity, transform);
-            newHordeEnemy.SetActive(false);
-            _hordeList.Add(newHordeEnemy);
-            newHordeEnemy.Init(_playerTransform);
-            startPosition.x += 1.7f;
+            if (_hordeArray[i] == null)
+            {
+                _hordeEnemyPrefab = Instantiate(_hordeEnemy, _positionInFormation, Quaternion.identity, transform);
+                _hordeArray[i] = _hordeEnemyPrefab;
+                _hordeEnemyPrefab.Init(_playerTransform);
+            }
+            else
+            {
+                _hordeArray[i].transform.SetPositionAndRotation(_positionInFormation, _defaultRotationForHorde);
+            }
+            _positionInFormation.x += _spawnRange;
         }
     }
 
-    public void ActivateHordeAttack(int numberOfAttacks)
+    private IEnumerator HordeAttack(HordeEnemy _hordeEnemy)
     {
-        Vector3 defaultPosition = transform.position;
-        for (int i = 0; i < 1; i++)
+        SetActiveForHorde(true);
+        transform.position = _enemyManager.RandomSpawnPosition() + _playerTransform.position;
+        transform.LookAt(_playerTransform, Vector3.up);
+        yield return new WaitForSeconds(3f);
+        SetActiveForHorde(false);
+        transform.SetPositionAndRotation(_defaultPositionForHorde, _defaultRotationForHorde);
+        CreateHorde(_hordeEnemy);
+    }
+
+    private void SetActiveForHorde(bool isActive)
+    {
+        foreach (Enemy hordeEnemy in _hordeArray)
         {
-            transform.position = _enemyManager.RandomSpawnPosition() + _playerTransform.position;
-            transform.LookAt(_playerTransform, Vector3.up);
-
-            foreach (Enemy hordeEnemy in _hordeList)
-            {
-                hordeEnemy.SetActive(true);
-            }
-
-
+            hordeEnemy.SetActive(isActive);
         }
-        //_horde.position = defaultPosition;
     }
 }

@@ -8660,12 +8660,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 178b6226702bf5e4899b5cb4f5256620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hordeMembers: 10
   _playerTransform: {fileID: 0}
-  _maxDelay: 10
-  _minDelay: 20
-  _hordeEnemyPrefab: {fileID: 418030179873237852, guid: 73fd957e12c3a2842a7420e815d16252,
+  _maxDelay: 20
+  _minDelay: 10
+  _hordeMembers: 10
+  _hordeEnemyPrefab: {fileID: 712909718950833328, guid: 73fd957e12c3a2842a7420e815d16252,
     type: 3}
+  _hordeArray: []
+  _delayBeforeAttack: 10
 --- !u!1 &1850350807
 GameObject:
   m_ObjectHideFlags: 0

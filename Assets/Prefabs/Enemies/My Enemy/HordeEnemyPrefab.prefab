@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6578648974142847144}
   - component: {fileID: 697549757339000518}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7face5c015a55594ba64878107ef473d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemy: {fileID: 418030179873237852}
+  _enemy: {fileID: 712909718950833328}
   _enemySettings: {fileID: 11400000, guid: ccffedc38f92b264aa7ee2e3888fec45, type: 2}
 --- !u!1 &715163565419134395
 GameObject:
@@ -56,10 +56,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7828235533612265993}
-  - component: {fileID: 418030179873237852}
   - component: {fileID: 2949437815831505586}
   - component: {fileID: 6493929928350308525}
-  m_Layer: 6
+  - component: {fileID: 712909718950833328}
+  m_Layer: 12
   m_Name: HordeEnemyPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,29 +84,6 @@ Transform:
   - {fileID: 3472836374777273541}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &418030179873237852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 715163565419134395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d696722949d06184fb464a5ff44c82bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ColumnColor: {r: 0.9960785, g: 0.627451, b: 0.38823533, a: 1}
-  _health: 24
-  _rigidbody: {fileID: 2949437815831505586}
-  speed: 16
-  _attackPeriod: 0.2
-  _dps: 8
-  _enemyHitPrefab: {fileID: 7642662276420158857, guid: 073e385a22bacac4ebd0e5609dc286cf,
-    type: 3}
-  _deathEffect: {fileID: 8891085540853434729, guid: a76161fe5e4d2c447965f3a0c359e851,
-    type: 3}
-  _rotationLerp: 0.4
 --- !u!54 &2949437815831505586
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -141,7 +118,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715163565419134395}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 357d02571d2c0eb4f8c0f9e679bf0b7b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -155,6 +132,30 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.42
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &712909718950833328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715163565419134395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 059035cf90bbeea429eea8b5449c3408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColumnColor: {r: 0, g: 0, b: 0, a: 0}
+  _health: 20
+  _rigidbody: {fileID: 2949437815831505586}
+  speed: 18
+  _attackPeriod: 0.2
+  _dps: 8
+  _enemyHitPrefab: {fileID: 7642662276420158857, guid: 073e385a22bacac4ebd0e5609dc286cf,
+    type: 3}
+  _deathEffect: {fileID: 8891085540853434729, guid: a76161fe5e4d2c447965f3a0c359e851,
+    type: 3}
+  _rotationLerp: 0
+  _hordeEnemyRigidbody: {fileID: 2949437815831505586}
 --- !u!1 &3828470067755571897
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,7 +166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3472836374777273541}
   - component: {fileID: 3881329909872941794}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: EnemyHustle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,7 +221,7 @@ GameObject:
   - component: {fileID: 5756963277660822250}
   - component: {fileID: 1085079009339930132}
   - component: {fileID: 4738126061622153236}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,7 +326,7 @@ GameObject:
   - component: {fileID: 1027338001866735372}
   - component: {fileID: 1244838149054029567}
   - component: {fileID: 3810375051101131031}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: AttackTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
