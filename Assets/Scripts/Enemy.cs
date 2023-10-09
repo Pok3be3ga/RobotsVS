@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -9,7 +10,7 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] private float _health = 50;
     private Transform _playerTransform;
-    [SerializeField] Rigidbody _rigidbody;
+    [SerializeField] private Rigidbody _rigidbody;
     public float speed = 3f;
     private PlayerHealth _playerHealth;
     private float _attackTimer;
@@ -24,7 +25,7 @@ public class Enemy : MonoBehaviour
 
     public Action OnTakeDamdage;
     private bool _isFrozen;
-    [SerializeField] private float _rotationLerp = 3f;
+    public float _rotationLerp = 3f;
 
     public void Init(Transform playerTransform, EnemyManager enemyManager, int level)
     {
@@ -32,6 +33,14 @@ public class Enemy : MonoBehaviour
         _attackTimer = 0f;
         _enemyManager = enemyManager;
         _health += level * 2;
+        _enemyHit = Instantiate(_enemyHitPrefab, transform.position, Quaternion.identity);
+        _enemyHit.Init();
+    }
+    
+    public void Init(Transform playerTransform)
+    {
+        _playerTransform = playerTransform;
+        _attackTimer = 0f;
         _enemyHit = Instantiate(_enemyHitPrefab, transform.position, Quaternion.identity);
         _enemyHit.Init();
     }
@@ -47,7 +56,6 @@ public class Enemy : MonoBehaviour
                 _playerHealth.SetDamage(_dps * _attackPeriod);
             }
         }
-
     }
 
     void FixedUpdate()
@@ -139,4 +147,12 @@ public class Enemy : MonoBehaviour
         _isFrozen = false;
     }
 
+    public void SetActive(bool active)
+    {
+        gameObject.SetActive(active);
+        foreach (Transform child in gameObject.transform)
+        {
+            child.gameObject.SetActive(active);
+        }
+    }
 }

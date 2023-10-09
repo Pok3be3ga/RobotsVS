@@ -2,7 +2,6 @@ using UnityEngine;
 
 public abstract class GameState : MonoBehaviour
 {
-
     protected GameStateManager _gameStateManager;
     // было ли это состояние уже хоть раз установлено
     protected bool _wasSet;
