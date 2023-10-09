@@ -55,7 +55,7 @@ public class EnemyManager : MonoBehaviour
         _chapterSettings = ChapterSettings[Progress.InstanceProgress.IndexChapter];
         _numberOfWaves = Progress.InstanceProgress.ProgressData.NumberOfWaves;
         SetupEnemies();
-        _hordeManager.Init(_playerTransform, this, ref _level);
+        //_hordeManager.Init(_playerTransform, this, ref _level);
     }
 
     private void SetupEnemies()

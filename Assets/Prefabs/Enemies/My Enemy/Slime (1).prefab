@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ColumnColor: {r: 0.9960785, g: 0.627451, b: 0.38823533, a: 1}
-  _health: 24
+  _health: 12
   _rigidbody: {fileID: 2949437815831505586}
   speed: 3
   _attackPeriod: 0.5
@@ -775,7 +775,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 606346329094112585}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: e7d8d802133534b48924191ee0354217, type: 2}
   m_CullingMode: 0

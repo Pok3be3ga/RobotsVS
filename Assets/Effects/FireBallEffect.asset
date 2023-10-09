@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84be7470bfc52094f976572b7808734d, type: 3}
   m_Name: FireBallEffect
   m_EditorClassIdentifier: 
-  Name: FireBall
+  Name: "\u041E\u0433\u0440\u043E\u043C\u043D\u0430\u044F \u0420\u0430\u043A\u0435\u0442\u0430"
   Description: "\u041D\u0430\u043D\u043E\u0441\u0438\u0442 \u0443\u0440\u043E\u043D
     \u043F\u043E \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u0438\u043C \u0446\u0435\u043B\u044F\u043C"
-  Sprite: {fileID: 21300000, guid: c996f015b7b9de2418e480c7adc709fc, type: 3}
+  Sprite: {fileID: 21300000, guid: b064fd7b2e5a62c4b92c081d690a870d, type: 3}
   Level: 0
   ActiveSkills: 01010101000000
   SkillLevels:

@@ -24,10 +24,10 @@ public class FireBallEffect : ContinuousEffect
             for (int i = 0; i < nearestEnemies.Length; i++)
             {
                 Vector3 playerPosition = _player.transform.position;
-                FireBall newFireBall = Instantiate(_fireBallPrefab, playerPosition, Quaternion.identity);
+                
 
                 Vector3 direction = Quaternion.Euler(0, Random.Range(0f, 360f), 0) * Vector3.right;
-
+                FireBall newFireBall = Instantiate(_fireBallPrefab, playerPosition, Quaternion.Euler(direction));
                 newFireBall.Init(direction.normalized * _speed, GetSkillValue(Skill.Radius), GetSkillValue(Skill.Damage));
                 yield return new WaitForSeconds(0.2f);
 

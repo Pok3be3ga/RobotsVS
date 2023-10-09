@@ -12,7 +12,7 @@ public class FireBall : MonoBehaviour
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private LayerMask _layerMask;
 
-    public void Init(Vector3 velocity, float radius, float damage)
+    public void Init( Vector3 velocity, float radius, float damage)
     {
         _rigidbody.velocity = velocity;
         _damage = damage;

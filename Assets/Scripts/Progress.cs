@@ -119,29 +119,29 @@ public class Progress : MonoBehaviour
 
 }
 
-//#if UNITY_EDITOR
-//[CustomEditor(typeof(Progress))]
-//public class ProgressEditor : Editor
-//{
-//    public override void OnInspectorGUI()
-//    {
-//        base.OnInspectorGUI();
-//        Progress progress = target as Progress;
+#if UNITY_EDITOR
+[CustomEditor(typeof(Progress))]
+public class ProgressEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        base.OnInspectorGUI();
+        Progress progress = target as Progress;
 
-//        if (GUILayout.Button("SAVE"))
-//        {
-//            SaveSystem.Save(progress.ProgressData);
-//        }
+        if (GUILayout.Button("SAVE"))
+        {
+            SaveSystem.Save(progress.ProgressData);
+        }
 
-//        if (GUILayout.Button("LOAD"))
-//        {
-//            progress.ProgressData = SaveSystem.Load();
-//        }
-//        if (GUILayout.Button("RESET PROGRESS"))
-//        {
-//            progress.ProgressData = new ProgressData();
-//            SaveSystem.Save(progress.ProgressData);
-//        }
-//    }
-//}
-//#endif
+        if (GUILayout.Button("LOAD"))
+        {
+            progress.ProgressData = SaveSystem.Load();
+        }
+        if (GUILayout.Button("RESET PROGRESS"))
+        {
+            progress.ProgressData = new ProgressData();
+            SaveSystem.Save(progress.ProgressData);
+        }
+    }
+}
+#endif
