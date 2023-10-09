@@ -19,7 +19,7 @@ public class PauseState : GameState
     {
         //base.EnterFirstTime();
         _continueButton.onClick.AddListener(Continue);
-        _restartButton.onClick.AddListener(Restart);
+        //_restartButton.onClick.AddListener(Restart);
     }
 
     public override void Enter()

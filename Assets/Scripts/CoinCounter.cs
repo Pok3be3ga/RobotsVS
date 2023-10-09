@@ -56,15 +56,13 @@ public class CoinCounter : MonoBehaviour
 
     public void SpendCoins(int value)
     {
-        _progress.ProgressData.Coins -= value;
+        Progress.InstanceProgress.ProgressData.Coins -= value;
         Display();
     }
 
     public void Display()
     {
-        //int totalNumber = _progress.ProgressData.Coins + Mathf.RoundToInt(NumberInLevel);
-        _coinsText.text = _progress.ProgressData.Coins.ToString(); //totalNumber.ToString();
-
+         if(Progress.InstanceProgress.ProgressData.Coins != 0) _coinsText.text = Progress.InstanceProgress.ProgressData.Coins.ToString();
     }
     public void SaveToProgress()
     {

@@ -165,12 +165,18 @@ public class EnemyManager : MonoBehaviour
     public void OnLastKilled()
     {
         Progress.InstanceProgress.IndexChapter++;
-        if (Progress.InstanceProgress.IndexChapter == 4)
+        if (Progress.InstanceProgress.IndexChapter == 3)
         {
             Progress.InstanceProgress.IndexChapter = 0;
         }
         Progress.InstanceProgress.ProgressData.NumberOfWaves++;
+        Progress.InstanceProgress.ProgressData.Chapter++;
         _gameStateManager.SetWin();
+#if UNITY_WEBGL
+        Progress.InstanceProgress.Save();
+#endif
+
+
     }
 
     public Enemy[] GetNearest(Vector3 point, int number)

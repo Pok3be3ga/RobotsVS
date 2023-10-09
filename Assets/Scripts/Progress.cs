@@ -1,8 +1,9 @@
-#if UNITY_EDITOR
+
 using System.Runtime.InteropServices;
+using TMPro;
 using UnityEditor;
-#endif
 using UnityEngine;
+using UnityEngine.Rendering;
 
 [System.Serializable]
 public class ProgressData
@@ -69,19 +70,20 @@ public class ProgressData
 
 public class Progress : MonoBehaviour
 {
-    //[DllImport("__Internal")]
-    //private static extern void SaveExtern(string date);
-    //[DllImport("__Internal")]
-    //private static extern void LoadExtern();
-
-
-
     public ProgressData ProgressData;
+
+    [DllImport("__Internal")]
+    private static extern void SaveExtern(string date);
+    [DllImport("__Internal")]
+    private static extern void LoadExtern();
+
+
+
+
     public static Progress InstanceProgress;
 
     public int IndexRobot = 0;
     public int IndexChapter = 0;
-
 
     public void Init()
     {
@@ -95,6 +97,9 @@ public class Progress : MonoBehaviour
             transform.parent = null;
             DontDestroyOnLoad(gameObject);
             InstanceProgress = this;
+#if UNITY_WEBGL
+            LoadExtern();
+#endif
         }
         else
         {
@@ -102,32 +107,41 @@ public class Progress : MonoBehaviour
         }
 
     }
-
-}
-
-#if UNITY_EDITOR
-[CustomEditor(typeof(Progress))]
-public class ProgressEditor : Editor
-{
-    public override void OnInspectorGUI()
+    public void SetProgressData(string value)
     {
-        base.OnInspectorGUI();
-        Progress progress = target as Progress;
-
-        if (GUILayout.Button("SAVE"))
-        {
-            SaveSystem.Save(progress.ProgressData);
-        }
-
-        if (GUILayout.Button("LOAD"))
-        {
-            progress.ProgressData = SaveSystem.Load();
-        }
-        if (GUILayout.Button("RESET PROGRESS"))
-        {
-            progress.ProgressData = new ProgressData();
-            SaveSystem.Save(progress.ProgressData);
-        }
+        ProgressData = JsonUtility.FromJson<ProgressData>(value);
     }
+    public void Save()
+    {
+        string jsonString = JsonUtility.ToJson(ProgressData);
+        SaveExtern(jsonString);
+    }
+
 }
-#endif
+
+//#if UNITY_EDITOR
+//[CustomEditor(typeof(Progress))]
+//public class ProgressEditor : Editor
+//{
+//    public override void OnInspectorGUI()
+//    {
+//        base.OnInspectorGUI();
+//        Progress progress = target as Progress;
+
+//        if (GUILayout.Button("SAVE"))
+//        {
+//            SaveSystem.Save(progress.ProgressData);
+//        }
+
+//        if (GUILayout.Button("LOAD"))
+//        {
+//            progress.ProgressData = SaveSystem.Load();
+//        }
+//        if (GUILayout.Button("RESET PROGRESS"))
+//        {
+//            progress.ProgressData = new ProgressData();
+//            SaveSystem.Save(progress.ProgressData);
+//        }
+//    }
+//}
+//#endif
