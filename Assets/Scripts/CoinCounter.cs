@@ -1,10 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CoinCounter : MonoBehaviour
 {
+
+    [DllImport("__Internal")]
+    private static extern void AddCoinsExtern();
+
+
+    [SerializeField] private Button _multiplyCoinsButton;
     [SerializeField] private Transform _counterTransform;
     [SerializeField] private TextMeshProUGUI _coinsText;
     [SerializeField] private AnimationCurve _scaleCurve;
@@ -68,6 +76,25 @@ public class CoinCounter : MonoBehaviour
     public void SaveToProgress()
     {
         //SaveSystem.Save(_progress.ProgressData);
+    }
+    public void AddCoin()
+    {
+        AddCoinsExtern();
+    }
+
+    public void MultiplyCoins()
+    {
+        // Тут надо вызвать показ рекламы
+
+        _multiplyCoinsButton.gameObject.SetActive(false);
+
+        // Умножаем количество монет, заработанных на уровне на 3
+        int coinsToAdd = Mathf.RoundToInt(NumberInLevel) * 2;
+        AddCoins(coinsToAdd);
+        Display();
+#if UNITY_WEBGL
+        Progress.InstanceProgress.Save();
+#endif
     }
 
 

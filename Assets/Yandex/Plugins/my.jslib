@@ -21,6 +21,26 @@
 				myGameInstance.SendMessage('Progress', 'SetProgressData', myJSON);
 				  });
   	},
+  	AddCoinsExtern : function(){
+  		ysdk.adv.showRewardedVideo({
+    callbacks: {
+        onOpen: () => {
+          console.log('Video ad open.');
+        },
+        onRewarded: () => {
+          console.log('Rewarded!');
+          myGameInstance.SendMessege("CoinCounter", "MultiplyCoins");
+        },
+        onClose: () => {
+          console.log('Video ad closed.');
+        }, 
+        onError: (e) => {
+          console.log('Error while open video ad:', e);
+        }
+    }
+})
+
+  	}
 
 
   });

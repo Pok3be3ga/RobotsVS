@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18593115, g: 0.53840375, b: 0.64181995, a: 1}
+  m_IndirectSpecularColor: {r: 0.18599689, g: 0.53840405, b: 0.6419488, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -455,7 +455,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 300}
+  m_SizeDelta: {x: 414.3, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &97647114
 MonoBehaviour:
@@ -1049,7 +1049,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215607513}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1059,7 +1059,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -239.72733, y: -134.84659}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &215607515
@@ -1075,7 +1075,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coinsText: {fileID: 1850350809}
-  _multiplyCoinsButton: {fileID: 933979513}
   _continueButton: {fileID: 1187669600}
 --- !u!114 &215607516
 MonoBehaviour:
@@ -2180,6 +2179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ab2091b8b7e7c1489b08d63bcfbb48c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _multiplyCoinsButton: {fileID: 0}
   _counterTransform: {fileID: 562083923}
   _coinsText: {fileID: 986393469}
   _scaleCurve:
@@ -2255,7 +2255,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1161866238}
-  m_Father: {fileID: 1797053315}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &455517021 stripped
 GameObject:
@@ -3311,7 +3311,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coinsText: {fileID: 1918998898}
-  _multiplyCoinsButton: {fileID: 2070174928}
   _continueButton: {fileID: 1266208130}
 --- !u!114 &765583638
 MonoBehaviour:
@@ -4031,8 +4030,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 36649040}
   - {fileID: 215607514}
+  - {fileID: 36649040}
   - {fileID: 765583636}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4203,7 +4202,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 933979514}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 439927505}
+        m_TargetAssemblyTypeName: CoinCounter, Assembly-CSharp
+        m_MethodName: AddCoin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &933979514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5643,7 +5654,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -92.9}
+  m_AnchoredPosition: {x: 0, y: -45.220222}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1266208130
@@ -8524,7 +8535,6 @@ Transform:
   - {fileID: 1059423415}
   - {fileID: 33470072}
   - {fileID: 1082512576}
-  - {fileID: 439927506}
   - {fileID: 547492692}
   - {fileID: 2125849734}
   - {fileID: 1790621253}
@@ -9646,7 +9656,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2070174927
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10137,7 +10147,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0417\u0410\u041D\u041E\u0412\u041E"
+  m_text: "\u041C\u0415\u041D\u042E\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 899d143bd72f8b7459c5f89bdde88ce4, type: 2}
   m_sharedMaterial: {fileID: -3105120805152725916, guid: 899d143bd72f8b7459c5f89bdde88ce4,
@@ -36728,6 +36738,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 8217974782522312591}
+  - {fileID: 439927506}
   - {fileID: 112566715}
   - {fileID: 410087041}
   - {fileID: 632809320}
