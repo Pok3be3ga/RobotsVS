@@ -5,12 +5,19 @@ using UnityEngine;
 public class HordeEnemy : Enemy
 {
     [SerializeField] private Rigidbody _hordeEnemyRigidbody;
-    private bool _isFrozen;
 
     void FixedUpdate()
     {
-        if (_isFrozen) return;
-
         _hordeEnemyRigidbody.velocity = transform.forward * speed;
+    }
+
+    public void SetActive(bool active)
+    {
+        gameObject.SetActive(active);
+
+        foreach (Transform child in gameObject.transform)
+        {
+            child.gameObject.SetActive(active);
+        }
     }
 }

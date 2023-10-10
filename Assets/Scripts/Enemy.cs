@@ -26,6 +26,8 @@ public class Enemy : MonoBehaviour
     public Action OnTakeDamdage;
     private bool _isFrozen;
     public float _rotationLerp = 3f;
+    private Vector3 _toPlayer;
+    private Quaternion _targetRotation;
 
     public void Init(Transform playerTransform, EnemyManager enemyManager, int level)
     {
@@ -63,14 +65,14 @@ public class Enemy : MonoBehaviour
         //return;
         if (_playerTransform == null) return;
         if (_isFrozen) return;
-        Vector3 toPlayer = _playerTransform.position - transform.position;
+        _toPlayer = _playerTransform.position - transform.position;
         // TODO: Убрать магическое число
-        if (toPlayer.magnitude > 32f)
+        if (_toPlayer.magnitude > 32f)
         {
-            transform.position += toPlayer * 1.95f;
+            transform.position += _toPlayer * 1.95f;
         }
-        Quaternion targetRotation = Quaternion.LookRotation(toPlayer);
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * _rotationLerp);
+        _targetRotation = Quaternion.LookRotation(_toPlayer);
+        transform.rotation = Quaternion.Lerp(transform.rotation, _targetRotation, Time.deltaTime * _rotationLerp);
         _rigidbody.velocity = transform.forward * speed;
     }
 
@@ -145,14 +147,5 @@ public class Enemy : MonoBehaviour
         _rigidbody.velocity = Vector3.zero;
         yield return new WaitForSeconds(period);
         _isFrozen = false;
-    }
-
-    public void SetActive(bool active)
-    {
-        gameObject.SetActive(active);
-        foreach (Transform child in gameObject.transform)
-        {
-            child.gameObject.SetActive(active);
-        }
     }
 }

@@ -18,49 +18,52 @@ public class HordeManager : MonoBehaviour
     [SerializeField] private HordeEnemy[] _hordeArray;
     [SerializeField] private float _delayBeforeAttack = 10;
 
-    private float _spawnRange = 1.7f;
+    private float _spawnRange;
     private int _playerLevel;
     private EnemyManager _enemyManager;
     private Vector3 _positionInFormation;
     private Vector3 _defaultPositionForHorde;
     private Quaternion _defaultRotationForHorde;
+    private bool HordeAttackActivated = false;
 
 
-    public void Init(Transform playerTransform, EnemyManager enemyManager, ref int level)
+    public void Init(EnemyManager enemyManager, ref int level)
     {
-        _playerTransform = playerTransform;
         _playerLevel = level;
         _enemyManager = enemyManager;
         _hordeArray = new HordeEnemy[_hordeMembers];
         _defaultPositionForHorde = transform.position;
         _defaultRotationForHorde = transform.rotation;
+        _spawnRange = 2* _hordeEnemyPrefab.GetComponent<SphereCollider>().radius;
 
         CreateHorde(_hordeEnemyPrefab);
-        SetActiveForHorde(false);
     }
 
     public void FixedUpdate()
     {
         _delayBeforeAttack -= Time.deltaTime;
-        if (_delayBeforeAttack <= 0)
+        if (_delayBeforeAttack <= 0 && !HordeAttackActivated)
+        {            
+            ActivateHordeAttack(_hordeEnemyPrefab);
+        }
+        if (_delayBeforeAttack < -4)
         {
+            DeactivateHordeAttack(_hordeEnemyPrefab);
             _delayBeforeAttack = Random.Range(_minDelay, _maxDelay) - (_playerLevel * 2);
-
-            StartCoroutine(HordeAttack(_hordeEnemyPrefab));
         }
     }
 
     public void CreateHorde(HordeEnemy _hordeEnemy)
     {
-        _positionInFormation = new Vector3(-_hordeMembers / 2, -1f, 0f);
+        _positionInFormation = new Vector3(-_hordeMembers / 2, 0, 0);
 
         for (int i = 0; i < _hordeMembers; i++)
         {
             if (_hordeArray[i] == null)
             {
-                _hordeEnemyPrefab = Instantiate(_hordeEnemy, _positionInFormation, Quaternion.identity, transform);
-                _hordeArray[i] = _hordeEnemyPrefab;
-                _hordeEnemyPrefab.Init(_playerTransform);
+                HordeEnemy newHordeEnemy = Instantiate(_hordeEnemy, _positionInFormation, Quaternion.identity, transform);
+                _hordeArray[i] = newHordeEnemy;
+                newHordeEnemy.Init(_playerTransform);
             }
             else
             {
@@ -70,22 +73,30 @@ public class HordeManager : MonoBehaviour
         }
     }
 
-    private IEnumerator HordeAttack(HordeEnemy _hordeEnemy)
-    {
-        SetActiveForHorde(true);
+    private void ActivateHordeAttack(HordeEnemy _hordeEnemy)
+    {   
         transform.position = _enemyManager.RandomSpawnPosition() + _playerTransform.position;
         transform.LookAt(_playerTransform, Vector3.up);
-        yield return new WaitForSeconds(3f);
+        SetActiveForHorde(true);
+        HordeAttackActivated = true;
+    }
+
+    private void DeactivateHordeAttack(HordeEnemy _hordeEnemy)
+    {
         SetActiveForHorde(false);
         transform.SetPositionAndRotation(_defaultPositionForHorde, _defaultRotationForHorde);
         CreateHorde(_hordeEnemy);
+        HordeAttackActivated = false;
     }
 
     private void SetActiveForHorde(bool isActive)
     {
-        foreach (Enemy hordeEnemy in _hordeArray)
+        foreach (HordeEnemy hordeEnemy in _hordeArray)
         {
-            hordeEnemy.SetActive(isActive);
+            if (hordeEnemy != null)
+            {
+                hordeEnemy.SetActive(isActive);
+            }
         }
     }
 }

@@ -62,7 +62,8 @@ public class CoinCounter : MonoBehaviour
 
     public void Display()
     {
-         if(Progress.InstanceProgress.ProgressData.Coins != 0) _coinsText.text = Progress.InstanceProgress.ProgressData.Coins.ToString();
+         if(Progress.InstanceProgress.ProgressData.Coins != 0) 
+            _coinsText.text = Progress.InstanceProgress.ProgressData.Coins.ToString();
     }
     public void SaveToProgress()
     {
