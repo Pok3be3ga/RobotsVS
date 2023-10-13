@@ -22,16 +22,13 @@ public class ChoseRobots : MonoBehaviour
         index -=1;
         if (index < 0)
         {
-            index = 0;
+            index = Button.Length - 1;
         }
-
         for (int i = 0; i < Button.Length; i++)
         {
             Button[i].SetActive(false);
         }
         Button[index].SetActive(true);
-
-
         for (int i = 0; i < Robots.Length; i++)
         {
             Robots[i].SetActive(false);
@@ -45,22 +42,18 @@ public class ChoseRobots : MonoBehaviour
         index += 1;
         if (index > Robots.Length - 1)
         {
-            index = Robots.Length - 1;
+            index = 0;
         }
-
         for (int i = 0; i < Button.Length; i++)
         {
             Button[i].SetActive(false);
         }
         Button[index].SetActive(true);
-
-
         for (int i = 0; i < Robots.Length; i++)
         {
             Robots[i].SetActive(false);
         }
         Robots[index].SetActive(true);
-        
     }
 
     public void SaveRobotIndex()
