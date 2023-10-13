@@ -29,6 +29,7 @@ public class Enemy : MonoBehaviour
     private Vector3 _toPlayer;
     private Quaternion _targetRotation;
 
+
     public void Init(Transform playerTransform, EnemyManager enemyManager, int level)
     {
         _playerTransform = playerTransform;

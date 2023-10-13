@@ -12,6 +12,8 @@ public class PermanentProgressCard : MonoBehaviour
     public int PricePerLevel;
 
     [SerializeField] private TextMeshProUGUI _percentText;
+    [SerializeField] AudioSource _audioSourceNonClick;
+    [SerializeField] AudioSource _audioSourceClick;
     [SerializeField] private TextMeshProUGUI _priceText;
 
     [SerializeField] private Button _button;
@@ -61,9 +63,10 @@ public class PermanentProgressCard : MonoBehaviour
         if (_enoughMoney)
         {
             AddLevel();
+            _audioSourceClick.Play();
         }
-        else { 
-            //
+        else {
+            _audioSourceNonClick.Play();
         }
     }
 
