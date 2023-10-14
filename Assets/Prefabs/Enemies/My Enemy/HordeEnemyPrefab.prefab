@@ -48,7 +48,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6578648974142847144
 Transform:
   m_ObjectHideFlags: 0
@@ -128,7 +128,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7828235533612265993
 Transform:
   m_ObjectHideFlags: 0
@@ -139,7 +139,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.253909, y: 0, z: 4.155686}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6578648974142847144}
@@ -193,7 +193,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.42
+  m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &712909718950833328
 MonoBehaviour:
@@ -210,7 +210,7 @@ MonoBehaviour:
   ColumnColor: {r: 0, g: 0, b: 0, a: 0}
   _health: 20
   _rigidbody: {fileID: 2949437815831505586}
-  speed: 18
+  speed: 14
   _attackPeriod: 0.2
   _dps: 8
   _enemyHitPrefab: {fileID: 7642662276420158857, guid: 073e385a22bacac4ebd0e5609dc286cf,
@@ -739,7 +739,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3472836374777273541
 Transform:
   m_ObjectHideFlags: 0
@@ -774,7 +774,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.8327569
+  m_Radius: 0.9
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4172144673060081507
 GameObject:
@@ -1081,7 +1081,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2781410738928257789, guid: a1d056039a0b0ef428df083afaa29a86, type: 3}
+  - {fileID: 2100000, guid: 32338cb3d3a13444caa886866d7d43cc, type: 2}
   - {fileID: -1789026911529549233, guid: a1d056039a0b0ef428df083afaa29a86, type: 3}
   - {fileID: -1580535799172915004, guid: a1d056039a0b0ef428df083afaa29a86, type: 3}
   - {fileID: 8627644809163848826, guid: a1d056039a0b0ef428df083afaa29a86, type: 3}
@@ -1408,7 +1408,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8790192240224522859
 Transform:
   m_ObjectHideFlags: 0
@@ -1493,7 +1493,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.75
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8893027118410264683
 GameObject:
