@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18599689, g: 0.53840405, b: 0.6419488, a: 1}
+  m_IndirectSpecularColor: {r: 0.18593115, g: 0.53840375, b: 0.64181995, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6354,13 +6354,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerTransform: {fileID: 8217974782522312591}
-  _maxDelay: 50
-  _minDelay: 40
-  _hordeMembers: 10
+  _maxDelay: 40
+  _minDelay: 2
+  _hordeMembers: 17
   _hordeEnemyPrefab: {fileID: 712909718950833328, guid: 73fd957e12c3a2842a7420e815d16252,
     type: 3}
   _hordeArray: []
-  _delayBeforeAttack: 10
 --- !u!1001 &1302178258
 PrefabInstance:
   m_ObjectHideFlags: 0
