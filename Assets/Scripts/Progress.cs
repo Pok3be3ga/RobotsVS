@@ -1,4 +1,5 @@
 
+using System;
 using System.Runtime.InteropServices;
 using TMPro;
 using UnityEditor;
@@ -115,6 +116,11 @@ public class Progress : MonoBehaviour
     {
         string jsonString = JsonUtility.ToJson(ProgressData);
         SaveExtern(jsonString);
+    }
+    public void ResetProogress()
+    {
+        ProgressData = new ProgressData();
+        SaveSystem.Save(ProgressData);
     }
 
 }

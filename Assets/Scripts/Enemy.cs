@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -29,13 +31,16 @@ public class Enemy : MonoBehaviour
     private Vector3 _toPlayer;
     private Quaternion _targetRotation;
 
+    public TextMeshPro CoeffHEalthInput;
+    public float CoeffHEalth = 2f;
 
-    public void Init(Transform playerTransform, EnemyManager enemyManager, int level)
+
+    public void Init(Transform playerTransform, EnemyManager enemyManager, int level, int Chapter)
     {
         _playerTransform = playerTransform;
         _attackTimer = 0f;
         _enemyManager = enemyManager;
-        _health += level * 2;
+        _health += Chapter * CoeffHEalth;
         _enemyHit = Instantiate(_enemyHitPrefab, transform.position, Quaternion.identity);
         _enemyHit.Init();
     }
@@ -50,6 +55,8 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+        CoeffHEalth = float.Parse(CoeffHEalthInput.text);
+
         if (_playerHealth)
         {
             _attackTimer += Time.deltaTime;

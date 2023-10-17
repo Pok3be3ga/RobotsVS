@@ -2,10 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.ProBuilder.MeshOperations;
+using UnityEngine.UI;
 using static UnityEngine.GraphicsBuffer;
 using Random = UnityEngine.Random;
 
@@ -140,7 +142,7 @@ public class EnemyManager : MonoBehaviour
     {
         Enemy newEnemy = Instantiate(enemy, RandomSpawnPosition() + _playerTransform.position, Quaternion.identity, transform);
         _enemyiesList.Add(newEnemy);
-        newEnemy.Init(_playerTransform, this, _level);
+        newEnemy.Init(_playerTransform, this, _level, Progress.InstanceProgress.ProgressData.Chapter);
         return newEnemy;
     }
 
