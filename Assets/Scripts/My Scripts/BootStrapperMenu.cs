@@ -10,6 +10,6 @@ public class BootStrapperMenu : MonoBehaviour
     private void Awake()
     {
         _progress.Init();
-        _coinCounter.Init(_progress, _permanentProgress);
+        //_coinCounter.Init(_progress, _permanentProgress);
     }
 }

@@ -190,6 +190,8 @@ MonoBehaviour:
   _deathEffect: {fileID: 8891085540853434729, guid: a76161fe5e4d2c447965f3a0c359e851,
     type: 3}
   _rotationLerp: 1
+  CoeffHEalthInput: {fileID: 0}
+  CoeffHEalth: 1.2
 --- !u!54 &2949437815831505586
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
     private Quaternion _targetRotation;
 
     public TextMeshPro CoeffHEalthInput;
-    public float CoeffHEalth = 2f;
+    public float CoeffHEalth = 1.2f;
 
 
     public void Init(Transform playerTransform, EnemyManager enemyManager, int level, int Chapter)
@@ -55,7 +55,6 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        CoeffHEalth = float.Parse(CoeffHEalthInput.text);
 
         if (_playerHealth)
         {

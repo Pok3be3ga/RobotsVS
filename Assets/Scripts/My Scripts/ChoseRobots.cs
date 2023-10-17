@@ -34,7 +34,8 @@ public class ChoseRobots : MonoBehaviour
             Robots[i].SetActive(false);
         }
         Robots[index].SetActive(true);
-        
+        SaveRobotIndex();
+
 
     }
     public void ChoseRobotsUp()
@@ -54,6 +55,7 @@ public class ChoseRobots : MonoBehaviour
             Robots[i].SetActive(false);
         }
         Robots[index].SetActive(true);
+        SaveRobotIndex();
     }
 
     public void SaveRobotIndex()

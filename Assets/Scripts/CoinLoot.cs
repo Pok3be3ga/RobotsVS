@@ -6,7 +6,7 @@ public class CoinLoot : Loot
 {
 
     [SerializeField] private int _value = 5;
-
+    
     private void Awake()
     {
         LootType = LootType.Coin;
@@ -17,6 +17,7 @@ public class CoinLoot : Loot
     {
         base.Take(coinCollector);
         coinCollector.CollectCoin(_value);
+
     }
 
 }
