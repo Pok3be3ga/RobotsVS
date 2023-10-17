@@ -13,6 +13,7 @@ public class CoinCounter : MonoBehaviour
 
 
     [SerializeField] private Button _multiplyCoinsButton;
+    [SerializeField] private Button _multiplyCoinsButton2;
     [SerializeField] private Transform _counterTransform;
     [SerializeField] private TextMeshProUGUI _coinsText;
     [SerializeField] private AnimationCurve _scaleCurve;
@@ -86,10 +87,11 @@ public class CoinCounter : MonoBehaviour
     {
         // Тут надо вызвать показ рекламы
 
-        _multiplyCoinsButton.gameObject.SetActive(false);
+        if(_multiplyCoinsButton != null) _multiplyCoinsButton.gameObject.SetActive(false);
+        if (_multiplyCoinsButton != null) _multiplyCoinsButton2.gameObject.SetActive(false);
 
         // Умножаем количество монет, заработанных на уровне на 3
-        int coinsToAdd = Mathf.RoundToInt(NumberInLevel) * 2;
+        int coinsToAdd = Mathf.RoundToInt(NumberInLevel) * 3;
         AddCoins(coinsToAdd);
         Display();
 #if UNITY_WEBGL

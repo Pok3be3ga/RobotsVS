@@ -485,7 +485,7 @@ GameObject:
   - component: {fileID: 3198499350608632684}
   - component: {fileID: 3198499350616388748}
   m_Layer: 0
-  m_Name: Bee
+  m_Name: Bee 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
