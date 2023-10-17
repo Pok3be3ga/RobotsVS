@@ -121,6 +121,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56428f096f98b384aa6a6771d1a9361c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  _enemyList: []
 --- !u!1 &1863168742727775128
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,10 +216,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 2584419751944233657}
-  _speed: 5
+  Speed: 5
   _joystick: {fileID: 0}
   _animator: {fileID: 4122718698871932392}
   _player: {fileID: 73457627442275882}
+  _choseRobot: {fileID: 0}
 --- !u!54 &2584419751944233657
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -256,7 +261,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerHealth: {fileID: 7918881431031988491}
+  _damageBoost: 0
   HealthRegeneration: 0
+  _maxHpBoost: 0
   DamageReduction: 0
   MovementSpeed: 0
   CollectionDistanceBoost: 0
@@ -275,9 +282,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0994c9883eb7dc40867e370186b6dfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startMaxHealth: 100
+  StartMaxHealth: 100
+  _maxHealth: 0
   _player: {fileID: 73457627442275882}
-  _regenerationPeriod: 5
+  RegenerationPeriod: 0
+  DamageAudio: {fileID: 0}
 --- !u!114 &1194061177160887973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,6 +305,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   _experienceScale: {fileID: 0}
+  _nextLevelExperience: 5
   _experienceCurve:
     serializedVersion: 2
     m_Curve:
@@ -359,6 +369,18 @@ MonoBehaviour:
   - {fileID: 8406301803747368001}
   - {fileID: 939305709385049631}
   - {fileID: 1803496761716125422}
+  _rigidbodyMove: {fileID: 0}
+  _playerHealth: {fileID: 0}
+  SpeedRobot1: 0
+  SpeedRobot2: 0
+  SpeedRobot3: 0
+  SpeedRobot4: 0
+  SpeedRobot5: 0
+  HealthCefficent1: 0
+  HealthCefficent2: 0
+  HealthCefficent3: 0
+  HealthCefficent4: 0
+  HealthCefficent5: 0
 --- !u!1 &8991248267629807753
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,6 +501,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56428f096f98b384aa6a6771d1a9361c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  _enemyList: []
 --- !u!1001 &1960544449060634364
 PrefabInstance:
   m_ObjectHideFlags: 0

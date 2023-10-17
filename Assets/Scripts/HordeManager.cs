@@ -3,39 +3,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.ProBuilder.MeshOperations;
-using static UnityEngine.EventSystems.EventTrigger;
 using Random = UnityEngine.Random;
 
 public class HordeManager : MonoBehaviour
 {
     [SerializeField] private Transform _playerTransform;
-
     [SerializeField] private float _maxDelay;
-    [SerializeField] private float _minDelay;
-
+    [SerializeField] private float _minDelay;  
     [SerializeField] private int _hordeMembers;
     [SerializeField] private HordeEnemy _hordeEnemyPrefab;
     [SerializeField] private HordeEnemy[] _hordeArray;
-    [SerializeField] private float _delayBeforeAttack = 10;
+    [SerializeField] private float _delayBeforeAttack;
 
     private float _spawnRange;
-    private int _playerLevel;
     private EnemyManager _enemyManager;
     private Vector3 _positionInFormation;
     private Vector3 _defaultPositionForHorde;
     private Quaternion _defaultRotationForHorde;
-    private bool HordeAttackActivated = false;
+    private bool HordeAttackActivated = false; 
+    private int _valueForDelay = -1;
+    private int _valueForAttacksNumber = 1;
 
 
-    public void Init(EnemyManager enemyManager, ref int level)
+    public void Init(EnemyManager enemyManager)
     {
-        _playerLevel = level;
         _enemyManager = enemyManager;
         _hordeArray = new HordeEnemy[_hordeMembers];
         _defaultPositionForHorde = transform.position;
         _defaultRotationForHorde = transform.rotation;
         _spawnRange = 2* _hordeEnemyPrefab.GetComponent<SphereCollider>().radius;
-
+        _delayBeforeAttack = _maxDelay;
         CreateHorde(_hordeEnemyPrefab);
     }
 
@@ -46,10 +43,18 @@ public class HordeManager : MonoBehaviour
         {            
             ActivateHordeAttack(_hordeEnemyPrefab);
         }
-        if (_delayBeforeAttack < -4)
+        if (_delayBeforeAttack < -6)
         {
             DeactivateHordeAttack(_hordeEnemyPrefab);
-            _delayBeforeAttack = Random.Range(_minDelay, _maxDelay) - (_playerLevel * 2);
+            _delayBeforeAttack = _minDelay;
+
+            _valueForDelay++;
+            if (_valueForDelay > _valueForAttacksNumber)
+            {
+                _valueForAttacksNumber++;
+                _valueForDelay = 0;
+                _delayBeforeAttack = _maxDelay;
+            }
         }
     }
 
@@ -64,12 +69,19 @@ public class HordeManager : MonoBehaviour
                 HordeEnemy newHordeEnemy = Instantiate(_hordeEnemy, _positionInFormation, Quaternion.identity, transform);
                 _hordeArray[i] = newHordeEnemy;
                 newHordeEnemy.Init(_playerTransform);
+                SetActiveForHorde(false);
             }
             else
             {
                 _hordeArray[i].transform.SetPositionAndRotation(_positionInFormation, _defaultRotationForHorde);
             }
             _positionInFormation.x += _spawnRange;
+
+            if (i == (_hordeMembers / 2) - 1)
+            {
+                _positionInFormation.z -= _spawnRange;
+                _positionInFormation.x = (-_hordeMembers / 2) - (_spawnRange / 2);
+            }
         }
     }
 

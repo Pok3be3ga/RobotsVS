@@ -15,7 +15,7 @@ MonoBehaviour:
   EnemyWavesArray:
   - Enemy: {fileID: 418030179873237852, guid: 32c52e69227228a4fb62fe56f4a39970, type: 3}
     NumberPerSecond:
-    - 0.8
+    - 0
     - 1
     - 2.0828013
     - 2.3856022
