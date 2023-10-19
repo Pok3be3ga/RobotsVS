@@ -60,7 +60,7 @@ public class HordeManager : MonoBehaviour
 
     public void CreateHorde(HordeEnemy _hordeEnemy)
     {
-        _positionInFormation = new Vector3(-_hordeMembers / 2, 0, 0);
+        _positionInFormation = new Vector3(-_hordeMembers / 2f, 0, 0);
 
         for (int i = 0; i < _hordeMembers; i++)
         {

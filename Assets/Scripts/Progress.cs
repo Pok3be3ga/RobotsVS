@@ -1,10 +1,7 @@
 
-using System;
 using System.Runtime.InteropServices;
-using TMPro;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 [System.Serializable]
 public class ProgressData

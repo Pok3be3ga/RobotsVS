@@ -1,4 +1,4 @@
-﻿mergeInto(LibraryManager.library, {
+mergeInto(LibraryManager.library, {
 
   	Hello: function () {
     	window.alert("Hello, world!");
