@@ -75,8 +75,8 @@ Transform:
   m_GameObject: {fileID: 715163565419134395}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.253909, y: 0, z: 4.155686}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6578648974142847144}
@@ -130,8 +130,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1
-  m_Center: {x: 0, y: 0, z: -0.91}
+  m_Radius: 0.8
+  m_Center: {x: 0, y: 0, z: -1.17}
 --- !u!114 &712909718950833328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,16 +145,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ColumnColor: {r: 0, g: 0, b: 0, a: 0}
-  _health: 2
+  _health: 4
   _rigidbody: {fileID: 2949437815831505586}
-  speed: 12
+  speed: 8
   _attackPeriod: 0.5
-  _dps: 16
+  _dps: 6
   _enemyHitPrefab: {fileID: 7642662276420158857, guid: 073e385a22bacac4ebd0e5609dc286cf,
     type: 3}
   _deathEffect: {fileID: 8891085540853434729, guid: a76161fe5e4d2c447965f3a0c359e851,
     type: 3}
-  _rotationLerp: 0
   CoeffHEalthInput: {fileID: 0}
   CoeffHEalth: 1.2
   _hordeEnemyRigidbody: {fileID: 2949437815831505586}
@@ -184,7 +183,7 @@ Transform:
   m_GameObject: {fileID: 3828470067755571897}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.6666667}
+  m_LocalPosition: {x: 0, y: 0, z: -0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -239,7 +238,7 @@ Transform:
   m_GameObject: {fileID: 8789435672749925881}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.086, y: 0, z: -0.783}
+  m_LocalPosition: {x: 0, y: 0, z: -0.783}
   m_LocalScale: {x: 1.9281, y: 1.9281, z: 1.9281}
   m_ConstrainProportionsScale: 0
   m_Children: []

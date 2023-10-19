@@ -19,6 +19,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private float _minRadius;
     [SerializeField] private float _maxRadius;
     [SerializeField] private List<Enemy> _enemyiesList = new List<Enemy>();
+    [SerializeField] private DelayForSound _enemyDeathSound;
 
     public ChapterSettings[] ChapterSettings;
 
@@ -160,6 +161,7 @@ public class EnemyManager : MonoBehaviour
     public void ExcludeDead(Enemy enemy)
     {
         _enemyiesList.Remove(enemy);
+        _enemyDeathSound.PlaySound();
 
         // Враг создает или очики опыта или монету
         if (Random.value < _coinDropProbability)
