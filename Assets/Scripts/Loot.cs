@@ -6,19 +6,20 @@ public enum LootType
 {
     Experience,
     Coin,
-    Other
+    Health,
+    Magnet
 }
 
 public class Loot : MonoBehaviour
 {
-
     public LootType LootType { get; protected set; }
-    [SerializeField] private float _moveSpeed = 18f;
-    [SerializeField] private float _rotationSpeed = 360f;
-    [SerializeField] private Collider _collider;
-    private CoinCounter coinCounter;
+    [SerializeField] protected float _moveSpeed = 18f;
+    [SerializeField] protected float _rotationSpeed = 360f;
+    [SerializeField] protected Collider _collider;
+    protected CoinCounter coinCounter;
+    [SerializeField] protected AudioManager _audioManager;
 
-    private void LateUpdate()
+    protected void LateUpdate()
     {
         transform.Rotate(0f, _rotationSpeed * Time.deltaTime, 0f);
     }
@@ -29,7 +30,7 @@ public class Loot : MonoBehaviour
         StartCoroutine(MoveToPlayer(coinCollector));
     }
 
-    private IEnumerator MoveToPlayer(Collector coinCollector)
+    protected IEnumerator MoveToPlayer(Collector coinCollector)
     {
         float t = 0f;
         Vector3 toTarget = (coinCollector.transform.position - transform.position).normalized;
@@ -58,10 +59,10 @@ public class Loot : MonoBehaviour
         }
     }
 
-    protected virtual void Take(Collector coinCollector) {
-        
+    protected virtual void Take(Collector coinCollector)
+    {
+        //_audioManager.FindAudioSourceByClipName(LootType + "Take");
         Die();
-
     }
 
     protected void Die()

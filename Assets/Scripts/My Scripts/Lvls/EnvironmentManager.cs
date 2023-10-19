@@ -42,7 +42,6 @@ public class EnvironmentManager : MonoBehaviour
         ChangeGround();
         LoadObjects();        
         SpawnEnvironment();
-        LvlNumber = Progress.InstanceProgress.IndexChapter;
     }
 
     public void LoadNewGround()

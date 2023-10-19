@@ -8,12 +8,11 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
-
     [field: SerializeField] public Color ColumnColor;
 
     [SerializeField] private float _health = 50;
-    protected Transform _playerTransform;
     [SerializeField] protected Rigidbody _rigidbody;
+    protected Transform _playerTransform;
     public float speed = 3f;
     protected PlayerHealth _playerHealth;
     private float _attackTimer;
@@ -34,10 +33,11 @@ public class Enemy : MonoBehaviour
 
     public TextMeshPro CoeffHEalthInput;
     public float CoeffHEalth = 1.2f;
+    private AudioManager _audioManager;
 
-
-    public void Init(Transform playerTransform, EnemyManager enemyManager, int level, int Chapter)
+    public void Init(Transform playerTransform, EnemyManager enemyManager, int level, int Chapter, AudioManager audioManager)
     {
+        _audioManager = audioManager;
         _playerTransform = playerTransform;
         _attackTimer = 0f;
         _enemyManager = enemyManager;
@@ -114,6 +114,7 @@ public class Enemy : MonoBehaviour
     public void SetDamage(float value, float freezTime)
     {
         _health -= value;
+        _audioManager.FindAudioSourceByClipName("DamageEnemy");
         _enemyHit.ShowDamage(transform.position, value);
         OnTakeDamdage.Invoke();
         if (_health <= 0)

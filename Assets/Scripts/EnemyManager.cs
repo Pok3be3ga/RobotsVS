@@ -45,6 +45,7 @@ public class EnemyManager : MonoBehaviour
     private GameStateManager _gameStateManager;
 
     [SerializeField] private HordeManager _hordeManager;
+    [SerializeField] private AudioManager _audioManager;
 
     private void Start()
     {
@@ -143,7 +144,7 @@ public class EnemyManager : MonoBehaviour
     {
         Enemy newEnemy = Instantiate(enemy, RandomSpawnPosition() + _playerTransform.position, Quaternion.identity, transform);
         _enemyiesList.Add(newEnemy);
-        newEnemy.Init(_playerTransform, this, _level, Progress.InstanceProgress.ProgressData.Chapter);
+        newEnemy.Init(_playerTransform, this, _level, Progress.InstanceProgress.ProgressData.Chapter, _audioManager);
         return newEnemy;
     }
 

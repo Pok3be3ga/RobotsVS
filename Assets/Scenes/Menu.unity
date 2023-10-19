@@ -4608,7 +4608,7 @@ MonoBehaviour:
     _healthLevel: 0
     _damageLevel: 0
     _lootLevel: 0
-    _chapter: 0
+    _chapter: 3
     _coins: 0
     _numberOfWaves: 5
   IndexRobot: 0

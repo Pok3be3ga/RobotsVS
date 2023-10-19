@@ -12,7 +12,6 @@ public class StartGame : MonoBehaviour
         SceneManager.LoadScene("Chapter 1");
         _coinCounter.SaveToProgress();
         _choseRobots.SaveRobotIndex();
-
     }
 
     public void GameMenu()

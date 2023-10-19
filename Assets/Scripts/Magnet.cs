@@ -7,7 +7,7 @@ public class Magnet : Loot
 
     private void Awake()
     {
-        LootType = LootType.Other;
+        LootType = LootType.Magnet;
     }
 
     protected override void Take(Collector coinCollector)

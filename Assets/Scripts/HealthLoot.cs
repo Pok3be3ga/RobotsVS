@@ -7,7 +7,7 @@ public class HealthLoot : Loot
 
     private void Awake()
     {
-        LootType = LootType.Other;
+        LootType = LootType.Health;
     }
 
     protected override void Take(Collector coinCollector)

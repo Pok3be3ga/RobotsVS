@@ -15,9 +15,9 @@ public class CoinLoot : Loot
 
     protected override void Take(Collector coinCollector)
     {
+        Debug.LogError("вошёл в Take");
         base.Take(coinCollector);
         coinCollector.CollectCoin(_value);
-
     }
 
 }
