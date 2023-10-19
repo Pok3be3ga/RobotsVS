@@ -11,7 +11,6 @@ public class FireBall : MonoBehaviour
     [SerializeField] private ParticleSystem _explosionEffect;
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private LayerMask _layerMask;
-
     public void Init( Vector3 velocity, float radius, float damage)
     {
         _rigidbody.velocity = velocity;
@@ -19,7 +18,10 @@ public class FireBall : MonoBehaviour
         _radius = radius;
         Destroy(gameObject, 4f);
     }
-
+    private void FixedUpdate()
+    {
+        transform.rotation = Quaternion.LookRotation(_rigidbody.velocity);
+    }
     private void OnCollisionEnter(Collision collision)
     {
         Instantiate(_explosionEffect, transform.position, Quaternion.identity);

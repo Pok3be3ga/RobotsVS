@@ -27,7 +27,7 @@ public class FireBallEffect : ContinuousEffect
                 
 
                 Vector3 direction = Quaternion.Euler(0, Random.Range(0f, 360f), 0) * Vector3.right;
-                FireBall newFireBall = Instantiate(_fireBallPrefab, playerPosition, Quaternion.Euler(direction));
+                FireBall newFireBall = Instantiate(_fireBallPrefab, playerPosition, Quaternion.Euler(0, direction.y, 0));
                 newFireBall.Init(direction.normalized * _speed, GetSkillValue(Skill.Radius), GetSkillValue(Skill.Damage));
                 yield return new WaitForSeconds(0.2f);
 

@@ -24,8 +24,7 @@ public class MeteorEffect : ContinuousEffect
             Debug.Log("i = " + i);
             Vector2 randomPosition = Random.insideUnitCircle;
             Vector3 position = _player.transform.position + new Vector3(randomPosition.x, 0, randomPosition.y) * _zoneRadius;
-            Meteor newMeteor = Instantiate(_meteorPrefab, position, Quaternion.identity);
-
+            Meteor newMeteor = Instantiate(_meteorPrefab, position, Quaternion.Euler(position));
             newMeteor.Init(GetSkillValue(Skill.Radius), GetSkillValue(Skill.Damage));
 
             yield return new WaitForSeconds(0.3f);
