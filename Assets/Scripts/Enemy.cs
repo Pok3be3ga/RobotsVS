@@ -3,6 +3,7 @@ using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
@@ -11,10 +12,10 @@ public class Enemy : MonoBehaviour
     [field: SerializeField] public Color ColumnColor;
 
     [SerializeField] private float _health = 50;
-    private Transform _playerTransform;
-    [SerializeField] private Rigidbody _rigidbody;
+    protected Transform _playerTransform;
+    [SerializeField] protected Rigidbody _rigidbody;
     public float speed = 3f;
-    private PlayerHealth _playerHealth;
+    protected PlayerHealth _playerHealth;
     private float _attackTimer;
     [SerializeField] private float _attackPeriod = 1f;
     [SerializeField] private float _dps;
@@ -27,9 +28,9 @@ public class Enemy : MonoBehaviour
 
     public Action OnTakeDamdage;
     private bool _isFrozen;
-    public float _rotationLerp = 3f;
-    private Vector3 _toPlayer;
-    private Quaternion _targetRotation;
+    protected float _rotationLerp = 3f;
+    protected Vector3 _toPlayer;
+    protected Quaternion _targetRotation;
 
     public TextMeshPro CoeffHEalthInput;
     public float CoeffHEalth = 1.2f;
@@ -53,7 +54,7 @@ public class Enemy : MonoBehaviour
         _enemyHit.Init();
     }
 
-    private void Update()
+    void Update()
     {
 
         if (_playerHealth)
