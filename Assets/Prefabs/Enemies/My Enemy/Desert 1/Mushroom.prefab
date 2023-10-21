@@ -51,7 +51,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.8327569
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1927280126014711970
 GameObject:
@@ -264,7 +264,6 @@ MonoBehaviour:
     type: 3}
   _deathEffect: {fileID: 8891085540853434729, guid: a76161fe5e4d2c447965f3a0c359e851,
     type: 3}
-  _rotationLerp: 8
   CoeffHEalthInput: {fileID: 0}
   CoeffHEalth: 1.2
 --- !u!54 &6177058380949903998
