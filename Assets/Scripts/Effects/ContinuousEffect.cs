@@ -14,7 +14,8 @@ public enum Skill
 }
 
 [System.Serializable]
-public class SkillLevels {
+public class SkillLevels
+{
     public float[] Values = new float[10];
 }
 
@@ -31,6 +32,7 @@ public class ContinuousEffect : Effect
     [HideInInspector]
     public UnityEvent<float> OnLoad = new UnityEvent<float>();
     private float _timer;
+    protected int _clipNum = 1;
 
 
     public static int GetTotalNumberOfSkills()
@@ -44,9 +46,12 @@ public class ContinuousEffect : Effect
 
         float value = SkillLevels[(int)skill].Values[levelIndex];
 
-        if (skill == Skill.Colldown) {
+        if (skill == Skill.Colldown)
+        {
             value *= (1 - _player.ColldownReduction);
-        } else if (skill == Skill.Damage) {
+        }
+        else if (skill == Skill.Damage)
+        {
             value *= (1 + _player.DamageBoost + (Progress.InstanceProgress.ProgressData.DamageLevel) * 0.5f);
         }
         else if (skill == Skill.Radius)
@@ -80,6 +85,20 @@ public class ContinuousEffect : Effect
 
     protected virtual void Produce()
     {
+        if (_audioManager.FindAudioSourceByClipName(this.GetType().Name + "Sound0" + _clipNum) != null)
+        {
+            _audioSource.Play();
+        }
+        else
+        {
+            Debug.LogError("Õ≈“ «¬” ¿: " + this.GetType().Name + "Sound0" + _clipNum);
+        }
+
+
+        if (_audioManager.FindAudioSourceByClipName(this.GetType().Name + "Sound0" + _clipNum++) == null)
+        {
+            _clipNum = 1;
+        }
     }
 
     public static string GetSkillName(Skill skill)

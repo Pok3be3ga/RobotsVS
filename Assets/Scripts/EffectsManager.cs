@@ -22,7 +22,7 @@ public class EffectsManager : MonoBehaviour
     [SerializeField] private TopIconManager _topIconManager;
     public Action OnHideCards;
 
-
+    [SerializeField] private AudioManager _audioManager;
 
     private void Awake()
     {
@@ -151,6 +151,8 @@ public class EffectsManager : MonoBehaviour
                 _continuousEffectsApplied.Add(c_effect);
                 _robotsEffect.Remove(c_effect);
                 _topIconManager.AddIcon(c_effect);
+
+                c_effect._audioManager = _audioManager;
             }
 
         }
@@ -167,6 +169,8 @@ public class EffectsManager : MonoBehaviour
                 _continuousEffectsApplied.Add(c_effect);
                 _continuousEffects.Remove(c_effect);
                 _topIconManager.AddIcon(c_effect);
+
+                c_effect._audioManager = _audioManager;
             }
 
         }
@@ -188,7 +192,7 @@ public class EffectsManager : MonoBehaviour
     {
         foreach (var effect in _continuousEffectsApplied)
         {
-            effect.ProcessFrame(Time.deltaTime * (1 + _player.ColldownReduction) );
+            effect.ProcessFrame(Time.deltaTime * (1 + _player.ColldownReduction));
         }
     }
 

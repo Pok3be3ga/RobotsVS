@@ -19,7 +19,6 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private float _minRadius;
     [SerializeField] private float _maxRadius;
     [SerializeField] private List<Enemy> _enemyiesList = new List<Enemy>();
-    [SerializeField] private DelayForSound _enemyDeathSound;
 
     public ChapterSettings[] ChapterSettings;
 
@@ -45,7 +44,9 @@ public class EnemyManager : MonoBehaviour
     private GameStateManager _gameStateManager;
 
     [SerializeField] private HordeManager _hordeManager;
-    [SerializeField] private AudioManager _audioManager;
+
+    [SerializeField] private DelayForSound _enemyDeathSound;
+    [SerializeField] private DelayForSound _enemyHitSound;
 
     private void Start()
     {
@@ -144,7 +145,7 @@ public class EnemyManager : MonoBehaviour
     {
         Enemy newEnemy = Instantiate(enemy, RandomSpawnPosition() + _playerTransform.position, Quaternion.identity, transform);
         _enemyiesList.Add(newEnemy);
-        newEnemy.Init(_playerTransform, this, _level, Progress.InstanceProgress.ProgressData.Chapter, _audioManager);
+        newEnemy.Init(_playerTransform, this, _level, Progress.InstanceProgress.ProgressData.Chapter, _enemyHitSound);
         return newEnemy;
     }
 

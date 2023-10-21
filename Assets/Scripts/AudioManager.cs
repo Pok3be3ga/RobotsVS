@@ -5,12 +5,11 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] private AudioSource[] _sound;
+    [SerializeField] private AudioSource[] _skillsSounds;
 
-    public void FindAudioSourceByClipName(string clipName)
+    public AudioSource FindAudioSourceByClipName(string clipName)
     {
-        Debug.LogError(Array.Find(_sound, source => source.clip != null && source.clip.name == clipName));
-
+        return (Array.Find(_skillsSounds, source => source.clip != null && source.clip.name == clipName));
     }
 
 

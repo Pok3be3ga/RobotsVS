@@ -30,8 +30,8 @@ public class EnemyHit : MonoBehaviour
         }
     }
 
-    private IEnumerator Show() {
-        
+    private IEnumerator Show() 
+    {        
         while (Time.time - _lastShowTime < 1f)
         {
             if (_valueBefore != _value) {

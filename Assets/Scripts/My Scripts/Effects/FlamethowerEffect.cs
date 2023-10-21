@@ -10,9 +10,9 @@ public class FlamethowerEffect : ContinuousEffect
 
     [SerializeField] private Flamethrower _flamethrowerPrefab;
     [SerializeField] private Flamethrower _flamethrower;
-
-    
     [SerializeField] private LayerMask _layerMask;
+
+
     protected override void FirstTimeCreated()
     {
         base.FirstTimeCreated();

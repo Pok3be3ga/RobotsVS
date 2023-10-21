@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18599689, g: 0.53840405, b: 0.6419488, a: 1}
+  m_IndirectSpecularColor: {r: 0.18593115, g: 0.53840375, b: 0.64181995, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -308,34 +308,20 @@ Transform:
   m_GameObject: {fileID: 38447465}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.540989, y: 79.32475, z: -21.553474}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 209556906}
-  - {fileID: 1536722627}
-  - {fileID: 1061911995}
-  - {fileID: 320564614}
-  - {fileID: 1544952325}
-  - {fileID: 2112760631}
-  - {fileID: 670995035}
-  - {fileID: 1875405317}
-  - {fileID: 443476649}
+  - {fileID: 163940184}
+  - {fileID: 1011925583}
   - {fileID: 159320290}
-  - {fileID: 474318442}
   - {fileID: 1480328872}
+  - {fileID: 474318442}
   - {fileID: 878490233}
   - {fileID: 2068094470}
   - {fileID: 1094888706}
   - {fileID: 1220410119}
-  - {fileID: 1286630642}
-  - {fileID: 340119356}
-  - {fileID: 1988092218}
-  - {fileID: 892741623}
-  - {fileID: 592411727}
-  - {fileID: 215863478}
-  - {fileID: 496747060}
-  m_Father: {fileID: 112566715}
+  m_Father: {fileID: 1797053315}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &38447467
 MonoBehaviour:
@@ -349,12 +335,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61d9244c2ab479149b7bb905f5fbf0d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sound:
-  - {fileID: 1480328873}
-  - {fileID: 1480328873}
-  - {fileID: 1480328873}
-  - {fileID: 1480328873}
-  - {fileID: 1480328873}
+  _skillsSounds:
+  - {fileID: 1286630643}
+  - {fileID: 340119357}
+  - {fileID: 1988092219}
+  - {fileID: 892741624}
+  - {fileID: 592411728}
+  - {fileID: 215863479}
+  - {fileID: 496747061}
 --- !u!1 &73897456
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,8 +584,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 38447466}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &135265198 stripped
@@ -795,7 +782,7 @@ GameObject:
   - component: {fileID: 159320291}
   - component: {fileID: 159320292}
   m_Layer: 0
-  m_Name: EnemyDeathSound
+  m_Name: EnemyDeathSound01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -927,6 +914,46 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &163940183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 163940184}
+  m_Layer: 0
+  m_Name: Dima'sSounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &163940184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163940183}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 209556906}
+  - {fileID: 1536722627}
+  - {fileID: 1061911995}
+  - {fileID: 320564614}
+  - {fileID: 1544952325}
+  - {fileID: 2112760631}
+  - {fileID: 670995035}
+  - {fileID: 1875405317}
+  - {fileID: 443476649}
+  m_Father: {fileID: 38447466}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &169108328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1094,7 +1121,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 38447466}
+  m_Father: {fileID: 163940184}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &209556907
 AudioSource:
@@ -1370,7 +1397,7 @@ GameObject:
   - component: {fileID: 215863478}
   - component: {fileID: 215863479}
   m_Layer: 0
-  m_Name: Skill_Meteor_Rain_02
+  m_Name: MeteorEffectSound02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1384,12 +1411,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215863477}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 38447466}
+  m_Father: {fileID: 1011925583}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &215863479
 AudioSource:
@@ -1598,7 +1625,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 38447466}
+  m_Father: {fileID: 163940184}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &320564615
 AudioSource:
@@ -2111,7 +2138,7 @@ GameObject:
   - component: {fileID: 340119356}
   - component: {fileID: 340119357}
   m_Layer: 0
-  m_Name: Mine_Explosion_02
+  m_Name: MineExplosion02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2125,12 +2152,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 340119355}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 38447466}
+  m_Father: {fileID: 1011925583}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &340119357
 AudioSource:
@@ -2904,7 +2931,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 38447466}
+  m_Father: {fileID: 163940184}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &443476650
 AudioSource:
@@ -3143,7 +3170,7 @@ GameObject:
   - component: {fileID: 496747060}
   - component: {fileID: 496747061}
   m_Layer: 0
-  m_Name: Skill_Meteor_Rain_03
+  m_Name: MeteorEffectSound03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3157,12 +3184,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496747059}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 38447466}
+  m_Father: {fileID: 1011925583}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &496747061
 AudioSource:
@@ -3726,7 +3753,7 @@ GameObject:
   - component: {fileID: 592411727}
   - component: {fileID: 592411728}
   m_Layer: 0
-  m_Name: Skill_Meteor_Rain_01
+  m_Name: MeteorEffectSound01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3740,12 +3767,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592411726}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 38447466}
+  m_Father: {fileID: 1011925583}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &592411728
 AudioSource:
@@ -4291,7 +4318,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 38447466}
+  m_Father: {fileID: 163940184}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &670995036
 AudioSource:
@@ -4968,7 +4995,7 @@ GameObject:
   - component: {fileID: 892741623}
   - component: {fileID: 892741624}
   m_Layer: 0
-  m_Name: Skill_Lightning_01
+  m_Name: ChainLightningEffectSound01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4982,12 +5009,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892741622}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 38447466}
+  m_Father: {fileID: 1011925583}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &892741624
 AudioSource:
@@ -5848,6 +5875,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1011925582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1011925583}
+  m_Layer: 0
+  m_Name: SkillsSounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1011925583
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011925582}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1286630642}
+  - {fileID: 340119356}
+  - {fileID: 1988092218}
+  - {fileID: 892741623}
+  - {fileID: 592411727}
+  - {fileID: 215863478}
+  - {fileID: 496747060}
+  m_Father: {fileID: 38447466}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1055911612
 GameObject:
   m_ObjectHideFlags: 0
@@ -6100,7 +6165,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 38447466}
+  m_Father: {fileID: 163940184}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1082512574
 GameObject:
@@ -7417,7 +7482,7 @@ GameObject:
   - component: {fileID: 1286630642}
   - component: {fileID: 1286630643}
   m_Layer: 0
-  m_Name: Mine_Explosion_01
+  m_Name: MineExplosion01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7431,12 +7496,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1286630641}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 38447466}
+  m_Father: {fileID: 1011925583}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1286630643
 AudioSource:
@@ -7584,7 +7649,6 @@ MonoBehaviour:
   _minRadius: 25
   _maxRadius: 30
   _enemyiesList: []
-  _enemyDeathSound: {fileID: 159320291}
   ChapterSettings:
   - {fileID: 11400000, guid: b940f6584a1ec1043879394ea3617c9c, type: 2}
   - {fileID: 11400000, guid: 13fd323639551c540b6c5b4bf983340f, type: 2}
@@ -7596,7 +7660,8 @@ MonoBehaviour:
     type: 3}
   _numberOfWaves: 5
   _hordeManager: {fileID: 1298571256}
-  _audioManager: {fileID: 38447467}
+  _enemyDeathSound: {fileID: 159320291}
+  _enemyHitSound: {fileID: 1480328874}
 --- !u!1 &1298571254
 GameObject:
   m_ObjectHideFlags: 0
@@ -8144,10 +8209,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1480328872}
-  - component: {fileID: 1480328873}
   - component: {fileID: 1480328874}
+  - component: {fileID: 1480328873}
   m_Layer: 0
-  m_Name: DamageEnemy
+  m_Name: EnemyHitSound01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8265,33 +8330,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!54 &1480328874
-Rigidbody:
+--- !u!114 &1480328874
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1480328871}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dd256597a4e15b40ab2cfac0ba84ca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: 1efe654ecbeab497eac381b078276739, type: 3}
+  _audioSource: {fileID: 1480328873}
 --- !u!1 &1491560749
 GameObject:
   m_ObjectHideFlags: 0
@@ -8628,7 +8680,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 38447466}
+  m_Father: {fileID: 163940184}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1544952324
 GameObject:
@@ -8660,7 +8712,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 38447466}
+  m_Father: {fileID: 163940184}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1544952326
 AudioSource:
@@ -9728,6 +9780,7 @@ MonoBehaviour:
   _cardManager: {fileID: 2125849733}
   _player: {fileID: 8873387193165512676}
   _topIconManager: {fileID: 327398549}
+  _audioManager: {fileID: 38447467}
 --- !u!4 &1790621253
 Transform:
   m_ObjectHideFlags: 0
@@ -9772,6 +9825,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 38447466}
   - {fileID: 1059423415}
   - {fileID: 33470072}
   - {fileID: 1082512576}
@@ -10089,7 +10143,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 38447466}
+  m_Father: {fileID: 163940184}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1875405318
 AudioSource:
@@ -10985,7 +11039,7 @@ GameObject:
   - component: {fileID: 1988092218}
   - component: {fileID: 1988092219}
   m_Layer: 0
-  m_Name: Mine_Explosion_03
+  m_Name: MineExplosion03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10999,12 +11053,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988092217}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 38447466}
+  m_Father: {fileID: 1011925583}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1988092219
 AudioSource:
@@ -11562,7 +11616,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 38447466}
+  m_Father: {fileID: 163940184}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &2112760632
 AudioSource:

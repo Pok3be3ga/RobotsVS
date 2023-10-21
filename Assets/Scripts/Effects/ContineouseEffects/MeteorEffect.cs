@@ -5,7 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = nameof(MeteorEffect), menuName = "Effects/" + nameof(MeteorEffect))]
 public class MeteorEffect : ContinuousEffect
 {
-
     [SerializeField] private Meteor _meteorPrefab;
     [SerializeField] private float _zoneRadius = 12f;
 

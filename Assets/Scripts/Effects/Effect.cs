@@ -14,7 +14,13 @@ public abstract class Effect : ScriptableObject
     protected Player _player;
     protected EnemyManager _enemyManager;
 
-    public virtual void Initialize(EffectsManager effectsManager, EnemyManager enemyManager, Player player) {
+
+
+    public AudioSource _audioSource;
+    public AudioManager _audioManager;
+
+    public virtual void Initialize(EffectsManager effectsManager, EnemyManager enemyManager, Player player) 
+    {
         _effectsManager = effectsManager;
         _player = player;
         _enemyManager = enemyManager;
@@ -30,6 +36,7 @@ public abstract class Effect : ScriptableObject
 
     protected virtual void FirstTimeCreated()
     {
+        _audioSource = _audioManager.FindAudioSourceByClipName(this.GetType().Name + "Sound01");
     }
 
     protected virtual void SetLevel() {

@@ -33,11 +33,11 @@ public class Enemy : MonoBehaviour
 
     public TextMeshPro CoeffHEalthInput;
     public float CoeffHEalth = 1.2f;
-    private AudioManager _audioManager;
+    private DelayForSound _enemyHitSound;
 
-    public void Init(Transform playerTransform, EnemyManager enemyManager, int level, int Chapter, AudioManager audioManager)
+    public void Init(Transform playerTransform, EnemyManager enemyManager, int level, int Chapter, DelayForSound enemyHitSound)
     {
-        _audioManager = audioManager;
+        _enemyHitSound = enemyHitSound;
         _playerTransform = playerTransform;
         _attackTimer = 0f;
         _enemyManager = enemyManager;
@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour
         _enemyHit = Instantiate(_enemyHitPrefab, transform.position, Quaternion.identity);
         _enemyHit.Init();
     }
-    
+
     public void Init(Transform playerTransform)
     {
         _playerTransform = playerTransform;
@@ -114,12 +114,15 @@ public class Enemy : MonoBehaviour
     public void SetDamage(float value, float freezTime)
     {
         _health -= value;
-        _audioManager.FindAudioSourceByClipName("DamageEnemy");
         _enemyHit.ShowDamage(transform.position, value);
         OnTakeDamdage.Invoke();
         if (_health <= 0)
         {
             Die();
+        }
+        else
+        {
+            _enemyHitSound.PlaySound();
         }
         Freez(freezTime);
     }
