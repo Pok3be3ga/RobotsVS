@@ -12,13 +12,15 @@ public class ChainLightning : MonoBehaviour
     private float _damage;
     private int _jumpCount;
     [SerializeField] private LayerMask _layerMask;
+    private AudioSource _audioSource;
 
-    public void Init(Enemy targetEnemy, float damage, float speed, int jumpCount)
+    public void Init(Enemy targetEnemy, float damage, float speed, int jumpCount, AudioSource audioSource)
     {
         _damage = damage;
         _targetEnemy = targetEnemy;
         _speed = speed;
         _jumpCount = jumpCount;
+        _audioSource = audioSource;
         //Destroy(gameObject, 4f);
     }
 
@@ -37,6 +39,7 @@ public class ChainLightning : MonoBehaviour
                 if (_jumpCount > 0)
                 {
                     GetNextEnemy();
+                    _audioSource.Play();
                 }
                 else {
                     Die();

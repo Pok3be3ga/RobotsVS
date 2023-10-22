@@ -10,14 +10,18 @@ public class HordeEnemy : Enemy
     {
         _hordeEnemyRigidbody.velocity = transform.forward * speed;
         _toPlayer = _playerTransform.position - transform.position;
-        // TODO: Убрать магическое число
-        if (_toPlayer.magnitude > 32f)
-        {
-            transform.position += _toPlayer * 1.95f;
+
+        if (_toPlayer.magnitude < 5f)
+        { 
+            _targetRotation = Quaternion.LookRotation(_toPlayer);
+            transform.rotation = Quaternion.Lerp(transform.rotation, 
+                _targetRotation, Time.deltaTime * _rotationLerp);
+            _rigidbody.velocity = transform.forward * speed;
         }
-        _targetRotation = Quaternion.LookRotation(_toPlayer);
-        transform.rotation = Quaternion.Lerp(transform.rotation, _targetRotation, Time.deltaTime * _rotationLerp);
-        _rigidbody.velocity = transform.forward * speed;
+        if (_toPlayer.magnitude > 37f)
+        {
+            SetActive(false);
+        }
     }
 
     public void SetActive(bool active)

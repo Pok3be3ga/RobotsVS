@@ -26,7 +26,7 @@ public class ChainLightningEffect : ContinuousEffect
             {
                 Vector3 position = _player.transform.position;
                 ChainLightning chainLightning = Instantiate(_chainLightningPrefab, position, Quaternion.identity);
-                chainLightning.Init(nearestEnemies[i], GetSkillValue(Skill.Damage), _bulletSpeed, (int)GetSkillValue(Skill.PassCount));
+                chainLightning.Init(nearestEnemies[i], GetSkillValue(Skill.Damage), _bulletSpeed, (int)GetSkillValue(Skill.PassCount), _audioSource);
                 yield return new WaitForSeconds(0.2f);
             }
         }

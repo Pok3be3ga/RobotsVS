@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ColumnColor: {r: 0, g: 0, b: 0, a: 0}
-  _health: 4
+  _health: 8
   _rigidbody: {fileID: 2949437815831505586}
   speed: 8
   _attackPeriod: 0.5
@@ -156,6 +156,8 @@ MonoBehaviour:
     type: 3}
   CoeffHEalthInput: {fileID: 0}
   CoeffHEalth: 1.2
+  _enemyHitSound: {fileID: 0}
+  _enemyDeathSound: {fileID: 0}
   _hordeEnemyRigidbody: {fileID: 2949437815831505586}
 --- !u!1 &3828470067755571897
 GameObject:

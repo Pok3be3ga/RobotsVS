@@ -64,7 +64,7 @@ public class EnemyManager : MonoBehaviour
         _chapterSettings = ChapterSettings[Progress.InstanceProgress.IndexChapter];
         _numberOfWaves = Progress.InstanceProgress.ProgressData.NumberOfWaves;
         SetupEnemies();
-        _hordeManager.Init(this);
+        _hordeManager.Init(this, _enemyDeathSound,  _enemyHitSound);
     }
 
     private void SetupEnemies()
@@ -149,7 +149,7 @@ public class EnemyManager : MonoBehaviour
     {
         Enemy newEnemy = Instantiate(enemy, RandomSpawnPosition() + _playerTransform.position, Quaternion.identity, transform);
         _enemyiesList.Add(newEnemy);
-        newEnemy.Init(_playerTransform, this, _level, Progress.InstanceProgress.ProgressData.Chapter, _enemyHitSound);
+        newEnemy.Init(_playerTransform, this, _level, Progress.InstanceProgress.ProgressData.Chapter, _enemyDeathSound, _enemyHitSound);
         return newEnemy;
     }
 
@@ -167,7 +167,6 @@ public class EnemyManager : MonoBehaviour
     public void ExcludeDead(Enemy enemy)
     {
         _enemyiesList.Remove(enemy);
-        _enemyDeathSound.PlaySound();
 
         // Враг создает или очики опыта или монету
         if (Random.value < _coinDropProbability)

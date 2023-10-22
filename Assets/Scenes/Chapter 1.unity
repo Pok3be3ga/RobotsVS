@@ -7503,7 +7503,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1298571255
 Transform:
   m_ObjectHideFlags: 0
@@ -7534,7 +7534,7 @@ MonoBehaviour:
   _playerTransform: {fileID: 8217974782522312591}
   _maxDelay: 10
   _minDelay: 8
-  _hordeMembers: 10
+  _hordeMembers: 15
   _hordeEnemyPrefab: {fileID: 712909718950833328, guid: 4d1aac7ef0470ea4eb966a4a8cb2f2dd,
     type: 3}
   _hordeArray: []

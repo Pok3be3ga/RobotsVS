@@ -23,10 +23,14 @@ public class HordeManager : MonoBehaviour
     private bool HordeAttackActivated = false; 
     private int _valueForDelay = -1;
     private int _valueForAttacksNumber = 1;
+    [SerializeField] private DelayForSound _enemyDeathSound;
+    [SerializeField] private DelayForSound _enemyHitSound;
 
 
-    public void Init(EnemyManager enemyManager)
+    public void Init(EnemyManager enemyManager, DelayForSound enemyDeathSound, DelayForSound enemyHitSound)
     {
+        _enemyDeathSound = enemyDeathSound;
+        _enemyHitSound = enemyHitSound;
         _enemyManager = enemyManager;
         _hordeArray = new HordeEnemy[_hordeMembers];
         _defaultPositionForHorde = transform.position;
@@ -43,7 +47,7 @@ public class HordeManager : MonoBehaviour
         {            
             ActivateHordeAttack(_hordeEnemyPrefab);
         }
-        if (_delayBeforeAttack < -6)
+        if (_delayBeforeAttack < -9)
         {
             DeactivateHordeAttack(_hordeEnemyPrefab);
             _delayBeforeAttack = _minDelay;
@@ -68,7 +72,7 @@ public class HordeManager : MonoBehaviour
             {
                 HordeEnemy newHordeEnemy = Instantiate(_hordeEnemy, _positionInFormation, Quaternion.identity, transform);
                 _hordeArray[i] = newHordeEnemy;
-                newHordeEnemy.Init(_playerTransform);
+                newHordeEnemy.Init(_playerTransform, _enemyDeathSound, _enemyHitSound);
                 SetActiveForHorde(false);
             }
             else
