@@ -10,12 +10,14 @@ public class Mine : MonoBehaviour
     [SerializeField] private Collider _collider;
     [SerializeField] private GameObject _explosionEffect;
     [SerializeField] private LayerMask _layerMask;
-    [SerializeField] private AudioSource[] _mineExplosion;
 
-    public void Init(float damage, float radius)
+    private AudioSource _mineExplosionSound;
+
+    public void Init(float damage, float radius, AudioSource mineExplosionSound)
     {
         _radius = radius;
         _damage = damage;
+        _mineExplosionSound = mineExplosionSound;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -29,18 +31,18 @@ public class Mine : MonoBehaviour
     void Explode()
     {
         Instantiate(_explosionEffect, transform.position, Quaternion.identity);
-        Collider[] colliders = Physics.OverlapSphere(transform.position, _radius, _layerMask, QueryTriggerInteraction.Ignore);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, 3, _layerMask, QueryTriggerInteraction.Ignore);
 
         foreach (var collider in colliders)
         {
             if (collider.TryGetComponent(out Enemy enemy))
             {
-                enemy.SetDamage(_damage, true);
+                enemy.SetDamage(4, true);
             }
         }
 
-        _mineExplosion[Random.Range(1, _mineExplosion.Length - 1)].Play();
         Destroy(gameObject);
+        //_mineExplosionSound.Play();
     }
 
 }

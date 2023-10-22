@@ -33,9 +33,10 @@ public class Enemy : MonoBehaviour
 
     public TextMeshPro CoeffHEalthInput;
     public float CoeffHEalth = 1.2f;
-    private DelayForSound _enemyHitSound;
+    public DelayForSound _enemyHitSound;
 
-    public void Init(Transform playerTransform, EnemyManager enemyManager, int level, int Chapter, DelayForSound enemyHitSound)
+    public void Init(Transform playerTransform, EnemyManager enemyManager, 
+        int level, int Chapter, DelayForSound enemyHitSound)
     {
         _enemyHitSound = enemyHitSound;
         _playerTransform = playerTransform;

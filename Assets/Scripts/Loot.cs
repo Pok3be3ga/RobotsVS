@@ -16,8 +16,9 @@ public class Loot : MonoBehaviour
     [SerializeField] protected float _moveSpeed = 18f;
     [SerializeField] protected float _rotationSpeed = 360f;
     [SerializeField] protected Collider _collider;
+    [SerializeField] public AudioSource _audioSource;
     protected CoinCounter coinCounter;
-    [SerializeField] protected AudioManager _audioManager;
+
 
     protected void LateUpdate()
     {
@@ -61,7 +62,9 @@ public class Loot : MonoBehaviour
 
     protected virtual void Take(Collector coinCollector)
     {
-        //_audioManager.FindAudioSourceByClipName(LootType + "Take");
+        if (_audioSource != null)
+            _audioSource.Play();
+
         Die();
     }
 

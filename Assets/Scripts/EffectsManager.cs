@@ -23,6 +23,9 @@ public class EffectsManager : MonoBehaviour
     public Action OnHideCards;
 
     [SerializeField] private AudioManager _audioManager;
+    [SerializeField] private AudioSource _clickLevelUp;
+    [SerializeField] private AudioSource _levelUp;
+
 
     private void Awake()
     {
@@ -40,10 +43,8 @@ public class EffectsManager : MonoBehaviour
         for (int i = 0; i < _robotsEffect.Count; i++)
         {
             _robotsEffect[i] = Instantiate(_robotsEffect[i]);
-            _robotsEffect[i].Initialize(this, _enemyManager, _player);
-
+            _robotsEffect[i].Initialize(this, _enemyManager, _player, _audioManager);
         }
-
     }
 
     //private void Start()
@@ -53,6 +54,7 @@ public class EffectsManager : MonoBehaviour
     [ContextMenu(nameof(ShowCards))]
     public void ShowCards(int level)
     {
+        _levelUp.Play();
         // ≈сли уровень самый первый, то нужно показать только карты атаки,
         // иначе игроку будет нечем атаковать
         bool onlyContinuous = level == 1;
@@ -183,6 +185,8 @@ public class EffectsManager : MonoBehaviour
                 _topIconManager.AddIcon(o_effect);
             }
         }
+
+        _clickLevelUp.Play();
         // активируем эффект
         effect.Activate();
         HideCards();

@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class DelayForSound : MonoBehaviour
 {
-    public AudioClip sound;
     [SerializeField] private AudioSource _audioSource;
+    private bool _isPlaying;
 
     public void PlaySound()
     {
-        StartCoroutine(PlaySoundWithDelay());
+        if (!_isPlaying)
+        {
+            StartCoroutine(PlaySoundWithDelay());
+            _isPlaying = false;
+        }
     }
 
     private IEnumerator PlaySoundWithDelay()
     {
-        yield return new WaitForSeconds(Random.Range(0.1f, 0.3f)); 
-        _audioSource.PlayOneShot(sound);
+        _isPlaying = true;
+        _audioSource.Play();
+        yield return new WaitForSeconds(0.3f);
     }
 }

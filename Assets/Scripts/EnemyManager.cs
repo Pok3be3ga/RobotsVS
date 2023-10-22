@@ -33,8 +33,12 @@ public class EnemyManager : MonoBehaviour
 
     // вероятность, что вместо очков опыта выпадет монетка
     private float _coinDropProbability = 0.04f;
+
     [SerializeField] private Loot _expPrefab;
+    [SerializeField] private AudioSource _expTakeSound;
+
     [SerializeField] private Loot _coinPrefab;
+    [SerializeField] private AudioSource _coinTakeSound;
 
     [SerializeField] public int _numberOfWaves;
 
@@ -168,11 +172,16 @@ public class EnemyManager : MonoBehaviour
         // Враг создает или очики опыта или монету
         if (Random.value < _coinDropProbability)
         {
-            Instantiate(_coinPrefab, enemy.transform.position, Quaternion.identity);
+            Loot coinObject = Instantiate(_coinPrefab, enemy.transform.position, Quaternion.identity);
+
+            //Instantiate(_coinPrefab, enemy.transform.position, Quaternion.identity);
+            coinObject._audioSource = _coinTakeSound;
         }
         else
         {
-            Instantiate(_expPrefab, enemy.transform.position, Quaternion.identity);
+            Loot expObject = Instantiate(_expPrefab, enemy.transform.position, Quaternion.identity);
+            //Instantiate(_expPrefab, enemy.transform.position, Quaternion.identity);
+            expObject._audioSource = _expTakeSound;
         }
 
         if (_isWaveLast)

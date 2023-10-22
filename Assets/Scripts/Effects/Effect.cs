@@ -25,6 +25,15 @@ public abstract class Effect : ScriptableObject
         _player = player;
         _enemyManager = enemyManager;
     }
+    
+    public virtual void Initialize(EffectsManager effectsManager, 
+        EnemyManager enemyManager, Player player, AudioManager audioManager) 
+    {
+        _effectsManager = effectsManager;
+        _player = player;
+        _enemyManager = enemyManager;
+        _audioManager = audioManager;
+    }
 
     public virtual void Activate() {
         Level++;
