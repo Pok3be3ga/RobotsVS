@@ -49,7 +49,6 @@ public class HordeManager : MonoBehaviour
         }
         if (_delayBeforeAttack < -9)
         {
-            DeactivateHordeAttack(_hordeEnemyPrefab);
             _delayBeforeAttack = _minDelay;
 
             _valueForDelay++;

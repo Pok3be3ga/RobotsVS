@@ -34,7 +34,7 @@ public class NovaEffect : ContinuousEffect
             if (colliders[i].GetComponent<Enemy>() is Enemy enemy)
             {
                 float damage = GetSkillValue(Skill.Damage);
-                enemy.SetDamage(damage,true);
+                enemy.SetDamageWithoutSound(damage,true);
             }
         }
     }

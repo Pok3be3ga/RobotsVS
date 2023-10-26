@@ -18,7 +18,6 @@ MonoBehaviour:
   Level: 0
   _audioSource: {fileID: 0}
   _audioManager: {fileID: 0}
-  _className: 
   ActiveSkills: 01010001000000
   SkillLevels:
   - Values:

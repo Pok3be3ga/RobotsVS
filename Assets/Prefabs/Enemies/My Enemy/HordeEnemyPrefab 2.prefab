@@ -154,6 +154,7 @@ MonoBehaviour:
     type: 3}
   _deathEffect: {fileID: 8891085540853434729, guid: a76161fe5e4d2c447965f3a0c359e851,
     type: 3}
+  _animator: {fileID: 7333618991037035143}
   CoeffHEalthInput: {fileID: 0}
   CoeffHEalth: 1.2
   _enemyHitSound: {fileID: 0}
@@ -388,6 +389,12 @@ PrefabInstance:
 --- !u!4 &7333618991027772775 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3198499350608632684, guid: 7396ab1848de50443be71bc2d68420de,
+    type: 3}
+  m_PrefabInstance: {fileID: 5306759523071723019}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7333618991037035143 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3198499350616388748, guid: 7396ab1848de50443be71bc2d68420de,
     type: 3}
   m_PrefabInstance: {fileID: 5306759523071723019}
   m_PrefabAsset: {fileID: 0}

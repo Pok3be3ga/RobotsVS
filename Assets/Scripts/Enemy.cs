@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using static UnityEngine.Rendering.DebugUI;
 
 public class Enemy : MonoBehaviour
 {
@@ -24,8 +25,9 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] protected EnemyHit _enemyHitPrefab;
     [SerializeField] protected GameObject _deathEffect;
-    protected EnemyHit _enemyHit;
+    [SerializeField] private Animator _animator;
 
+    protected EnemyHit _enemyHit;
     public Action OnTakeDamdage;
     protected bool _isFrozen;
     protected float _rotationLerp = 3f;
@@ -37,6 +39,7 @@ public class Enemy : MonoBehaviour
 
     public DelayForSound _enemyHitSound;
     public DelayForSound _enemyDeathSound;
+
 
     public void Init(Transform playerTransform, EnemyManager enemyManager,
         int level, int Chapter, DelayForSound enemyDeathSound, DelayForSound enemyHitSound)
@@ -113,18 +116,33 @@ public class Enemy : MonoBehaviour
 
     public void SetDamage(float value)
     {
-        SetDamage(value, 0f);
+        SetDamage(value, 0f, true);
     }
 
     public void SetDamage(float value, bool freez = false)
     {
-        SetDamage(value, freez ? 0.2f : 0);
+        SetDamage(value, freez ? 0.2f : 0, true);
     }
 
-    public void SetDamage(float value, float freezTime)
+    public void SetDamageWithoutSound(float value)
     {
-        _health -= value;
+        SetDamage(value, 0f, false);
+    }
+
+    public void SetDamageWithoutSound(float value, bool freez = false)
+    {
+        SetDamage(value, freez ? 0.2f : 0, false);
+    }
+
+    public void SetDamage(float value, float freezTime, bool doHitSound)
+    {
         speed /= 2;
+        if (_animator != null)
+        {
+            _animator.speed = 0.7f;
+        }
+
+        _health -= value;
         _enemyHit.ShowDamage(transform.position, value);
         OnTakeDamdage.Invoke();
 
@@ -132,13 +150,14 @@ public class Enemy : MonoBehaviour
         {
             Die();
         }
-        else
+        else 
         {
-            _enemyHitSound.PlaySound();
+            if (doHitSound)
+                _enemyHitSound.PlaySound();
+            Freez(freezTime);
+            StartCoroutine(ReturnSpeedToDefaultValue(1));
         }
 
-        Freez(freezTime);
-        StartCoroutine(ReturnSpeedToDefaultValue(1));
     }
 
     public void Die()
@@ -165,6 +184,12 @@ public class Enemy : MonoBehaviour
     private void Freez(float period)
     {
         if (period == 0) return;
+
+        if (_animator != null)
+        {
+            _animator.speed = 0f;
+        }
+
         //_freezCoroutine = StartCoroutine(FreezCycle(period));
         StartCoroutine(FreezCycle(period));
     }
@@ -173,13 +198,24 @@ public class Enemy : MonoBehaviour
     {
         _isFrozen = true;
         _rigidbody.velocity = Vector3.zero;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(period);
+
+        if (_animator != null)
+        {
+            _animator.speed = 1f;
+        }
         _isFrozen = false;
     }
-    
+
     private IEnumerator ReturnSpeedToDefaultValue(float period)
     {
         yield return new WaitForSeconds(period);
+
+        if (_animator != null)
+        {
+            _animator.speed = 1f;
+        }
+
         speed = _startSpeed;
     }
 }

@@ -16,7 +16,6 @@ public class MineEffect : ContinuousEffect
 
     protected override void Produce()
     {
-
         base.Produce();
         Mine newMine = Instantiate(_minePrefab, _player.transform.position, Quaternion.identity);
         newMine.Init(GetSkillValue(Skill.Damage), GetSkillValue(Skill.Radius), 

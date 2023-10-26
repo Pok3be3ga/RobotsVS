@@ -36,7 +36,7 @@ public class FrostAuraEffect : ContinuousEffect
             int numberOfColliders = Physics.OverlapSphereNonAlloc(_player.transform.position, radius, _colliders, _layerMask, QueryTriggerInteraction.Ignore);
             for (int i = 0; i < numberOfColliders; i++)
             {
-                _colliders[i].GetComponent<Enemy>().SetDamage( GetSkillValue(Skill.DPS) * _hitPeriod );
+                _colliders[i].GetComponent<Enemy>().SetDamageWithoutSound( GetSkillValue(Skill.DPS) * _hitPeriod );
             }
             yield return new WaitForSeconds(_hitPeriod);
         }

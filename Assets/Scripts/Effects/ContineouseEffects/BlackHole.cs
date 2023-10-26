@@ -67,7 +67,7 @@ public class BlackHole : MonoBehaviour
             Vector3 direction = transform.position - _enemiesToDrag[i].transform.position;
             Vector3 velocity = direction.normalized * _dragSpeed;
             _enemiesToDrag[i].Drag(velocity, Time.deltaTime);
-            _enemiesToDrag[i].SetDamage(_dps * Time.deltaTime);
+            _enemiesToDrag[i].SetDamageWithoutSound(_dps * Time.deltaTime);
         }
     }
 

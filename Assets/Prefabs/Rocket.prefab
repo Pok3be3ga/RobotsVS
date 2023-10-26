@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1051271247688459284}
   - component: {fileID: 9126213732097959305}
   - component: {fileID: 6715706224460009016}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 7968851854886565475}
   - component: {fileID: 7807661794998868751}
   - component: {fileID: 7808109082735207971}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4910,7 +4910,7 @@ GameObject:
   - component: {fileID: 7968712258337974845}
   - component: {fileID: 7793361939644414803}
   - component: {fileID: 7808803850940464759}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9752,7 +9752,7 @@ GameObject:
   - component: {fileID: 7964897508300695247}
   - component: {fileID: 7807451808331539487}
   - component: {fileID: 7808691689012810019}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14652,6 +14652,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rocket
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b0d5dfa2b5d33b64d8a1bfc5d9860e82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
