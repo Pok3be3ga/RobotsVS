@@ -104,19 +104,19 @@ public class ContinuousEffect : Effect
     public static string GetSkillName(Skill skill)
     {
         if (skill == Skill.Colldown)
-            return "Colldown";
+            return "Кулдаун";
         else if (skill == Skill.Damage)
-            return "Damage";
+            return "Урон";
         else if (skill == Skill.Radius)
-            return "Radius";
+            return "Радиус";
         else if (skill == Skill.Number)
-            return "Number";
+            return "Колличество";
         else if (skill == Skill.DPS)
-            return "DPS";
+            return "Урон в секунду";
         else if (skill == Skill.PassCount)
-            return "Pass Count";
+            return "Цели";
         else if (skill == Skill.LifeTime)
-            return "Life Time";
+            return "Длительность";
         else return "Нет названия для такого эффекта";
     }
 

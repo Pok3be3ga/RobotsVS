@@ -12,9 +12,19 @@ public class ProgressData
     [SerializeField] private int _chapter;
     [SerializeField] private float _coins;
     [SerializeField] private int _numberOfWaves = 5;
+    [SerializeField] private int _numberOfEnvironment;
+
+    public bool[] RobotBuy = {false, false, false};
 
 
-
+    public int NumberOfEnvironment
+    {
+        get => _numberOfEnvironment; set
+        {
+            _numberOfEnvironment = value;
+            SaveSystem.Save(this);
+        }
+    }
     public int NumberOfWaves
     {
         get => _numberOfWaves; set
@@ -74,15 +84,8 @@ public class Progress : MonoBehaviour
     private static extern void SaveExtern(string date);
     [DllImport("__Internal")]
     private static extern void LoadExtern();
-
-
-
-
     public static Progress InstanceProgress;
-
     public int IndexRobot = 0;
-    public int IndexChapter = 0;
-
     public void Init()
     {
         ProgressData = SaveSystem.Load();

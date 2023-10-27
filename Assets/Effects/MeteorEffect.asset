@@ -19,7 +19,6 @@ MonoBehaviour:
   Level: 0
   _audioSource: {fileID: 0}
   _audioManager: {fileID: 0}
-  _className: "\u0411\u0430\u0437\u043E\u0432\u043E\u0435 \u043D\u0430\u0437\u0432\u0430\u043D\u0438\u0435"
   ActiveSkills: 01010101010000
   SkillLevels:
   - Values:

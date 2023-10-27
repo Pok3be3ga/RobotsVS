@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ColumnColor: {r: 0.9960785, g: 0.627451, b: 0.38823533, a: 1}
-  _health: 16
+  _health: 9
   _rigidbody: {fileID: 2949437815831505586}
   speed: 4
   _attackPeriod: 0.5

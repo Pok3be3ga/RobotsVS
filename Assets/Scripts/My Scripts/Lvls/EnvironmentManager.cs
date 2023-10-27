@@ -12,7 +12,7 @@ public class EnvironmentManager : MonoBehaviour
     private string _resourcePath;
     [SerializeField] private Renderer _ground;
     private Material _newGround;
-    [SerializeField] public int LvlNumber;
+    [SerializeField] int LvlNumber;
     [SerializeField] private Environment[] _loadedObjects;
 
     private int _objectCount;
@@ -35,7 +35,7 @@ public class EnvironmentManager : MonoBehaviour
 
     public void Init()
     {
-        LvlNumber = Progress.InstanceProgress.IndexChapter + 1;
+        LvlNumber = Progress.InstanceProgress.ProgressData.NumberOfEnvironment + 1;
         _spawnAreaSizeZ = _spawnArea.bounds.size.z;
         _spawnAreaSizeX = _spawnArea.bounds.size.x;
         LoadNewGround();

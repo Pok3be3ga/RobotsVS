@@ -61,7 +61,7 @@ public class EnemyManager : MonoBehaviour
         _gameManager = gameManager;
         _gameStateManager = gameStateManager;
         _gameManager.OnUpLevel += UpLevel;
-        _chapterSettings = ChapterSettings[Progress.InstanceProgress.IndexChapter];
+        _chapterSettings = ChapterSettings[Progress.InstanceProgress.ProgressData.NumberOfEnvironment];
         _numberOfWaves = Progress.InstanceProgress.ProgressData.NumberOfWaves;
         SetupEnemies();
         _hordeManager.Init(this, _enemyDeathSound,  _enemyHitSound);
@@ -192,13 +192,10 @@ public class EnemyManager : MonoBehaviour
     // Когда последний враг убит
     public void OnLastKilled()
     {
-        Progress.InstanceProgress.IndexChapter++;
-        if (Progress.InstanceProgress.IndexChapter == 3)
-        {
-            Progress.InstanceProgress.IndexChapter = 0;
-        }
         Progress.InstanceProgress.ProgressData.NumberOfWaves++;
         Progress.InstanceProgress.ProgressData.Chapter++;
+        Progress.InstanceProgress.ProgressData.NumberOfEnvironment++;
+        if (Progress.InstanceProgress.ProgressData.NumberOfEnvironment > 2) Progress.InstanceProgress.ProgressData.NumberOfEnvironment = 0;
         _gameStateManager.SetWin();
 #if UNITY_WEBGL
         Progress.InstanceProgress.Save();
