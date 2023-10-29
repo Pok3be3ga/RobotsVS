@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PauseButton _pauseButton;
     [SerializeField] private EnvironmentManager _environmentManager;
 
+    [SerializeField] private AudioSource _LevelUpSound;
+
     public void Init(GameStateManager gameStateManager)
     {
         _player.Init(_permanentProgress);
@@ -54,7 +56,10 @@ public class GameManager : MonoBehaviour
         _effectsManager.ShowCards(_level);
     }
 
-    private void UpLevel() {
+    private void UpLevel() 
+    {
+        _LevelUpSound.Play();
+
         _level++;
         // начальный уровень нулевой, но показывать пользователю надо цифру 1
         _levelText.text = (_level + 1).ToString();

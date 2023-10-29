@@ -52,10 +52,10 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private DelayForSound _enemyDeathSound;
     [SerializeField] private DelayForSound _enemyHitSound;
 
-    private void Start()
-    {
+    [SerializeField] private AudioSource _winSound01;
 
-    }
+    [SerializeField] private TMP_Text _levelProgress;
+
     public void Init(GameManager gameManager, GameStateManager gameStateManager)
     {
         _gameManager = gameManager;
@@ -63,9 +63,20 @@ public class EnemyManager : MonoBehaviour
         _gameManager.OnUpLevel += UpLevel;
         _chapterSettings = ChapterSettings[Progress.InstanceProgress.ProgressData.NumberOfEnvironment];
         _numberOfWaves = Progress.InstanceProgress.ProgressData.NumberOfWaves;
+        DisplayLevelProgress();
         SetupEnemies();
-        _hordeManager.Init(this, _enemyDeathSound,  _enemyHitSound);
+        _hordeManager.Init(this, _enemyDeathSound, _enemyHitSound);
     }
+
+    private void DisplayLevelProgress()
+    {
+        if (!_isWaveLast)
+            _levelProgress.text = "ƒостигните уровн€ " + (_numberOfWaves + 1);
+        else
+            _levelProgress.text = "¬рагов осталось: " + _enemyiesList.Count;
+    }
+
+
 
     private void SetupEnemies()
     {
@@ -115,7 +126,9 @@ public class EnemyManager : MonoBehaviour
                 _nextTimeToCreateList.Add(_timer + 1f / _periodList[i]);
             }
         }
-        _level++;
+
+        _level = level;
+        DisplayLevelProgress();
     }
 
     //private IEnumerator ProcessLastWave() {
@@ -128,10 +141,11 @@ public class EnemyManager : MonoBehaviour
 
     void Update()
     {
-
-
         // если волна последн€€, то больше никого не создавать
-        if (_isWaveLast) return;
+        if (_isWaveLast)
+        {
+            return;
+        }
 
         _timer += Time.deltaTime;
         for (int i = 0; i < _nextTimeToCreateList.Count; i++)
@@ -187,6 +201,7 @@ public class EnemyManager : MonoBehaviour
             if (_enemyiesList.Count == 0)
                 OnLastKilled();
 
+        DisplayLevelProgress();
     }
 
     //  огда последний враг убит
@@ -195,18 +210,17 @@ public class EnemyManager : MonoBehaviour
         Progress.InstanceProgress.ProgressData.NumberOfWaves++;
         Progress.InstanceProgress.ProgressData.Chapter++;
         Progress.InstanceProgress.ProgressData.NumberOfEnvironment++;
-        if (Progress.InstanceProgress.ProgressData.NumberOfEnvironment > 2) Progress.InstanceProgress.ProgressData.NumberOfEnvironment = 0;
+        if (Progress.InstanceProgress.ProgressData.NumberOfEnvironment > 2)
+            Progress.InstanceProgress.ProgressData.NumberOfEnvironment = 0;
+        _winSound01.Play();
         _gameStateManager.SetWin();
 #if UNITY_WEBGL
         Progress.InstanceProgress.Save();
 #endif
-
-
     }
 
     public Enemy[] GetNearest(Vector3 point, int number)
     {
-
         // LINQ
         _enemyiesList = _enemyiesList.OrderBy(x => Vector3.Distance(point, x.transform.position)).ToList();
 

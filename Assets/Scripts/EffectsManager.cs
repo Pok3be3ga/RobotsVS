@@ -107,8 +107,7 @@ public class EffectsManager : MonoBehaviour
         }
 
         // Передаем карты для показа в cardManager. level нужет чтоб просто отобразить его в виде текста.
-        _cardManager.ShowCards(effectsForCards, level);
-        
+        _cardManager.ShowCards(effectsForCards, level);        
     }
 
     void HideCards()

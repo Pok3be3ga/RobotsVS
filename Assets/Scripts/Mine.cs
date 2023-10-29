@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Mine : MonoBehaviour
 {
-
     private float _damage;
     private float _radius;
     [SerializeField] private Collider _collider;
