@@ -8,6 +8,7 @@ public class BootStrapperMenu : MonoBehaviour
     [SerializeField] Progress _progress;
     [SerializeField] PermanentProgress _permanentProgress;
     [SerializeField] TextMeshProUGUI _coinText;
+    [SerializeField] TextMeshProUGUI _levelText;
     private void Awake()
     {
         _progress.Init();
@@ -16,5 +17,7 @@ public class BootStrapperMenu : MonoBehaviour
     private void Start()
     {
         _coinText.text = Progress.InstanceProgress.ProgressData.Coins.ToString();
+        _levelText.text = Progress.InstanceProgress.ProgressData.Chapter.ToString();
+
     }
 }

@@ -6,73 +6,15 @@ using UnityEngine;
 [System.Serializable]
 public class ProgressData
 {
-    [SerializeField] private int _healthLevel;
-    [SerializeField] private int _damageLevel;
-    [SerializeField] private int _lootLevel;
-    [SerializeField] private int _chapter;
-    [SerializeField] private float _coins;
-    [SerializeField] private int _numberOfWaves = 5;
-    [SerializeField] private int _numberOfEnvironment;
+    public int HealthLevel;
+    public int DamageLevel;
+    public int LootLevel;
+    public int Chapter;
+    public float Coins;
+    public int NumberOfWaves = 5;
+    public int NumberOfEnvironment;
 
-    public bool[] RobotBuy = {false, false, false};
-
-
-    public int NumberOfEnvironment
-    {
-        get => _numberOfEnvironment; set
-        {
-            _numberOfEnvironment = value;
-            SaveSystem.Save(this);
-        }
-    }
-    public int NumberOfWaves
-    {
-        get => _numberOfWaves; set
-        {
-            _numberOfWaves = value;
-            SaveSystem.Save(this);
-        }
-    }
-    public int HealthLevel
-    {
-        get => _healthLevel; set
-        {
-            _healthLevel = value;
-            SaveSystem.Save(this);
-        }
-    }
-    public int DamageLevel
-    {
-        get => _damageLevel; set
-        {
-            _damageLevel = value;
-            SaveSystem.Save(this);
-        }
-    }
-    public int LootLevel
-    {
-        get => _lootLevel; set
-        {
-            _lootLevel = value;
-            SaveSystem.Save(this);
-        }
-    }
-    public int Chapter
-    {
-        get => _chapter; set
-        {
-            _chapter = value;
-            SaveSystem.Save(this);
-        }
-    }
-    public float Coins
-    {
-        get => _coins; set
-        {
-            _coins = value;
-            SaveSystem.Save(this);
-        }
-    }
+    public bool[] RobotBuy = { false, false, false };
 }
 
 

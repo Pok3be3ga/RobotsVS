@@ -7,6 +7,7 @@ public class StartGame : MonoBehaviour
 {
     [SerializeField] CoinCounter _coinCounter;
     [SerializeField] ChoseRobots _choseRobots;
+    
     public void StartGameGo()
     {
         SceneManager.LoadScene("Chapter 1");
