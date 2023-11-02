@@ -28,33 +28,33 @@ public class EnemyManager : MonoBehaviour
     private List<Enemy> _enemyList = new List<Enemy>();
     private List<float> _periodList = new List<float>();
     private List<float> _nextTimeToCreateList = new List<float>();
-
     private GameManager _gameManager;
 
     // вероятность, что вместо очков опыта выпадет монетка
     private float _coinDropProbability = 0.04f;
-
     [SerializeField] private Loot _expPrefab;
     [SerializeField] private AudioSource _expTakeSound;
-
     [SerializeField] private Loot _coinPrefab;
     [SerializeField] private AudioSource _coinTakeSound;
-
     [SerializeField] public int _numberOfWaves;
 
     private bool _isWaveLast = false;
     private int _level = 0;
-
     private GameStateManager _gameStateManager;
 
     [SerializeField] private HordeManager _hordeManager;
-
     [SerializeField] private DelayForSound _enemyDeathSound;
     [SerializeField] private DelayForSound _enemyHitSound;
-
     [SerializeField] private AudioSource _winSound01;
-
     [SerializeField] private TMP_Text _levelProgress;
+    // Строчки текста для перевода
+    string _textLevel;
+    [SerializeField] string _textLevelRu;
+    [SerializeField] string _textLevelEn;
+
+    string _textEnemy;
+    [SerializeField] string _textEnemyRu;
+    [SerializeField] string _textEnemyEn;
 
     public void Init(GameManager gameManager, GameStateManager gameStateManager)
     {
@@ -66,14 +66,30 @@ public class EnemyManager : MonoBehaviour
         DisplayLevelProgress();
         SetupEnemies();
         _hordeManager.Init(this, _enemyDeathSound, _enemyHitSound);
+
+        if (LanguageSettings.Instance.CurrentLanguage == "en")
+        {
+            _textLevel = _textLevelEn;
+            _textEnemy = _textEnemyEn;
+        }
+        else if (LanguageSettings.Instance.CurrentLanguage == "ru")
+        {
+            _textLevel = _textLevelRu;
+            _textEnemy = _textEnemyRu;
+        }
+        else
+        {
+            _textLevel = _textLevelRu;
+            _textEnemy = _textEnemyRu;
+        }
     }
 
     private void DisplayLevelProgress()
     {
         if (!_isWaveLast)
-            _levelProgress.text = "Достигните уровня " + (_numberOfWaves + 1);
+            _levelProgress.text = _textLevel + " " + (_numberOfWaves + 1);
         else
-            _levelProgress.text = "Врагов осталось: " + _enemyiesList.Count;
+            _levelProgress.text = _textEnemy + " " + _enemyiesList.Count;
     }
 
 
