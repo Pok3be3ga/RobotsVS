@@ -26,6 +26,8 @@ public class Progress : MonoBehaviour
     private static extern void SaveExtern(string date);
     [DllImport("__Internal")]
     private static extern void LoadExtern();
+
+
     public static Progress InstanceProgress;
     public int IndexRobot = 0;
     public void Init()

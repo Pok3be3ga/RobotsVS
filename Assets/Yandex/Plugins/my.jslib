@@ -10,7 +10,7 @@ mergeInto(LibraryManager.library, {
   		myGameInstance.SendMessege("Yandex", "SetPhoto", player.getPhoto("medium"));
   	},
   	SaveExtern: function(date){
-  		var dateString = UTF8ToString(date);
+  	var dateString = UTF8ToString(date);
 		var myobj = JSON.parse(dateString);
 		player.setData(myobj);
 
@@ -21,6 +21,7 @@ mergeInto(LibraryManager.library, {
 				myGameInstance.SendMessage('Progress', 'SetProgressData', myJSON);
 				  });
   	},
+
   	AddCoinsExtern : function(){
   		ysdk.adv.showRewardedVideo({
     callbacks: {
@@ -40,10 +41,16 @@ mergeInto(LibraryManager.library, {
     }
 })
 
-  	}
+  	},
 
-
-  });
+GetLang : function(){
+      var lang = ysdk.environment.i18n.lang;
+      var bufferSize = lengthBytesUTF8(lang) + 1;
+      var buffer = _malloc(bufferSize);
+      stringToUTF8(lang, buffer, bufferSize);
+      return buffer;
+    }
+});
 
 
   
