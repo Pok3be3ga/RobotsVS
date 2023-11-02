@@ -9300,11 +9300,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1441277874}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 5ac942b (па)
 --- !u!1 &1441277877 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7571884461398774623, guid: 40813cdf92baff14c8900ef1d5883b23,
@@ -9325,13 +9320,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _en: NO MONEY
   _ru: "\u041D\u0435\u0442 \u043C\u043E\u043D\u0435\u0442"
-<<<<<<< HEAD
-=======
->>>>>>> parent of 533cf47 (чекай звуки)
-=======
->>>>>>> parent of 533cf47 (чекай звуки)
-=======
->>>>>>> parent of 5ac942b (па)
 --- !u!1 &1480328871
 GameObject:
   m_ObjectHideFlags: 0
@@ -10895,11 +10883,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78edc846c39c4654298d27242df51d8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 5ac942b (па)
 --- !u!1 &1676528042 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5704307794821161114, guid: 7f4b42042012ea94ea1d5ad844fcbfcc,
@@ -10920,13 +10903,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _en: Effect Name
   _ru: "\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u044D\u0444\u0444\u0435\u043A\u0442\u0430"
-<<<<<<< HEAD
-=======
->>>>>>> parent of 533cf47 (чекай звуки)
-=======
->>>>>>> parent of 533cf47 (чекай звуки)
-=======
->>>>>>> parent of 5ac942b (па)
 --- !u!1 &1687894705
 GameObject:
   m_ObjectHideFlags: 0
