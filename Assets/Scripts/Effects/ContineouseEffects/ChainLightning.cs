@@ -12,15 +12,15 @@ public class ChainLightning : MonoBehaviour
     private float _damage;
     private int _jumpCount;
     [SerializeField] private LayerMask _layerMask;
-    private AudioSource _audioSource;
+    private AudioSource[] _audioSources;
 
-    public void Init(Enemy targetEnemy, float damage, float speed, int jumpCount, AudioSource audioSource)
+    public void Init(Enemy targetEnemy, float damage, float speed, int jumpCount, AudioSource[] audioSources)
     {
         _damage = damage;
         _targetEnemy = targetEnemy;
         _speed = speed;
         _jumpCount = jumpCount;
-        _audioSource = audioSource;
+        _audioSources = audioSources;
         //Destroy(gameObject, 4f);
     }
 
@@ -39,9 +39,9 @@ public class ChainLightning : MonoBehaviour
                 if (_jumpCount > 0)
                 {
                     GetNextEnemy();
-                    _audioSource.Play();
                 }
-                else {
+                else
+                {
                     Die();
                 }
             }
@@ -52,7 +52,8 @@ public class ChainLightning : MonoBehaviour
         }
     }
 
-    void GetNextEnemy() {
+    void GetNextEnemy()
+    {
         //Debug.Log("GetNextEnemy");
         Collider[] colliders = Physics.OverlapSphere(transform.position, 10f, _layerMask, QueryTriggerInteraction.Ignore);
         float minDistance = Mathf.Infinity;
@@ -71,6 +72,7 @@ public class ChainLightning : MonoBehaviour
         if (nearestCollider)
         {
             _targetEnemy = nearestCollider.GetComponent<Enemy>();
+            _audioSources[_audioSources.Length - _jumpCount].Play();
         }
         else
         {
@@ -83,7 +85,8 @@ public class ChainLightning : MonoBehaviour
         _targetEnemy.SetDamage(_damage, true);
     }
 
-    void Die() {
+    void Die()
+    {
         Destroy(gameObject);
     }
 

@@ -27,11 +27,12 @@ public class HordeManager : MonoBehaviour
     [SerializeField] private DelayForSound _enemyHitSound;
 
 
-    public void Init(EnemyManager enemyManager, DelayForSound enemyDeathSound, DelayForSound enemyHitSound)
+    public void Init(EnemyManager enemyManager, Transform playerTransform, DelayForSound enemyDeathSound, DelayForSound enemyHitSound)
     {
+        _enemyManager = enemyManager;
+        _playerTransform = playerTransform;
         _enemyDeathSound = enemyDeathSound;
         _enemyHitSound = enemyHitSound;
-        _enemyManager = enemyManager;
         _hordeArray = new HordeEnemy[_hordeMembers];
         _defaultPositionForHorde = transform.position;
         _defaultRotationForHorde = transform.rotation;

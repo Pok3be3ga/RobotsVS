@@ -24,7 +24,7 @@ public class EffectsManager : MonoBehaviour
 
     [SerializeField] private AudioManager _audioManager;
     [SerializeField] private AudioSource _clickLevelUp;
-    [SerializeField] private AudioSource _levelUp;
+    [SerializeField] private AudioSource _levelUpOn;
 
 
     private void Awake()
@@ -54,7 +54,7 @@ public class EffectsManager : MonoBehaviour
     [ContextMenu(nameof(ShowCards))]
     public void ShowCards(int level)
     {
-        _levelUp.Play();
+        _levelUpOn.Play();
         // Если уровень самый первый, то нужно показать только карты атаки,
         // иначе игроку будет нечем атаковать
         bool onlyContinuous = level == 1;
@@ -170,8 +170,8 @@ public class EffectsManager : MonoBehaviour
                 _continuousEffectsApplied.Add(c_effect);
                 _continuousEffects.Remove(c_effect);
                 _topIconManager.AddIcon(c_effect);
-
                 c_effect._audioManager = _audioManager;
+                c_effect.AddSoundForEffect();
             }
 
         }

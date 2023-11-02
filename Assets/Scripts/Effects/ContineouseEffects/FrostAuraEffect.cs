@@ -14,7 +14,7 @@ public class FrostAuraEffect : ContinuousEffect
 
     private const float _hitPeriod = 0.1f;
 
-    protected override void FirstTimeCreated()
+    public override void FirstTimeCreated()
     {
         base.FirstTimeCreated();
         _frostAura = Instantiate(_frostAuraPrefab, _player.transform.position, Quaternion.identity);

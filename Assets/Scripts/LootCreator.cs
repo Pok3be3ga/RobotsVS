@@ -17,12 +17,12 @@ public class LootCreator : MonoBehaviour
     {
         if (Time.timeScale < 1f) _timer = _timer;
         _timer += Time.deltaTime;
-        if (_timer > _period) 
+        if (_timer > _period)
         {
             Vector2 randomPoint = Random.insideUnitCircle;
             Vector3 position = _playerTransform.position + new Vector3(randomPoint.x, 0f, randomPoint.y) * _creationDistance;
-            Instantiate(_loot, position, Quaternion.identity);
-            _loot._audioSource = _audioSource;
+            Loot newLoot = Instantiate(_loot, position, Quaternion.identity);
+            newLoot._audioSource = _audioSource;
             _timer = 0f;
         }
     }
@@ -30,7 +30,8 @@ public class LootCreator : MonoBehaviour
 #if (UNITY_EDITOR)
     private void OnDrawGizmosSelected()
     {
-        if (_playerTransform) {
+        if (_playerTransform)
+        {
 
             Handles.color = Color.green;
             Handles.DrawWireDisc(_playerTransform.position, Vector3.up, _creationDistance);

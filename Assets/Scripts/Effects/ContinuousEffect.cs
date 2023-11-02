@@ -35,6 +35,8 @@ public class ContinuousEffect : Effect
     private float _timer;
     protected int _clipNum = 1;
 
+    [HideInInspector] public AudioSource _audioSource;
+
 
     public static int GetTotalNumberOfSkills()
     {
@@ -127,4 +129,9 @@ public class ContinuousEffect : Effect
         else return "Нет названия для такого эффекта";
     }
 
+    public void AddSoundForEffect()
+    {
+        if (_audioManager.CheckAvailability(this.GetType().Name + "Sound01"))
+            _audioSource = _audioManager.FindAudioSourceByClipName(this.GetType().Name + "Sound01");
+    }
 }

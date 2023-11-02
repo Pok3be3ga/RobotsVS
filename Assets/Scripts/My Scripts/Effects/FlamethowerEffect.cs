@@ -13,7 +13,7 @@ public class FlamethowerEffect : ContinuousEffect
     [SerializeField] private LayerMask _layerMask;
 
 
-    protected override void FirstTimeCreated()
+    public override void FirstTimeCreated()
     {
         base.FirstTimeCreated();
         _flamethrower = Instantiate(_flamethrowerPrefab, _player.transform.position, Quaternion.identity);

@@ -22,7 +22,7 @@ public class HolyShieldEffect : ContinuousEffect, IPlayerHealthEffect
         }
     }
 
-    protected override void FirstTimeCreated()
+    public override void FirstTimeCreated()
     {
         base.FirstTimeCreated();
         _holyShield = Instantiate(_holyShieldPrefab, _player.transform.position, Quaternion.identity, _player.transform);

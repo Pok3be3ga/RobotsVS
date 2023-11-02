@@ -5,7 +5,7 @@ using UnityEngine;
 public class RotateSphereEffect : ContinuousEffect
 {
     [SerializeField] GameObject Prefab;
-    protected override void FirstTimeCreated()
+    public override void FirstTimeCreated()
     {
         base.FirstTimeCreated();
         //Sphere = Instantiate(Prefab, _player.transform);

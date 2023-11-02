@@ -65,7 +65,7 @@ public class EnemyManager : MonoBehaviour
         _numberOfWaves = Progress.InstanceProgress.ProgressData.NumberOfWaves;
         DisplayLevelProgress();
         SetupEnemies();
-        _hordeManager.Init(this, _enemyDeathSound, _enemyHitSound);
+        _hordeManager.Init(this, _playerTransform, _enemyDeathSound, _enemyHitSound);
 
         if (LanguageSettings.Instance.CurrentLanguage == "en")
         {

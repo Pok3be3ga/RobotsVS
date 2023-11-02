@@ -10,10 +10,10 @@ public class NovaEffect : ContinuousEffect
     [SerializeField] private LayerMask _layerMask;
     [SerializeField] private Nova _novaPrefab;
     private Nova _currentNova;
-    
-    protected override void FirstTimeCreated()
+
+    public override void FirstTimeCreated()
     {
-        base.FirstTimeCreated();
+        AddSoundForEffect();
         _currentNova = Instantiate(_novaPrefab, _player.transform);
         _currentNova.transform.localPosition = Vector3.zero;
     }

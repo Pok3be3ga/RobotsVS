@@ -10,6 +10,7 @@ public class AxesEffect : ContinuousEffect
     public override void Activate()
     {
         base.Activate();
+        AddSoundForEffect();
         if (Level == 0) {
             Axes axes = Instantiate(_axesPrefab);
             axes.Init(GetSkillValue(Skill.LifeTime), GetSkillValue(Skill.Damage), _player.transform);

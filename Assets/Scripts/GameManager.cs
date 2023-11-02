@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private LevelUpEffect _levelUpEffect;
     [SerializeField] private PauseButton _pauseButton;
     [SerializeField] private EnvironmentManager _environmentManager;
+    [SerializeField] private AudioSource _LvlUpEffectSound;
 
     public void Init(GameStateManager gameStateManager)
     {
@@ -43,7 +44,9 @@ public class GameManager : MonoBehaviour
         //ShowCards();
     }
 
-    public void UpLevelDelayed() {
+    public void UpLevelDelayed() 
+    {
+        _LvlUpEffectSound.Play();
         _levelUpEffect.StartEffect(_playerTransform);
         UpLevel();
         Invoke(nameof(ShowCards), 2f);
