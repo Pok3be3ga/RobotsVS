@@ -2276,7 +2276,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: e82958f476efa422dab6dd7d78a951ff, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3053,7 +3053,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 995e6d23f9a61461f90403e556a0f9e5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3182,7 +3182,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: a8ae8f509e29642169e46ce0bc37ee63, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5203,13 +5203,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ProgressData:
-    _healthLevel: 0
-    _damageLevel: 0
-    _lootLevel: 0
-    _chapter: 0
-    _coins: 0
-    _numberOfWaves: 5
-    _numberOfEnvironment: 0
+    HealthLevel: 0
+    DamageLevel: 0
+    LootLevel: 0
+    Chapter: 0
+    Coins: 0
+    NumberOfWaves: 5
+    NumberOfEnvironment: 0
     RobotBuy: 000000
   IndexRobot: 0
 --- !u!4 &1844736848

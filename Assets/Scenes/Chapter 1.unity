@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18599689, g: 0.53840405, b: 0.6419488, a: 1}
+  m_IndirectSpecularColor: {r: 0.18593329, g: 0.53840613, b: 0.641821, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3275,13 +3275,13 @@ MonoBehaviour:
     m_RotationOrder: 4
   _dontAudio: {fileID: 1161866239}
   ProgressData:
-    _healthLevel: 0
-    _damageLevel: 0
-    _lootLevel: 0
-    _chapter: 0
-    _coins: 0
-    _numberOfWaves: 5
-    _numberOfEnvironment: 0
+    HealthLevel: 0
+    DamageLevel: 0
+    LootLevel: 0
+    Chapter: 0
+    Coins: 0
+    NumberOfWaves: 5
+    NumberOfEnvironment: 0
     RobotBuy: 000000
 --- !u!4 &439927506
 Transform:
@@ -3602,7 +3602,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 730b8702d331b496594118331ee9b7f8, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.755
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -12605,13 +12605,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ProgressData:
-    _healthLevel: 0
-    _damageLevel: 0
-    _lootLevel: 0
-    _chapter: 0
-    _coins: 0
-    _numberOfWaves: 5
-    _numberOfEnvironment: 0
+    HealthLevel: 0
+    DamageLevel: 0
+    LootLevel: 0
+    Chapter: 0
+    Coins: 0
+    NumberOfWaves: 5
+    NumberOfEnvironment: 0
     RobotBuy: 000000
   IndexRobot: 0
 --- !u!1 &2051327352
