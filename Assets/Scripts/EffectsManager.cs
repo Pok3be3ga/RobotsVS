@@ -185,9 +185,9 @@ public class EffectsManager : MonoBehaviour
             }
         }
 
-        _clickLevelUp.Play();
         // активируем эффект
         effect.Activate();
+        _clickLevelUp.Play();
         HideCards();
     }
 
