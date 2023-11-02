@@ -1,5 +1,4 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -86,25 +85,19 @@ public class ContinuousEffect : Effect
 
     protected virtual void Produce()
     {
-        if (_audioManager.CheckAvailability(this.GetType().Name + "Sound0" + _clipNum))
+        if (_audioManager.FindAudioSourceByClipName(this.GetType().Name + "Sound0" + _clipNum) != null)
         {
             _audioSource.Play();
-            Debug.LogError("Воспроизвёлся звук: " + this.GetType().Name + "Sound0" + _clipNum);
         }
         else
         {
             Debug.LogError("НЕТ ЗВУКА: " + this.GetType().Name + "Sound0" + _clipNum);
         }
 
-        if (!_audioManager.CheckAvailability(this.GetType().Name + "Sound0" + (_clipNum + 1)))
+
+        if (_audioManager.FindAudioSourceByClipName(this.GetType().Name + "Sound0" + _clipNum++) == null)
         {
             _clipNum = 1;
-            Debug.LogError("_clipNum = 1 для звука " + this.GetType().Name + "Sound0" + _clipNum);
-        }
-        else
-        {
-            _clipNum += 1;
-            Debug.LogError("Для звука: " + this.GetType().Name + " _clipNum = " + _clipNum);
         }
     }
 

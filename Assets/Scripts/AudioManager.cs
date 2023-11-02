@@ -12,8 +12,5 @@ public class AudioManager : MonoBehaviour
         return (Array.Find(_skillsSounds, source => source.clip != null && source.clip.name == clipName));
     }
 
-    public bool CheckAvailability(string clipName)
-    {
-        return (Array.Find(_skillsSounds, source => source.clip != null && source.clip.name == clipName));
-    }
+
 }
