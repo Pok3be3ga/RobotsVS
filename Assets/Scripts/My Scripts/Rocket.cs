@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.UIElements;
-using static UnityEngine.GraphicsBuffer;
 
 public class Rocket : MonoBehaviour
 {
+    [SerializeField] private AudioSource[] _audioSources;
+
+    private int _randomAudio;
     private Enemy _targetEnemy;
     private float _speed;
-    private float _damage;
+    private float _damage;    
     private float _timer;
 
     public void Init(Enemy targetEnemy, float damage, float speed)
@@ -18,7 +20,9 @@ public class Rocket : MonoBehaviour
         _targetEnemy = targetEnemy;
         _speed = speed;
         Destroy(gameObject, 4f);
+        _randomAudio = Random.Range(0, _audioSources.Length);
     }
+
     private void Update()
     {
         _timer += Time.deltaTime;
@@ -35,6 +39,7 @@ public class Rocket : MonoBehaviour
                 if (transform.position == _targetEnemy.transform.position)
                 {
                     AffectEnemy();
+                    _audioSources[_randomAudio].Play();
                     Destroy(gameObject);
                 }
             }

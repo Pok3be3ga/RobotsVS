@@ -5418,7 +5418,7 @@ MonoBehaviour:
     DamageLevel: 0
     LootLevel: 0
     Chapter: 0
-    Coins: 0
+    Coins: 500
     NumberOfWaves: 5
     NumberOfEnvironment: 0
     RobotBuy: 000000
