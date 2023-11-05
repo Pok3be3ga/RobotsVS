@@ -43,7 +43,6 @@ public class EnemyManager : MonoBehaviour
     private int _level = 0;
     private GameStateManager _gameStateManager;
 
-    [SerializeField] private HordeManager _hordeManager;
     [SerializeField] private DelayForSound _enemyDeathSound;
     [SerializeField] private DelayForSound _enemyHitSound;
     [SerializeField] private AudioSource _winSound01;
@@ -66,7 +65,6 @@ public class EnemyManager : MonoBehaviour
         _numberOfWaves = YandexGame.savesData.NumberOfWaves;
         DisplayLevelProgress();
         SetupEnemies();
-        _hordeManager.Init(this, _playerTransform, _enemyDeathSound, _enemyHitSound);
 
         //if (LanguageSettings.Instance.CurrentLanguage == "en")
         //{

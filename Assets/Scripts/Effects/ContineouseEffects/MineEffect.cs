@@ -5,13 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = nameof(MineEffect), menuName = "Effects/" + nameof(MineEffect))]
 public class MineEffect : ContinuousEffect
 {
-
     [SerializeField] private Mine _minePrefab;
-
-    private void Awake()
-    {
-        
-    }
 
     protected override void Produce()
     {
@@ -19,5 +13,4 @@ public class MineEffect : ContinuousEffect
         Mine newMine = Instantiate(_minePrefab, _player.transform.position, Quaternion.identity);
         newMine.Init(GetSkillValue(Skill.Damage), GetSkillValue(Skill.Radius));
     }
-
 }

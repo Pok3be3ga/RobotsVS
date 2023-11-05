@@ -26,9 +26,7 @@ public class RobotMine : MonoBehaviour
             {
                 enemy.SetDamage(Damage, true);
                 _timer = 0;
-
             }
         }
-
     }
 }
