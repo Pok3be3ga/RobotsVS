@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using YG;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class PlayerHealth : MonoBehaviour
     public void Init(GameStateManager gameStateManager)
     {
         _gameStateManager = gameStateManager;
-        _maxHealth = GetMaxHealth() + Progress.InstanceProgress.ProgressData.HealthLevel * 10;
+        _maxHealth = GetMaxHealth() + YandexGame.savesData.HealthLevel * 10;
         SetHealth(_maxHealth, false);
     }
 

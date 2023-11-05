@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 public class PermanentProgressCard : MonoBehaviour
 {
@@ -44,7 +45,7 @@ public class PermanentProgressCard : MonoBehaviour
         _percentText.text = "+" + percent.ToString() + "%";
         _priceText.text = nextLevePrice.ToString();
 
-        if (_progress.ProgressData.Coins >= nextLevePrice)
+        if (YandexGame.savesData.Coins >= nextLevePrice)
         {
             _priceBlock.SetActive(true);
             _noMoneyObject.SetActive(false);

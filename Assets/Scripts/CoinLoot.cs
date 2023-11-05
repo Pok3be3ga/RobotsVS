@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using YG;
 
 public class CoinLoot : Loot
 {
@@ -10,7 +11,7 @@ public class CoinLoot : Loot
     private void Awake()
     {
         LootType = LootType.Coin;
-        _value += Progress.InstanceProgress.ProgressData.LootLevel;
+        _value += YandexGame.savesData.LootLevel;
     }
 
     protected override void Take(Collector coinCollector)

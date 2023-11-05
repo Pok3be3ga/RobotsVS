@@ -8,6 +8,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.ProBuilder.MeshOperations;
 using UnityEngine.UI;
+using YG;
 using static UnityEngine.GraphicsBuffer;
 using Random = UnityEngine.Random;
 
@@ -61,27 +62,27 @@ public class EnemyManager : MonoBehaviour
         _gameManager = gameManager;
         _gameStateManager = gameStateManager;
         _gameManager.OnUpLevel += UpLevel;
-        _chapterSettings = ChapterSettings[Progress.InstanceProgress.ProgressData.NumberOfEnvironment];
-        _numberOfWaves = Progress.InstanceProgress.ProgressData.NumberOfWaves;
+        _chapterSettings = ChapterSettings[YandexGame.savesData.NumberOfEnvironment];
+        _numberOfWaves = YandexGame.savesData.NumberOfWaves;
         DisplayLevelProgress();
         SetupEnemies();
         _hordeManager.Init(this, _playerTransform, _enemyDeathSound, _enemyHitSound);
 
-        if (LanguageSettings.Instance.CurrentLanguage == "en")
-        {
-            _textLevel = _textLevelEn;
-            _textEnemy = _textEnemyEn;
-        }
-        else if (LanguageSettings.Instance.CurrentLanguage == "ru")
-        {
+        //if (LanguageSettings.Instance.CurrentLanguage == "en")
+        //{
+        //    _textLevel = _textLevelEn;
+        //    _textEnemy = _textEnemyEn;
+        //}
+        //else if (LanguageSettings.Instance.CurrentLanguage == "ru")
+        //{
             _textLevel = _textLevelRu;
             _textEnemy = _textEnemyRu;
-        }
-        else
-        {
-            _textLevel = _textLevelRu;
-            _textEnemy = _textEnemyRu;
-        }
+        //}
+        //else
+        //{
+        //    _textLevel = _textLevelRu;
+        //    _textEnemy = _textEnemyRu;
+        //}
     }
 
     private void DisplayLevelProgress()
@@ -179,7 +180,7 @@ public class EnemyManager : MonoBehaviour
     {
         Enemy newEnemy = Instantiate(enemy, RandomSpawnPosition() + _playerTransform.position, Quaternion.identity, transform);
         _enemyiesList.Add(newEnemy);
-        newEnemy.Init(_playerTransform, this, _level, Progress.InstanceProgress.ProgressData.Chapter, _enemyDeathSound, _enemyHitSound);
+        newEnemy.Init(_playerTransform, this, _level, YandexGame.savesData.Chapter, _enemyDeathSound, _enemyHitSound);
         return newEnemy;
     }
 
@@ -223,16 +224,15 @@ public class EnemyManager : MonoBehaviour
     // Когда последний враг убит
     public void OnLastKilled()
     {
-        Progress.InstanceProgress.ProgressData.NumberOfWaves++;
-        Progress.InstanceProgress.ProgressData.Chapter++;
-        Progress.InstanceProgress.ProgressData.NumberOfEnvironment++;
-        if (Progress.InstanceProgress.ProgressData.NumberOfEnvironment > 2)
-            Progress.InstanceProgress.ProgressData.NumberOfEnvironment = 0;
+        YandexGame.savesData.NumberOfWaves++;
+        YandexGame.savesData.Chapter++;
+        YandexGame.savesData.NumberOfEnvironment++;
+        if (YandexGame.savesData.NumberOfEnvironment > 2)
+            YandexGame.savesData.NumberOfEnvironment = 0;
         _winSound01.Play();
         _gameStateManager.SetWin();
-#if UNITY_WEBGL
-        Progress.InstanceProgress.Save();
-#endif
+        YandexGame.SaveProgress();
+
     }
 
     public Enemy[] GetNearest(Vector3 point, int number)

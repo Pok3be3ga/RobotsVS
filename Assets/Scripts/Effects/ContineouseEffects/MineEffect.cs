@@ -7,7 +7,6 @@ public class MineEffect : ContinuousEffect
 {
 
     [SerializeField] private Mine _minePrefab;
-    private AudioSource[] _mineExplosionSound;
 
     private void Awake()
     {
@@ -18,8 +17,7 @@ public class MineEffect : ContinuousEffect
     {
         base.Produce();
         Mine newMine = Instantiate(_minePrefab, _player.transform.position, Quaternion.identity);
-        newMine.Init(GetSkillValue(Skill.Damage), GetSkillValue(Skill.Radius), 
-            _mineExplosionSound[Random.Range(0, _mineExplosionSound.Length)]);
+        newMine.Init(GetSkillValue(Skill.Damage), GetSkillValue(Skill.Radius));
     }
 
 }

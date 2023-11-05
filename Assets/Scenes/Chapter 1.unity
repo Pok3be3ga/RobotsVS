@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18593115, g: 0.53840375, b: 0.64181995, a: 1}
+  m_IndirectSpecularColor: {r: 0.18599689, g: 0.53840405, b: 0.6419488, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -280,7 +280,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab11b17f3f6297e48bae4a58e3ee52c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coinCounter: {fileID: 439927505}
   _choseRobots: {fileID: 0}
 --- !u!4 &38447466 stripped
 Transform:
@@ -1982,8 +1981,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07cc21cc3dc1a2c4fbd7da083569a249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _en: PAUSE
-  _ru: "\u041F\u0410\u0423\u0417\u0410"
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2187,15 +2184,6 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _dontAudio: {fileID: 1161866239}
-  ProgressData:
-    HealthLevel: 0
-    DamageLevel: 0
-    LootLevel: 0
-    Chapter: 0
-    Coins: 0
-    NumberOfWaves: 5
-    NumberOfEnvironment: 0
-    RobotBuy: 000000
 --- !u!4 &439927506
 Transform:
   m_ObjectHideFlags: 0
@@ -2706,8 +2694,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07cc21cc3dc1a2c4fbd7da083569a249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _en: Effect Name
-  _ru: "\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u044D\u0444\u0444\u0435\u043A\u0442\u0430"
 --- !u!1 &594621984
 GameObject:
   m_ObjectHideFlags: 0
@@ -3402,7 +3388,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab11b17f3f6297e48bae4a58e3ee52c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coinCounter: {fileID: 439927505}
   _choseRobots: {fileID: 0}
 --- !u!224 &809798849 stripped
 RectTransform:
@@ -3681,8 +3666,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07cc21cc3dc1a2c4fbd7da083569a249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _en: MENU
-  _ru: "\u041C\u0415\u041D\u042E "
 --- !u!1 &910414690
 GameObject:
   m_ObjectHideFlags: 0
@@ -3831,8 +3814,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07cc21cc3dc1a2c4fbd7da083569a249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _en: Add x3
-  _ru: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u04453"
 --- !u!1 &916956499 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6584215372937715174, guid: ce183db44d13d8e4ab54798491c33c6a,
@@ -4689,7 +4670,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5807e93a95ed6df44ac6a83bbf6b89b1, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 93850c5eb10d34b4ba2d712bce52e7cc, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.1
   m_Pitch: 1
@@ -4893,6 +4874,18 @@ MonoBehaviour:
       - m_Target: {fileID: 209556907}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1082512575}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Save
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5631,8 +5624,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerTransform: {fileID: 8217974782522312591}
-  _maxDelay: 50
-  _minDelay: 40
+  _maxDelay: 120
+  _minDelay: 110
   _hordeMembers: 15
   _hordeEnemyPrefab: {fileID: 712909718950833328, guid: 4d1aac7ef0470ea4eb966a4a8cb2f2dd,
     type: 3}
@@ -6153,8 +6146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07cc21cc3dc1a2c4fbd7da083569a249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _en: NO MONEY
-  _ru: "\u041D\u0435\u0442 \u043C\u043E\u043D\u0435\u0442"
 --- !u!114 &1480328874 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7200024666742789179, guid: edb755118b13bd94d81dd4949e8f2938,
@@ -6178,7 +6169,6 @@ GameObject:
   - component: {fileID: 1491560750}
   - component: {fileID: 1491560752}
   - component: {fileID: 1491560751}
-  - component: {fileID: 1491560753}
   m_Layer: 5
   m_Name: Text (TAP TO PLAY)
   m_TagString: Untagged
@@ -6302,20 +6292,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491560749}
   m_CullTransparentMesh: 1
---- !u!114 &1491560753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1491560749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07cc21cc3dc1a2c4fbd7da083569a249, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _en: Tap To Play
-  _ru: "\u041D\u0430\u0436\u043C\u0438 \u0447\u0442\u043E\u0431\u044B \u0438\u0433\u0440\u0430\u0442\u044C"
 --- !u!1 &1535937491
 GameObject:
   m_ObjectHideFlags: 0
@@ -6408,7 +6384,6 @@ GameObject:
   - component: {fileID: 1567569838}
   - component: {fileID: 1567569840}
   - component: {fileID: 1567569839}
-  - component: {fileID: 1567569841}
   m_Layer: 5
   m_Name: LevelProgressText
   m_TagString: Untagged
@@ -6532,20 +6507,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567569837}
   m_CullTransparentMesh: 1
---- !u!114 &1567569841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1567569837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07cc21cc3dc1a2c4fbd7da083569a249, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _en: 
-  _ru: 
 --- !u!1 &1591091403
 GameObject:
   m_ObjectHideFlags: 0
@@ -6694,8 +6655,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07cc21cc3dc1a2c4fbd7da083569a249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _en: Add x3
-  _ru: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u04453"
 --- !u!1 &1614128360
 GameObject:
   m_ObjectHideFlags: 0
@@ -7095,8 +7054,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07cc21cc3dc1a2c4fbd7da083569a249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _en: Effect Name
-  _ru: "\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u044D\u0444\u0444\u0435\u043A\u0442\u0430"
 --- !u!1 &1687894705
 GameObject:
   m_ObjectHideFlags: 0
@@ -7113,7 +7070,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1687894706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7292,8 +7249,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07cc21cc3dc1a2c4fbd7da083569a249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _en: MENU
-  _ru: "\u041C\u0415\u041D\u042E"
 --- !u!1 &1763514721
 GameObject:
   m_ObjectHideFlags: 0
@@ -7921,8 +7876,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07cc21cc3dc1a2c4fbd7da083569a249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _en: CONTINUE
-  _ru: "\u041F\u0420\u041E\u0414\u041E\u041B\u0416\u0418\u0422\u042C"
 --- !u!114 &1890428520 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1591115436897593863, guid: 40813cdf92baff14c8900ef1d5883b23,
@@ -8468,8 +8421,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07cc21cc3dc1a2c4fbd7da083569a249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _en: NO MONEY
-  _ru: "\u041D\u0435\u0442 \u043C\u043E\u043D\u0435\u0442"
 --- !u!114 &1941580716 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1591115436897593863, guid: 40813cdf92baff14c8900ef1d5883b23,
@@ -8782,15 +8733,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5012fe4a00e8cc49b63a7e406d3f971, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProgressData:
-    HealthLevel: 0
-    DamageLevel: 0
-    LootLevel: 0
-    Chapter: 0
-    Coins: 0
-    NumberOfWaves: 5
-    NumberOfEnvironment: 0
-    RobotBuy: 000000
   IndexRobot: 0
 --- !u!1 &2051327352
 GameObject:
@@ -9245,8 +9187,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07cc21cc3dc1a2c4fbd7da083569a249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _en: MENU
-  _ru: "\u041C\u0415\u041D\u042E"
 --- !u!1 &2134554885
 GameObject:
   m_ObjectHideFlags: 0
@@ -29839,11 +29779,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5704307794821161114, guid: 7f4b42042012ea94ea1d5ad844fcbfcc,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5384362468782000702}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f4b42042012ea94ea1d5ad844fcbfcc, type: 3}
 --- !u!224 &5384362468782000699 stripped
 RectTransform:
@@ -29863,26 +29799,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78edc846c39c4654298d27242df51d8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &5384362468782000701 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5704307794821161114, guid: 7f4b42042012ea94ea1d5ad844fcbfcc,
-    type: 3}
-  m_PrefabInstance: {fileID: 5384362468782000698}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5384362468782000702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5384362468782000701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07cc21cc3dc1a2c4fbd7da083569a249, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _en: Effect Name
-  _ru: "\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u044D\u0444\u0444\u0435\u043A\u0442\u0430"
 --- !u!114 &5566812682467261280 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9064987688727720795, guid: db165ff2c0599284e8a48fe32cd1d343,
@@ -30170,8 +30086,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07cc21cc3dc1a2c4fbd7da083569a249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _en: NO MONEY
-  _ru: "\u041D\u0435\u0442 \u043C\u043E\u043D\u0435\u0442"
 --- !u!114 &7688290670051489643 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 251057320333929369, guid: db165ff2c0599284e8a48fe32cd1d343,

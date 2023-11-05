@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 public class BuyRobot : MonoBehaviour
 {
@@ -13,23 +14,24 @@ public class BuyRobot : MonoBehaviour
     void Start()
     {
         GetComponent<Button>().onClick.AddListener(BuyRobotButton);
-        if (Progress.InstanceProgress.ProgressData.RobotBuy[NumberSaveRobots] == true)
+        if (YandexGame.savesData.RobotBuy[NumberSaveRobots] == true)
         {
             gameObject.SetActive(false);
         }
     }
     public void BuyRobotButton()
     {
-        if(Progress.InstanceProgress.ProgressData.Coins >= _price) 
+        if(YandexGame.savesData.Coins >= _price) 
         {
-            Progress.InstanceProgress.ProgressData.Coins -= _price;
-            Progress.InstanceProgress.ProgressData.RobotBuy[NumberSaveRobots] = true;
+            YandexGame.savesData.Coins -= _price;
+            YandexGame.savesData.RobotBuy[NumberSaveRobots] = true;
             gameObject.SetActive(false);
-            textCoins.text = Progress.InstanceProgress.ProgressData.Coins.ToString();
+            textCoins.text = YandexGame.savesData.Coins.ToString();
         }
         else
         {
             _audioSourceClosed.Play();
         }
+        YandexGame.SaveProgress();
     }
 }

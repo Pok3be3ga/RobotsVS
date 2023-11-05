@@ -10,13 +10,10 @@ public class Mine : MonoBehaviour
     [SerializeField] private GameObject _explosionEffect;
     [SerializeField] private LayerMask _layerMask;
 
-    private AudioSource _mineExplosionSound;
-
-    public void Init(float damage, float radius, AudioSource mineExplosionSound)
+    public void Init(float damage, float radius) //AudioSource mineExplosionSound)
     {
         _radius = radius;
         _damage = damage;
-        _mineExplosionSound = mineExplosionSound;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -41,7 +38,6 @@ public class Mine : MonoBehaviour
         }
 
         Destroy(gameObject);
-        //_mineExplosionSound.Play();
     }
 
 }

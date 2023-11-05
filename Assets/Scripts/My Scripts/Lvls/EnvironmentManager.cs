@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
+using YG;
 
 public class EnvironmentManager : MonoBehaviour
 {
@@ -35,7 +36,7 @@ public class EnvironmentManager : MonoBehaviour
 
     public void Init()
     {
-        LvlNumber = Progress.InstanceProgress.ProgressData.NumberOfEnvironment + 1;
+        LvlNumber = YandexGame.savesData.NumberOfEnvironment + 1;
         _spawnAreaSizeZ = _spawnArea.bounds.size.z;
         _spawnAreaSizeX = _spawnArea.bounds.size.x;
         LoadNewGround();

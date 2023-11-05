@@ -4,12 +4,13 @@ using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 public class CoinCounter : MonoBehaviour
 {
 
-    [DllImport("__Internal")]
-    private static extern void AddCoinsExtern();
+    //[DllImport("__Internal")]
+    //private static extern void AddCoinsExtern();
 
 
     [SerializeField] private Button _multiplyCoinsButton;
@@ -19,8 +20,6 @@ public class CoinCounter : MonoBehaviour
     [SerializeField] private AnimationCurve _scaleCurve;
 
     [SerializeField] AudioSource _dontAudio;
-
-    public ProgressData ProgressData;
     private Progress _progress;
     private PermanentProgress _permanentProgress;
 
@@ -41,9 +40,7 @@ public class CoinCounter : MonoBehaviour
     public void AddCoins(int number)
     {
         NumberInLevel += number * (1 + _permanentProgress.GetLoot());
-        _progress.ProgressData.Coins += number;
-        //CoinsInGame += number;
-
+        YandexGame.savesData.Coins += number;
         Display();
         StartCoroutine(CounterAnimation());
         
@@ -65,38 +62,37 @@ public class CoinCounter : MonoBehaviour
 
     public void SpendCoins(int value)
     {
-        Progress.InstanceProgress.ProgressData.Coins -= value;
+        YandexGame.savesData.Coins -= value;
         Display();
     }
 
     public void Display()
     {
-         if(Progress.InstanceProgress.ProgressData.Coins != 0) 
-            _coinsText.text = Progress.InstanceProgress.ProgressData.Coins.ToString();
+         if(YandexGame.savesData.Coins != 0) 
+            _coinsText.text = YandexGame.savesData.Coins.ToString();
     }
     public void SaveToProgress()
     {
+        YandexGame.SaveProgress();
         //SaveSystem.Save(_progress.ProgressData);
     }
     public void AddCoin()
     {
-        AddCoinsExtern();
+        YandexGame.RewVideoShow(0);
     }
 
     public void MultiplyCoins()
     {
         // Тут надо вызвать показ рекламы
-
-        if(_multiplyCoinsButton != null) _multiplyCoinsButton.gameObject.SetActive(false);
+        YandexGame.RewVideoShow(0);
+        if (_multiplyCoinsButton != null) _multiplyCoinsButton.gameObject.SetActive(false);
         if (_multiplyCoinsButton != null) _multiplyCoinsButton2.gameObject.SetActive(false);
 
         // Умножаем количество монет, заработанных на уровне на 3
         int coinsToAdd = Mathf.RoundToInt(NumberInLevel) * 3;
         AddCoins(coinsToAdd);
         Display();
-#if UNITY_WEBGL
-        Progress.InstanceProgress.Save();
-#endif
+        YandexGame.SaveProgress();
     }
 
 

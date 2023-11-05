@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class LanguageSettings : MonoBehaviour
 {
-    [DllImport("__Internal")]
-    private static extern string GetLang();
+    //[DllImport("__Internal")]
+    //private static extern string GetLang();
 
     public string CurrentLanguage; //RU EN
     [SerializeField] TextMeshProUGUI _languageText;

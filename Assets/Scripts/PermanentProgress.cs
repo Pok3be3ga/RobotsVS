@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using YG;
 
 public class PermanentProgress : MonoBehaviour
 {
@@ -18,49 +19,52 @@ public class PermanentProgress : MonoBehaviour
     public void Init(Progress progress, CoinCounter coinCounter) {
         _progress = progress;
         _coinCounter = coinCounter;
-        _healthCard.Init(progress, AddHealth, progress.ProgressData.HealthLevel);
-        _damageCard.Init(progress, AddDamage, progress.ProgressData.DamageLevel);
-        _lootCard.Init(progress, AddLoot, progress.ProgressData.LootLevel);
+        _healthCard.Init(progress, AddHealth, YandexGame.savesData.HealthLevel);
+        _damageCard.Init(progress, AddDamage, YandexGame.savesData.DamageLevel);
+        _lootCard.Init(progress, AddLoot, YandexGame.savesData.LootLevel);
     }
 
     public void AddHealth(int price)
     {
-        _progress.ProgressData.HealthLevel += 1;
+        YandexGame.savesData.HealthLevel += 1;
         _coinCounter.SpendCoins(price);
         UpdateCards();
+        YandexGame.SaveProgress();
     }
 
     public void AddDamage(int price)
     {
-        _progress.ProgressData.DamageLevel += 1;
+        YandexGame.savesData.DamageLevel += 1;
         _coinCounter.SpendCoins(price);
         UpdateCards();
+        YandexGame.SaveProgress();
     }
 
     public void AddLoot(int price)
     {
-        _progress.ProgressData.LootLevel += 1;
+        YandexGame.savesData.LootLevel += 1;
         _coinCounter.SpendCoins(price);
         UpdateCards();
+        YandexGame.SaveProgress();
     }
 
     private void UpdateCards() {
-        _healthCard.SetLevel(_progress.ProgressData.HealthLevel);
-        _damageCard.SetLevel(_progress.ProgressData.DamageLevel);
-        _lootCard.SetLevel(_progress.ProgressData.LootLevel);
+        _healthCard.SetLevel(YandexGame.savesData.HealthLevel);
+        _damageCard.SetLevel(YandexGame.savesData.DamageLevel);
+        _lootCard.SetLevel(YandexGame.savesData.LootLevel);
     }
 
     public float GetHealth() { 
-        return _healthCard.PercentPerLevel * _progress.ProgressData.HealthLevel * 0.01f;
+        return _healthCard.PercentPerLevel * YandexGame.savesData.HealthLevel * 0.01f;
     }
 
     public float GetDamage()
     {
-        return _damageCard.PercentPerLevel * _progress.ProgressData.DamageLevel * 0.01f;
+        return _damageCard.PercentPerLevel * YandexGame.savesData.DamageLevel * 0.01f;
     }
 
     public float GetLoot() { 
-        return _lootCard.PercentPerLevel * _progress.ProgressData.LootLevel * 0.01f;
+        return _lootCard.PercentPerLevel * YandexGame.savesData.LootLevel * 0.01f;
     }
 
 }

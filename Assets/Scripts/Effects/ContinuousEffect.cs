@@ -1,7 +1,7 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using YG;
 
 public enum Skill
 {
@@ -55,7 +55,7 @@ public class ContinuousEffect : Effect
         }
         else if (skill == Skill.Damage)
         {
-            value *= (1 + _player.DamageBoost + (Progress.InstanceProgress.ProgressData.DamageLevel) * 0.5f);
+            value *= (1 + _player.DamageBoost + (YandexGame.savesData.DamageLevel) * 0.5f);
         }
         else if (skill == Skill.Radius)
         {

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using YG;
 
 public class BootStrapperMenu : MonoBehaviour
 {
@@ -14,10 +15,10 @@ public class BootStrapperMenu : MonoBehaviour
         _progress.Init();
     
     }
-    private void Start()
+    private void Update()
     {
-        _coinText.text = Progress.InstanceProgress.ProgressData.Coins.ToString();
-        _levelText.text = Progress.InstanceProgress.ProgressData.Chapter.ToString();
+        _coinText.text = YandexGame.savesData.Coins.ToString();
+        _levelText.text = YandexGame.savesData.Chapter.ToString();
 
     }
 }

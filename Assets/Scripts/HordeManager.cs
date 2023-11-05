@@ -91,7 +91,7 @@ public class HordeManager : MonoBehaviour
 
     private void ActivateHordeAttack(HordeEnemy _hordeEnemy)
     {   
-        transform.position = _enemyManager.RandomSpawnPosition() + _playerTransform.position;
+        if(_playerTransform) transform.position = _enemyManager.RandomSpawnPosition() + _playerTransform.position;
         transform.LookAt(_playerTransform, Vector3.up);
         SetActiveForHorde(true);
         HordeAttackActivated = true;

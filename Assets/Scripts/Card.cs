@@ -44,7 +44,7 @@ public class Card : MonoBehaviour
         _nameText.text = effect.Name;
 
         //
-        _levelText.text = "LVL " + (effect.Level + 1);
+        _levelText.text = "сп " + (effect.Level + 1);
         gameObject.SetActive(true);
     }
 

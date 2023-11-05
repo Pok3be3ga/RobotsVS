@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using YG;
 
 public class GameManager : MonoBehaviour
 {
@@ -36,7 +37,10 @@ public class GameManager : MonoBehaviour
         _effectsManager.OnHideCards += WhenHideCards;
         _pauseButton.Init(gameStateManager);
     }
-
+    public void Save()
+    {
+        YandexGame.SaveProgress();
+    }
     public void SetFirstLevel()
     {
         UpLevel();

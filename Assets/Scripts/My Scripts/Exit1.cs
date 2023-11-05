@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using YG;
 
 public class Exit : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Exit : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             ExitGame();
+            YandexGame.SaveProgress();
         }
     }
     public void ExitGame()

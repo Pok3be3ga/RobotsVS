@@ -23,7 +23,7 @@ public class CardManager : MonoBehaviour
     public void ShowCards(List<Effect> effects, int level)
     {
         _cardManagerParent.SetActive(true);
-        _levelText.text = level.ToString();
+        _levelText.text = (level + 1).ToString();
 
         for (int i = 0; i < effects.Count; i++)
         {
