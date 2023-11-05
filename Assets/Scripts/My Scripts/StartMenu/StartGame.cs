@@ -8,7 +8,10 @@ public class StartGame : MonoBehaviour
 {
     //[SerializeField] CoinCounter _coinCounter;
     [SerializeField] ChoseRobots _choseRobots;
-    
+    private void Start()
+    {
+        YandexGame.NewLeaderboardScores("LevelsPrefs", YandexGame.savesData.Chapter);
+    }
     public void StartGameGo()
     {
         SceneManager.LoadScene("Chapter 1");
