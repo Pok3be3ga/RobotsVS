@@ -30274,6 +30274,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8217974782522312591}
     m_Modifications:
+    - target: {fileID: 517616004098770604, guid: edb755118b13bd94d81dd4949e8f2938,
+        type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: de2888a39d70a4d77b41a8efb5a96d19, type: 3}
     - target: {fileID: 1591632423235133206, guid: edb755118b13bd94d81dd4949e8f2938,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30328,6 +30333,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7200024666742789179, guid: edb755118b13bd94d81dd4949e8f2938,
+        type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1efe654ecbeab497eac381b078276739, type: 3}
+    - target: {fileID: 7422883745949623289, guid: edb755118b13bd94d81dd4949e8f2938,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
