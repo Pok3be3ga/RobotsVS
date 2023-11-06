@@ -88,7 +88,7 @@ public class ContinuousEffect : Effect
 
     protected virtual void Produce()
     {
-        if (_audioManager.CheckAvailability(this.GetType().Name + "Sound0" + _clipNum))
+        if (_audioSource != null /*_audioManager.CheckAvailability(this.GetType().Name + "Sound0" + _clipNum)*/)
         {
             _audioSource.Play();
             Debug.Log("Воспроизвёлся звук: " + this.GetType().Name + "Sound0" + _clipNum);
