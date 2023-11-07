@@ -1,4 +1,5 @@
 using UnityEngine;
+using YG;
 
 public static class SaveSystem
 {
@@ -12,16 +13,5 @@ public static class SaveSystem
     //    PlayerPrefs.SetString(_stringName, dataString);
     //}
 
-    //public static ProgressData Load()
-    //{
-    //    if (PlayerPrefs.HasKey(_stringName))
-    //    {
-    //        string dataString = PlayerPrefs.GetString(_stringName);
-    //        return JsonUtility.FromJson<ProgressData>(dataString);
-    //    }
-    //    else { 
-    //        return new ProgressData();
-    //    }
-    //}
 
 }

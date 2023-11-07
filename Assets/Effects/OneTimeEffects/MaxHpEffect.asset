@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: MaxHpEffect
   m_EditorClassIdentifier: 
   Name: "\u0417\u0434\u043E\u0440\u043E\u0432\u044C\u0435"
-  Description: +10%
+  Description: "+10% \u043A \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u044E"
   Sprite: {fileID: 21300000, guid: 739a526ef9f56604aaf5e2a04ca570bb, type: 3}
   Level: 0
+  _audioManager: {fileID: 0}
   _percent: 0.1

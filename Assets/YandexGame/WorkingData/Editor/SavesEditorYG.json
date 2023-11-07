@@ -1,25 +1,18 @@
 {
-    "idSave": 100,
+    "idSave": 19,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
-    "money": 1,
-    "newPlayerName": "Hello!",
-    "openLevels": [
-        false,
-        true,
-        false
-    ],
-    "HealthLevel": 2,
-    "DamageLevel": 10,
-    "LootLevel": 18,
-    "Chapter": 10,
-    "Coins": 24.0,
-    "NumberOfWaves": 15,
+    "HealthLevel": 0,
+    "DamageLevel": 0,
+    "LootLevel": 0,
+    "Chapter": 4,
+    "Coins": 20.0,
+    "NumberOfWaves": 9,
     "NumberOfEnvironment": 1,
     "RobotBuy": [
-        true,
-        true,
-        true
+        false,
+        false,
+        false
     ]
 }

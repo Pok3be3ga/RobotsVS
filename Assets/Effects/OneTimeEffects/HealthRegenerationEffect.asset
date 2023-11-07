@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: HealthRegenerationEffect
   m_EditorClassIdentifier: 
   Name: "\u0420\u0435\u0433\u0435\u043D\u0435\u0440\u0430\u0446\u0438\u044F"
-  Description: +1% Regeneration
+  Description: "+1% \u043A \u0440\u0435\u0433\u0435\u043D\u0435\u0440\u0430\u0446\u0438\u0438"
   Sprite: {fileID: 21300000, guid: 0bf5ecdb514bc0248b9eaaf494623af2, type: 3}
   Level: 0
+  _audioManager: {fileID: 0}
   _percent: 0.01
