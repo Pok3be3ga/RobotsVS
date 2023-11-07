@@ -33,7 +33,7 @@ public class Mine : MonoBehaviour
         {
             if (collider.TryGetComponent(out Enemy enemy))
             {
-                enemy.SetDamage(4, true);
+                enemy.SetDamage(_damage, true);
             }
         }
 

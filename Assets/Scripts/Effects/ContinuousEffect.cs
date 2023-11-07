@@ -95,7 +95,7 @@ public class ContinuousEffect : Effect
         }
         else
         {
-            Debug.LogError("ÍÅÒ ÇÂÓÊÀ: " + this.GetType().Name + "Sound0" + _clipNum);
+            Debug.Log("ÍÅÒ ÇÂÓÊÀ: " + this.GetType().Name + "Sound0" + _clipNum);
         }
 
         if (!_audioManager.CheckAvailability(this.GetType().Name + "Sound0" + (_clipNum + 1)))
