@@ -1,15 +1,9 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.ProBuilder.MeshOperations;
-using UnityEngine.UI;
 using YG;
-using static UnityEngine.GraphicsBuffer;
 using Random = UnityEngine.Random;
 
 public class EnemyManager : MonoBehaviour
@@ -46,6 +40,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private DelayForSound _enemyDeathSound;
     [SerializeField] private DelayForSound _enemyHitSound;
     [SerializeField] private AudioSource _winSound01;
+    [SerializeField] private AudioSource _gameSound;
     [SerializeField] private TMP_Text _levelProgress;
     // Строчки текста для перевода
     string _textLevel;
@@ -229,6 +224,7 @@ public class EnemyManager : MonoBehaviour
             YandexGame.savesData.NumberOfEnvironment = 0;
         _winSound01.Play();
         _gameStateManager.SetWin();
+        _gameSound.Pause();
         YandexGame.SaveProgress();
 
     }

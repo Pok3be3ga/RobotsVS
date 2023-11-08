@@ -1059,7 +1059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMPComponent: {fileID: 242121348}
-  uniqueFontTMP: {fileID: 11400000, guid: e7a02eddaf2b135449dcbb70c898643d, type: 2}
+  uniqueFontTMP: {fileID: 0}
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
@@ -1357,7 +1357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMPComponent: {fileID: 329475160}
-  uniqueFontTMP: {fileID: 11400000, guid: e7a02eddaf2b135449dcbb70c898643d, type: 2}
+  uniqueFontTMP: {fileID: 0}
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
@@ -1968,7 +1968,6 @@ GameObject:
   - component: {fileID: 384761353}
   - component: {fileID: 384761355}
   - component: {fileID: 384761354}
-  - component: {fileID: 384761356}
   - component: {fileID: 384761357}
   m_Layer: 5
   m_Name: Text (PAUSE)
@@ -2046,7 +2045,7 @@ MonoBehaviour:
   m_fontSize: 50
   m_fontSizeBase: 50
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -2093,18 +2092,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 384761352}
   m_CullTransparentMesh: 1
---- !u!114 &384761356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 384761352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07cc21cc3dc1a2c4fbd7da083569a249, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &384761357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2118,7 +2105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMPComponent: {fileID: 384761354}
-  uniqueFontTMP: {fileID: 11400000, guid: e7a02eddaf2b135449dcbb70c898643d, type: 2}
+  uniqueFontTMP: {fileID: 0}
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
@@ -2892,7 +2879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMPComponent: {fileID: 589897199}
-  uniqueFontTMP: {fileID: 11400000, guid: e7a02eddaf2b135449dcbb70c898643d, type: 2}
+  uniqueFontTMP: {fileID: 0}
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
@@ -3012,7 +2999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMPComponent: {fileID: 609633739}
-  uniqueFontTMP: {fileID: 11400000, guid: e7a02eddaf2b135449dcbb70c898643d, type: 2}
+  uniqueFontTMP: {fileID: 0}
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
@@ -3914,7 +3901,7 @@ MonoBehaviour:
   m_fontSize: 34.9
   m_fontSizeBase: 34.9
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 16
@@ -3974,7 +3961,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMPComponent: {fileID: 899810417}
-  uniqueFontTMP: {fileID: 11400000, guid: e7a02eddaf2b135449dcbb70c898643d, type: 2}
+  uniqueFontTMP: {fileID: 0}
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
@@ -4162,7 +4149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMPComponent: {fileID: 910414692}
-  uniqueFontTMP: {fileID: 11400000, guid: e7a02eddaf2b135449dcbb70c898643d, type: 2}
+  uniqueFontTMP: {fileID: 0}
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
@@ -5959,6 +5946,7 @@ MonoBehaviour:
   _enemyDeathSound: {fileID: 159320291}
   _enemyHitSound: {fileID: 1480328874}
   _winSound01: {fileID: 319806171}
+  _gameSound: {fileID: 9017900905275257650}
   _levelProgress: {fileID: 1567569839}
   _textLevelRu: "\u0414\u043E\u0441\u0442\u0438\u0433\u043D\u0438\u0442\u0435 \u0443\u0440\u043E\u0432\u043D\u044F"
   _textLevelEn: Reach the level
@@ -6490,7 +6478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMPComponent: {fileID: 1441277878}
-  uniqueFontTMP: {fileID: 11400000, guid: e7a02eddaf2b135449dcbb70c898643d, type: 2}
+  uniqueFontTMP: {fileID: 0}
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
@@ -6689,7 +6677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMPComponent: {fileID: 1491560751}
-  uniqueFontTMP: {fileID: 11400000, guid: e7a02eddaf2b135449dcbb70c898643d, type: 2}
+  uniqueFontTMP: {fileID: 0}
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
@@ -7092,7 +7080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMPComponent: {fileID: 1591091405}
-  uniqueFontTMP: {fileID: 11400000, guid: e7a02eddaf2b135449dcbb70c898643d, type: 2}
+  uniqueFontTMP: {fileID: 0}
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
@@ -7388,7 +7376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMPComponent: {fileID: 1670268424}
-  uniqueFontTMP: {fileID: 11400000, guid: e7a02eddaf2b135449dcbb70c898643d, type: 2}
+  uniqueFontTMP: {fileID: 0}
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
@@ -7857,7 +7845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMPComponent: {fileID: 1690413742}
-  uniqueFontTMP: {fileID: 11400000, guid: e7a02eddaf2b135449dcbb70c898643d, type: 2}
+  uniqueFontTMP: {fileID: 0}
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
@@ -8465,7 +8453,7 @@ MonoBehaviour:
   m_fontSize: 34.9
   m_fontSizeBase: 34.9
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 16
@@ -8537,7 +8525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMPComponent: {fileID: 1868216292}
-  uniqueFontTMP: {fileID: 11400000, guid: e7a02eddaf2b135449dcbb70c898643d, type: 2}
+  uniqueFontTMP: {fileID: 0}
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
@@ -9134,7 +9122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMPComponent: {fileID: 1941580714}
-  uniqueFontTMP: {fileID: 11400000, guid: e7a02eddaf2b135449dcbb70c898643d, type: 2}
+  uniqueFontTMP: {fileID: 0}
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
@@ -9953,7 +9941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMPComponent: {fileID: 2134264729}
-  uniqueFontTMP: {fileID: 11400000, guid: e7a02eddaf2b135449dcbb70c898643d, type: 2}
+  uniqueFontTMP: {fileID: 0}
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
@@ -10958,7 +10946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMPComponent: {fileID: 49818551537521788}
-  uniqueFontTMP: {fileID: 11400000, guid: e7a02eddaf2b135449dcbb70c898643d, type: 2}
+  uniqueFontTMP: {fileID: 0}
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
@@ -31061,7 +31049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMPComponent: {fileID: 7571884462095719104}
-  uniqueFontTMP: {fileID: 11400000, guid: e7a02eddaf2b135449dcbb70c898643d, type: 2}
+  uniqueFontTMP: {fileID: 0}
   textLComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
   text: 
@@ -31419,6 +31407,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edb755118b13bd94d81dd4949e8f2938, type: 3}
+--- !u!82 &9017900905275257650 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 632349687171561496, guid: edb755118b13bd94d81dd4949e8f2938,
+    type: 3}
+  m_PrefabInstance: {fileID: 9017900905275257649}
+  m_PrefabAsset: {fileID: 0}
 --- !u!198 &9111550418887869208
 ParticleSystem:
   m_ObjectHideFlags: 0
