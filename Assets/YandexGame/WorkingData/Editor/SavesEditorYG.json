@@ -1,5 +1,5 @@
 {
-    "idSave": 131,
+    "idSave": 146,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -7,7 +7,7 @@
     "DamageLevel": 2,
     "LootLevel": 1,
     "Chapter": 4,
-    "Coins": 42.0,
+    "Coins": 60.0,
     "NumberOfWaves": 9,
     "NumberOfEnvironment": 1,
     "RobotBuy": [
