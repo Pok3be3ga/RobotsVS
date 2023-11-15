@@ -153,7 +153,7 @@ public class Enemy : MonoBehaviour
         else 
         {
             if (doHitSound)
-                _enemyHitSound.PlaySound();
+                //_enemyHitSound.PlaySound();
             Freez(freezTime);
             StartCoroutine(ReturnSpeedToDefaultValue(1));
         }
@@ -164,7 +164,7 @@ public class Enemy : MonoBehaviour
     {
         Instantiate(_deathEffect, transform.position, Quaternion.identity);
 
-        _enemyDeathSound.PlaySound();
+        //_enemyDeathSound.PlaySound();
 
         // Проверка для тестовых врагов, которые были созданы не enemyManager-ом
         if (_enemyManager)
