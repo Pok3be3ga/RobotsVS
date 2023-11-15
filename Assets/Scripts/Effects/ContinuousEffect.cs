@@ -37,7 +37,21 @@ public class ContinuousEffect : Effect
 
     [HideInInspector] public AudioSource _audioSource;
 
-
+    // Строчки текста для перевода
+    static string _colldownRu = "перезарядка";
+    static string _colldownEn = "cooldown";
+    static string _damageRu = "урон";
+    static string _damageEn = "damage";
+    static string _radiusRu = "радиус";
+    static string _radiusEn = "radius";
+    static string _numberRu = "количество";
+    static string _numberEn = "number";
+    static string _DPSRu = "урон в секунду";
+    static string _DPSEn = "DPS";
+    static string _passCountRu = "колличество целей";
+    static string _passCountEn = "pass count";
+    static string _lifeTimeRu = "время жизни";
+    static string _lifeTimeEn = "life time";
     public static int GetTotalNumberOfSkills()
     {
         return Enum.GetValues(typeof(Skill)).Length;
@@ -112,20 +126,40 @@ public class ContinuousEffect : Effect
 
     public static string GetSkillName(Skill skill)
     {
-        if (skill == Skill.Colldown)
-            return "Кулдаун";
-        else if (skill == Skill.Damage)
-            return "Урон";
-        else if (skill == Skill.Radius)
-            return "Радиус";
-        else if (skill == Skill.Number)
-            return "Колличество";
-        else if (skill == Skill.DPS)
-            return "Урон в секунду";
-        else if (skill == Skill.PassCount)
-            return "Цели";
-        else if (skill == Skill.LifeTime)
-            return "Длительность";
+        if (skill == Skill.Colldown && YandexGame.EnvironmentData.language == "en")
+            return _colldownEn;
+        else if (skill == Skill.Colldown && YandexGame.EnvironmentData.language == "ru")
+            return _colldownRu;
+
+        else if (skill == Skill.Damage && YandexGame.EnvironmentData.language == "en")
+            return _damageEn;
+        else if (skill == Skill.Damage && YandexGame.EnvironmentData.language == "ru")
+            return _damageRu;
+
+        else if (skill == Skill.Radius && YandexGame.EnvironmentData.language == "ru")
+            return _radiusRu;
+        else if (skill == Skill.Radius && YandexGame.EnvironmentData.language == "en")
+            return _radiusEn;
+
+        else if (skill == Skill.Number && YandexGame.EnvironmentData.language == "en")
+            return _numberEn;
+        else if (skill == Skill.Number && YandexGame.EnvironmentData.language == "ru")
+            return _numberRu;
+
+        else if (skill == Skill.DPS && YandexGame.EnvironmentData.language == "en")
+            return _DPSEn;
+        else if (skill == Skill.DPS && YandexGame.EnvironmentData.language == "ru")
+            return _DPSRu;
+
+        else if (skill == Skill.PassCount && YandexGame.EnvironmentData.language == "en")
+            return _passCountEn;
+        else if (skill == Skill.PassCount && YandexGame.EnvironmentData.language == "ru")
+            return _passCountRu;
+
+        else if (skill == Skill.LifeTime && YandexGame.EnvironmentData.language == "en")
+            return _lifeTimeEn;
+        else if (skill == Skill.LifeTime && YandexGame.EnvironmentData.language == "ru")
+            return _lifeTimeRu;
         else return "Нет названия для такого эффекта";
     }
 

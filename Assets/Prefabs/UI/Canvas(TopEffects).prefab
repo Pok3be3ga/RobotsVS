@@ -31,6 +31,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7461025986217830010}
+  - {fileID: 6152941654483793483}
+  - {fileID: 1030511300885252759}
+  - {fileID: 2086654651680315163}
+  - {fileID: 7397313562136727967}
   - {fileID: 5030283132949236068}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -134,7 +139,7 @@ RectTransform:
   - {fileID: 2540418133586591688}
   - {fileID: 4428562695476311590}
   - {fileID: 5285682487618267100}
-  - {fileID: 8411776096738726985}
+  - {fileID: 8863276226831682553}
   m_Father: {fileID: 2086654651680315163}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
@@ -619,7 +624,7 @@ RectTransform:
   m_Children:
   - {fileID: 4463941248682942748}
   - {fileID: 4900098658956492639}
-  m_Father: {fileID: 5030283132949236068}
+  m_Father: {fileID: 5170320282742112528}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -642,7 +647,7 @@ MonoBehaviour:
   - {fileID: 2540418133586591691}
   - {fileID: 4428562695476311589}
   - {fileID: 5285682487618267103}
-  - {fileID: 8411776096738726986}
+  - {fileID: 8863276226831682554}
   _topIconsContinuous:
   - {fileID: 7140624135699750498}
   - {fileID: 7151368322200244140}
@@ -673,12 +678,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5024360724370887754}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5030283132949236068}
+  m_Father: {fileID: 5170320282742112528}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1064,14 +1069,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5900226687532778602}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2507730363386477163}
   - {fileID: 6792991501922184948}
-  m_Father: {fileID: 5030283132949236068}
+  m_Father: {fileID: 5170320282742112528}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -1238,7 +1243,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3373690994828947782}
-  m_Father: {fileID: 5030283132949236068}
+  m_Father: {fileID: 5170320282742112528}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1368,12 +1373,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7397313562136727967}
-  - {fileID: 2086654651680315163}
-  - {fileID: 1030511300885252759}
-  - {fileID: 6152941654483793483}
-  - {fileID: 7461025986217830010}
+  m_Children: []
   m_Father: {fileID: 5170320282742112528}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1525,7 +1525,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2772744845792300664}
-  m_Father: {fileID: 5030283132949236068}
+  m_Father: {fileID: 5170320282742112528}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -2868,13 +2868,13 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 162108119e099594581f3c0c218f509b, type: 3}
---- !u!224 &8411776096738726985 stripped
+--- !u!224 &8863276226831682553 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1133797759637020593, guid: 162108119e099594581f3c0c218f509b,
     type: 3}
   m_PrefabInstance: {fileID: 8411776096738726984}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8411776096738726986 stripped
+--- !u!114 &8863276226831682554 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1133797759637020594, guid: 162108119e099594581f3c0c218f509b,
     type: 3}

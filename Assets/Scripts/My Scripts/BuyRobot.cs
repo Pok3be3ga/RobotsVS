@@ -11,6 +11,7 @@ public class BuyRobot : MonoBehaviour
     [SerializeField] int _price;
     [SerializeField] TextMeshProUGUI textCoins;
     [SerializeField] AudioSource _audioSourceClosed;
+    [SerializeField] AudioSource _audioSourcePay;
     void Start()
     {
         GetComponent<Button>().onClick.AddListener(BuyRobotButton);
@@ -27,6 +28,7 @@ public class BuyRobot : MonoBehaviour
             YandexGame.savesData.RobotBuy[NumberSaveRobots] = true;
             gameObject.SetActive(false);
             textCoins.text = YandexGame.savesData.Coins.ToString();
+            _audioSourcePay.Play();
         }
         else
         {

@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf86dc961fff4d5458597223edb93405, type: 3}
   m_Name: ColldownEffect
   m_EditorClassIdentifier: 
-  Name: "\u041A\u0443\u043B\u0434\u0430\u0443\u043D"
+  Name: "\u041F\u0435\u0440\u0435\u0437\u0430\u0440\u044F\u0434\u043A\u0430"
+  NameEn: Cooldown
+  NameRu: "\u041F\u0435\u0440\u0435\u0437\u0430\u0440\u044F\u0434\u043A\u0430"
   Description: "\u0423\u043C\u0435\u043D\u044C\u0448\u0430\u0435\u0442 \u0432\u0440\u0435\u043C\u044F
+    \u043E\u0442\u043A\u0430\u0442\u0430 \u0441\u043F\u043E\u0441\u043E\u0431\u043D\u043E\u0441\u0442\u0438"
+  DescriptionEn: Reduces the ability rollback time
+  DescriptionRu: "\u0423\u043C\u0435\u043D\u044C\u0448\u0430\u0435\u0442 \u0432\u0440\u0435\u043C\u044F
     \u043E\u0442\u043A\u0430\u0442\u0430 \u0441\u043F\u043E\u0441\u043E\u0431\u043D\u043E\u0441\u0442\u0438"
   Sprite: {fileID: 21300000, guid: e92f502f58149574f905575430c14c2a, type: 3}
   Level: 0

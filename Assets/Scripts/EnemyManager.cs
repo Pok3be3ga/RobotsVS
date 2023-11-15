@@ -61,21 +61,21 @@ public class EnemyManager : MonoBehaviour
         DisplayLevelProgress();
         SetupEnemies();
 
-        //if (LanguageSettings.Instance.CurrentLanguage == "en")
-        //{
-        //    _textLevel = _textLevelEn;
-        //    _textEnemy = _textEnemyEn;
-        //}
-        //else if (LanguageSettings.Instance.CurrentLanguage == "ru")
-        //{
+        if (YandexGame.EnvironmentData.language == "en")
+        {
+            _textLevel = _textLevelEn;
+            _textEnemy = _textEnemyEn;
+        }
+        else if (YandexGame.EnvironmentData.language == "ru")
+        {
             _textLevel = _textLevelRu;
             _textEnemy = _textEnemyRu;
-        //}
-        //else
-        //{
-        //    _textLevel = _textLevelRu;
-        //    _textEnemy = _textEnemyRu;
-        //}
+    }
+        else
+        {
+            _textLevel = _textLevelRu;
+            _textEnemy = _textEnemyRu;
+        }
     }
 
     private void DisplayLevelProgress()

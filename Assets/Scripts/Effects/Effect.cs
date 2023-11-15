@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using YG;
 
 public abstract class Effect : ScriptableObject
 {
     public string Name;
+    [SerializeField] string NameEn;
+    [SerializeField] string NameRu;
     [TextArea(1, 3)]
     public string Description;
+    [SerializeField] string DescriptionEn;
+    [SerializeField] string DescriptionRu;
     public Sprite Sprite;
     public int Level = -1;
 
@@ -21,6 +26,21 @@ public abstract class Effect : ScriptableObject
         _effectsManager = effectsManager;
         _player = player;
         _enemyManager = enemyManager;
+        if (YandexGame.EnvironmentData.language == "en")
+        {
+            Name = NameEn;
+            Description = DescriptionEn;
+        }
+        else if (YandexGame.EnvironmentData.language == "ru")
+        {
+            Name = NameRu;
+            Description = DescriptionRu;
+        }
+        else
+        {
+            Name = NameRu;
+            Description = DescriptionRu;
+        }
     }
 
     public virtual void Initialize(EffectsManager effectsManager,

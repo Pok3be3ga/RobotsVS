@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: AddSpeedEffect
   m_EditorClassIdentifier: 
   Name: "\u0421\u043A\u043E\u0440\u043E\u0441\u0442\u044C"
+  NameEn: Speed
+  NameRu: "\u0421\u043A\u043E\u0440\u043E\u0441\u0442\u044C"
   Description: "+10% \u043A \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u0438"
+  DescriptionEn: +10% to speed
+  DescriptionRu: "+10% \u043A \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u0438"
   Sprite: {fileID: 21300000, guid: 9a80b3c27511a044b8dc33815fe9e3fe, type: 3}
   Level: 0
   _audioManager: {fileID: 0}

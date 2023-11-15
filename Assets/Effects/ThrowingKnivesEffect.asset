@@ -13,7 +13,12 @@ MonoBehaviour:
   m_Name: ThrowingKnivesEffect
   m_EditorClassIdentifier: 
   Name: "\u041B\u0430\u0437\u0435\u0440\u044B"
+  NameEn: Lasers
+  NameRu: "\u041B\u0430\u0437\u0435\u0440\u044B"
   Description: "\u0421\u0442\u0440\u0435\u043B\u044F\u0435\u0442 \u043F\u0435\u0440\u0435\u0434
+    \u0441\u043E\u0431\u043E\u0439 "
+  DescriptionEn: Shoots in front of him
+  DescriptionRu: "\u0421\u0442\u0440\u0435\u043B\u044F\u0435\u0442 \u043F\u0435\u0440\u0435\u0434
     \u0441\u043E\u0431\u043E\u0439 "
   Sprite: {fileID: 21300000, guid: 76cdb0a6de15794428c7029fd337f949, type: 3}
   Level: 0

@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: ChainLightningEffect
   m_EditorClassIdentifier: 
   Name: "\u0426\u0435\u043F\u043D\u0430\u044F \u043C\u043E\u043B\u043D\u0438\u044F"
+  NameEn: Chain Lightning
+  NameRu: "\u0426\u0435\u043F\u043D\u0430\u044F \u043C\u043E\u043B\u043D\u0438\u044F"
   Description: "\u0421\u043A\u0430\u0447\u0435\u0442 \u043F\u043E \u0432\u0440\u0430\u0433\u0430\u043C"
+  DescriptionEn: Jumps on enemies
+  DescriptionRu: "\u0421\u043A\u0430\u0447\u0435\u0442 \u043F\u043E \u0432\u0440\u0430\u0433\u0430\u043C"
   Sprite: {fileID: 21300000, guid: 9b5559c220383214889c4e3802ddfd45, type: 3}
   Level: 0
-  _audioSource: {fileID: 0}
   _audioManager: {fileID: 0}
   ActiveSkills: 01010001000100
   SkillLevels:
@@ -178,6 +181,7 @@ MonoBehaviour:
   OnLoad:
     m_PersistentCalls:
       m_Calls: []
+  _audioSource: {fileID: 0}
   _chainLightningPrefab: {fileID: 7517399038076100509, guid: e7e8bf351b60dd149bc4fc10fe6e58ef,
     type: 3}
   _bulletSpeed: 14

@@ -13,7 +13,12 @@ MonoBehaviour:
   m_Name: DamageBoostEffect
   m_EditorClassIdentifier: 
   Name: "\u0423\u0440\u043E\u043D"
+  NameEn: Damag
+  NameRu: "\u0423\u0440\u043E\u043D"
   Description: "\u0423\u0432\u0435\u043B\u0438\u0447\u0435\u043D\u0438\u0435 \u0443\u0440\u043E\u043D\u0430"
+  DescriptionEn: Increased Damage
+  DescriptionRu: "\u0423\u0432\u0435\u043B\u0438\u0447\u0435\u043D\u0438\u0435 \u0443\u0440\u043E\u043D\u0430"
   Sprite: {fileID: 21300000, guid: f13b630227a0b0c439125294573c8626, type: 3}
   Level: 0
+  _audioManager: {fileID: 0}
   _percent: 0.1

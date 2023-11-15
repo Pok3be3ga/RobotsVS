@@ -13,7 +13,12 @@ MonoBehaviour:
   m_Name: MeteorEffect
   m_EditorClassIdentifier: 
   Name: "\u041C\u0435\u0442\u0435\u043E\u0440\u0438\u0442\u043D\u044B\u0439 \u0434\u043E\u0436\u0434\u044C"
+  NameEn: Meteor
+  NameRu: "\u041C\u0435\u0442\u0435\u043E\u0440\u0438\u0442\u043D\u044B\u0439 \u0434\u043E\u0436\u0434\u044C"
   Description: "\u041C\u0435\u0442\u0435\u043E\u0440\u0438\u0442\u044B \u043F\u0430\u0434\u0430\u044E\u0442
+    \u0441 \u043D\u0435\u0431\u0430"
+  DescriptionEn: Meteorites fall from the sky
+  DescriptionRu: "\u041C\u0435\u0442\u0435\u043E\u0440\u0438\u0442\u044B \u043F\u0430\u0434\u0430\u044E\u0442
     \u0441 \u043D\u0435\u0431\u0430"
   Sprite: {fileID: 21300000, guid: f3fd39d4032525f45832c132a5125858, type: 3}
   Level: 0
