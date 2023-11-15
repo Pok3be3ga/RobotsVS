@@ -105,22 +105,15 @@ public class ContinuousEffect : Effect
         if (_audioSource != null /*_audioManager.CheckAvailability(this.GetType().Name + "Sound0" + _clipNum)*/)
         {
             _audioSource.Play();
-            Debug.Log("Воспроизвёлся звук: " + this.GetType().Name + "Sound0" + _clipNum);
-        }
-        else
-        {
-            Debug.Log("НЕТ ЗВУКА: " + this.GetType().Name + "Sound0" + _clipNum);
         }
 
         if (!_audioManager.CheckAvailability(this.GetType().Name + "Sound0" + (_clipNum + 1)))
         {
             _clipNum = 1;
-            Debug.Log("_clipNum = 1 для звука " + this.GetType().Name + "Sound0" + _clipNum);
         }
         else
         {
             _clipNum += 1;
-            Debug.Log("Для звука: " + this.GetType().Name + " _clipNum = " + _clipNum);
         }
     }
 
