@@ -2,6 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 public class Card : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class Card : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _nameText;
     [SerializeField] private TextMeshProUGUI _descriptionText;
     [SerializeField] private TextMeshProUGUI _levelText;
+    string _levelTextString;
+    [SerializeField] string _levelTextRu;
+    [SerializeField] string _levelTextEn;
     [SerializeField] private Button _button;
 
     [SerializeField] private Sprite _continuousEffectSprite;
@@ -25,6 +29,19 @@ public class Card : MonoBehaviour
         _button.onClick.AddListener(OnClick);
         _cardManager = cardManager;
         _effectsManager = effectsManager;
+        if (YandexGame.EnvironmentData.language == "en")
+        {
+            _levelTextString = _levelTextEn;
+        }
+        else if (YandexGame.EnvironmentData.language == "ru")
+        {
+            _levelTextString = _levelTextRu;
+        }
+        else
+        {
+            _levelTextString = _levelTextRu;
+        }
+        _levelText.text = _levelTextString;
     }
 
     public void Show(Effect effect) {
@@ -44,7 +61,7 @@ public class Card : MonoBehaviour
         _nameText.text = effect.Name;
 
         //
-        _levelText.text = "сп " + (effect.Level + 1);
+        _levelText.text = _levelTextString + " " + (effect.Level + 1);
         gameObject.SetActive(true);
     }
 

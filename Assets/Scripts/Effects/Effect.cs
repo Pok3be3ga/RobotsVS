@@ -50,6 +50,21 @@ public abstract class Effect : ScriptableObject
         _player = player;
         _enemyManager = enemyManager;
         _audioManager = audioManager;
+        if (YandexGame.EnvironmentData.language == "en")
+        {
+            Name = NameEn;
+            Description = DescriptionEn;
+        }
+        else if (YandexGame.EnvironmentData.language == "ru")
+        {
+            Name = NameRu;
+            Description = DescriptionRu;
+        }
+        else
+        {
+            Name = NameRu;
+            Description = DescriptionRu;
+        }
     }
 
     public virtual void Activate()
