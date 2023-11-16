@@ -108,7 +108,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void GetHealed()
     {
-        if (_currentHealth <= _maxHealth / 2)
+        if (_currentHealth <= _maxHealth)
             _currentHealth += _maxHealth / 2;
 
         else

@@ -1262,7 +1262,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u041D\u041E\u0412\u042B\u0419 \u0423\u0420\u041E\u0412\u0415\u041D\u042C!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7ef62b92d82553540ba3e05db293cca9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 899d143bd72f8b7459c5f89bdde88ce4, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 4404c34ff207985499b3d5c17180fdc4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2917,7 +2917,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 7ef62b92d82553540ba3e05db293cca9,
+      objectReference: {fileID: 11400000, guid: 899d143bd72f8b7459c5f89bdde88ce4,
         type: 2}
     - target: {fileID: 2435801410034298279, guid: 7f4b42042012ea94ea1d5ad844fcbfcc,
         type: 3}
@@ -2985,6 +2985,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontStyle
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050656147108352390, guid: 7f4b42042012ea94ea1d5ad844fcbfcc,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050656147108352390, guid: 7f4b42042012ea94ea1d5ad844fcbfcc,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050656147108352390, guid: 7f4b42042012ea94ea1d5ad844fcbfcc,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6050656147108352390, guid: 7f4b42042012ea94ea1d5ad844fcbfcc,
         type: 3}
@@ -7901,7 +7916,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 7ef62b92d82553540ba3e05db293cca9,
+      objectReference: {fileID: 11400000, guid: 899d143bd72f8b7459c5f89bdde88ce4,
         type: 2}
     - target: {fileID: 2435801410034298279, guid: 7f4b42042012ea94ea1d5ad844fcbfcc,
         type: 3}
@@ -7969,6 +7984,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontStyle
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050656147108352390, guid: 7f4b42042012ea94ea1d5ad844fcbfcc,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050656147108352390, guid: 7f4b42042012ea94ea1d5ad844fcbfcc,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050656147108352390, guid: 7f4b42042012ea94ea1d5ad844fcbfcc,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6050656147108352390, guid: 7f4b42042012ea94ea1d5ad844fcbfcc,
         type: 3}
@@ -31245,7 +31275,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 7ef62b92d82553540ba3e05db293cca9,
+      objectReference: {fileID: 11400000, guid: 899d143bd72f8b7459c5f89bdde88ce4,
         type: 2}
     - target: {fileID: 2435801410034298279, guid: 7f4b42042012ea94ea1d5ad844fcbfcc,
         type: 3}
@@ -31318,6 +31348,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontStyle
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050656147108352390, guid: 7f4b42042012ea94ea1d5ad844fcbfcc,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050656147108352390, guid: 7f4b42042012ea94ea1d5ad844fcbfcc,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050656147108352390, guid: 7f4b42042012ea94ea1d5ad844fcbfcc,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6050656147108352390, guid: 7f4b42042012ea94ea1d5ad844fcbfcc,
         type: 3}
