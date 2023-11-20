@@ -336,6 +336,7 @@ MonoBehaviour:
   textCoins: {fileID: 1204592131}
   _audioSourceClosed: {fileID: 573832382}
   _audioSourcePay: {fileID: 141698345}
+  bootStrapperMenu: {fileID: 0}
 --- !u!114 &58828094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2285,6 +2286,7 @@ MonoBehaviour:
   textCoins: {fileID: 1204592131}
   _audioSourceClosed: {fileID: 573832382}
   _audioSourcePay: {fileID: 141698345}
+  bootStrapperMenu: {fileID: 0}
 --- !u!114 &637803769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4015,7 +4017,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1189145725}
   - component: {fileID: 1189145726}
-  - component: {fileID: 1189145727}
   m_Layer: 0
   m_Name: StartScripts
   m_TagString: Untagged
@@ -4051,18 +4052,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _choseRobots: {fileID: 1221172431}
---- !u!114 &1189145727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1189145724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c1f31fb7c0d8c949941ddcc146cd387, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1204297329
 GameObject:
   m_ObjectHideFlags: 0
@@ -5818,6 +5807,7 @@ MonoBehaviour:
   textCoins: {fileID: 1204592131}
   _audioSourceClosed: {fileID: 573832382}
   _audioSourcePay: {fileID: 141698345}
+  bootStrapperMenu: {fileID: 0}
 --- !u!1 &1943170740
 GameObject:
   m_ObjectHideFlags: 0
