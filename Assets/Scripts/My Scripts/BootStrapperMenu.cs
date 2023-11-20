@@ -22,8 +22,10 @@ public class BootStrapperMenu : MonoBehaviour
     }
     private void Start()
     {
-        Disaplay();
-
+        if (YandexGame.SDKEnabled == true)
+        {
+            Disaplay();
+        }
     }
     public void Disaplay()
     {
