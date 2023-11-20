@@ -1,18 +1,18 @@
 {
-    "idSave": 98,
+    "idSave": 48,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
-    "HealthLevel": 0,
-    "DamageLevel": 1,
+    "HealthLevel": 1,
+    "DamageLevel": 0,
     "LootLevel": 1,
-    "Chapter": 13,
-    "Coins": 319.0,
-    "NumberOfWaves": 18,
+    "Chapter": 7,
+    "Coins": 288.0,
+    "NumberOfWaves": 12,
     "NumberOfEnvironment": 1,
     "RobotBuy": [
         true,
         true,
-        false
+        true
     ]
 }

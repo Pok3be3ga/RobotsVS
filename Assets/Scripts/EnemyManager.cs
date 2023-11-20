@@ -220,13 +220,11 @@ public class EnemyManager : MonoBehaviour
         YandexGame.savesData.NumberOfWaves++;
         YandexGame.savesData.Chapter++;
         YandexGame.savesData.NumberOfEnvironment++;
-        if (YandexGame.savesData.NumberOfEnvironment > 2)
-            YandexGame.savesData.NumberOfEnvironment = 0;
+        if (YandexGame.savesData.NumberOfEnvironment > 2) YandexGame.savesData.NumberOfEnvironment = 0;
+        YandexGame.SaveProgress();
         _winSound01.Play();
         _gameStateManager.SetWin();
         _gameSound.Pause();
-        YandexGame.SaveProgress();
-
     }
 
     public Enemy[] GetNearest(Vector3 point, int number)

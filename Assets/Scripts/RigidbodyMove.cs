@@ -44,10 +44,8 @@ public class RigidbodyMove : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
         _moveInputKey = new Vector3(moveHorizontal, 0f, moveVertical);
-
         _rigidbody.velocity = new Vector3(_moveInputKey.x, 0, _moveInputKey.y) * speed;
         _rigidbody.velocity = new Vector3(_moveInput.x, 0, _moveInput.y) * speed;
-
         if (_rigidbody.velocity != Vector3.zero)
         {
             transform.rotation = Quaternion.LookRotation(_rigidbody.velocity * Speed, Vector3.up);

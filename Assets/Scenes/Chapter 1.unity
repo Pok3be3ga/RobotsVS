@@ -2979,7 +2979,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: e7a02eddaf2b135449dcbb70c898643d,
+      objectReference: {fileID: 11400000, guid: 899d143bd72f8b7459c5f89bdde88ce4,
         type: 2}
     - target: {fileID: 6050656147108352390, guid: 7f4b42042012ea94ea1d5ad844fcbfcc,
         type: 3}
@@ -7240,8 +7240,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7ef62b92d82553540ba3e05db293cca9, type: 2}
-  m_sharedMaterial: {fileID: -4692361006407627384, guid: 7ef62b92d82553540ba3e05db293cca9,
+  m_fontAsset: {fileID: 11400000, guid: 899d143bd72f8b7459c5f89bdde88ce4, type: 2}
+  m_sharedMaterial: {fileID: -3105120805152725916, guid: 899d143bd72f8b7459c5f89bdde88ce4,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -7978,7 +7978,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: e7a02eddaf2b135449dcbb70c898643d,
+      objectReference: {fileID: 11400000, guid: 899d143bd72f8b7459c5f89bdde88ce4,
         type: 2}
     - target: {fileID: 6050656147108352390, guid: 7f4b42042012ea94ea1d5ad844fcbfcc,
         type: 3}
@@ -31342,7 +31342,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: e7a02eddaf2b135449dcbb70c898643d,
+      objectReference: {fileID: 11400000, guid: 899d143bd72f8b7459c5f89bdde88ce4,
         type: 2}
     - target: {fileID: 6050656147108352390, guid: 7f4b42042012ea94ea1d5ad844fcbfcc,
         type: 3}
@@ -31891,7 +31891,7 @@ PrefabInstance:
     - target: {fileID: 8152475455617589819, guid: d623ab8b6f8dab34c940d296f921fd2c,
         type: 3}
       propertyPath: _size
-      value: 0.3
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 8152475455617589819, guid: d623ab8b6f8dab34c940d296f921fd2c,
         type: 3}
@@ -31901,7 +31901,7 @@ PrefabInstance:
     - target: {fileID: 8152475455617589819, guid: d623ab8b6f8dab34c940d296f921fd2c,
         type: 3}
       propertyPath: _stickSize
-      value: 0.5
+      value: 0.437
       objectReference: {fileID: 0}
     - target: {fileID: 8152475455617589819, guid: d623ab8b6f8dab34c940d296f921fd2c,
         type: 3}
@@ -31921,12 +31921,12 @@ PrefabInstance:
     - target: {fileID: 8152475456537471219, guid: d623ab8b6f8dab34c940d296f921fd2c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 79.05
+      value: 84.952805
       objectReference: {fileID: 0}
     - target: {fileID: 8152475456537471219, guid: d623ab8b6f8dab34c940d296f921fd2c,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 79.05
+      value: 84.952805
       objectReference: {fileID: 0}
     - target: {fileID: 8196812612993696243, guid: d623ab8b6f8dab34c940d296f921fd2c,
         type: 3}
@@ -32041,12 +32041,12 @@ PrefabInstance:
     - target: {fileID: 8196812613576827625, guid: d623ab8b6f8dab34c940d296f921fd2c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 158.1
+      value: 194.40001
       objectReference: {fileID: 0}
     - target: {fileID: 8196812613576827625, guid: d623ab8b6f8dab34c940d296f921fd2c,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 158.1
+      value: 194.40001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
